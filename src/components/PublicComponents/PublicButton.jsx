@@ -1,0 +1,50 @@
+import styled from "styled-components";
+import { Link as LinkR } from "react-router-dom";
+
+export const PublicButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const PublicButton = styled(LinkR)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color: #fff;
+  margin: ${({ margin }) => (margin ? "0 auto 20px auto" : null)};
+  padding: ${({ big }) => (big ? " 20px 30px" : " 10px 20px")};
+  width: ${({ width }) => (width ? `${width}` : null)};
+  ${({ transparent }) =>
+    !transparent
+      ? "background:  rgba(255, 105, 180, 1)"
+      : "background:  rgba(255, 105, 180, 0.5)"};
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  border: #870a30 1px solid;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.6);
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  font-weight: 900;
+  &:hover {
+    background: rgba(255, 105, 180, 0.9);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+    opacity: 1;
+  }
+  @media screen and (max-width: 768px) {
+    opacity: 1;
+    font-size: 14px;
+    padding: 2px 20px;
+  }
+  
+  @media screen and (max-width: 480px) {
+    max-width: 80%;
+    font-size: 12px;
+  }
+`;
