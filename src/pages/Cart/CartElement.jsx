@@ -82,6 +82,7 @@ export const CardSummary = styled.div`
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   column-gap: 100px;
   align-items: center;
   border: 2px solid lightgray;

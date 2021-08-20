@@ -87,8 +87,9 @@ const Cart = () => {
         <div>
           <CartItemsTitle>Cart Summary</CartItemsTitle>
           <CardSummary>
-            <CardItemSpan>total numbers: {cartData.length}</CardItemSpan>
-            <CardItemSpan>total Cost : {sum}$</CardItemSpan>
+            <CardItemSpan>Total Numbers: {cartData.length}</CardItemSpan>
+            <CardItemSpan>Total Cost : {sum}$</CardItemSpan>
+            <CardItemSpan>Your Credit : {sum}$</CardItemSpan>
           </CardSummary>
         </div>
       </CartWrapper>
