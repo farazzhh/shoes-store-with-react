@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const CartSection = styled.section`
@@ -7,18 +8,11 @@ export const CartSection = styled.section`
   min-height: calc(100vh - 80px);
   padding: 50px 0;
   position: relative;
-  background: linear-gradient(
-    to left bottom,
-    rgba(242, 197, 224, 1),
-    rgb(255, 255, 255),
-    rgb(255, 255, 255),
-    rgba(242, 197, 224, 1)
-  );
+  background: rgba(242, 197, 224, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
 `;
-
 
 export const CartWrapper = styled.div`
   max-width: 900px;
@@ -27,7 +21,7 @@ export const CartWrapper = styled.div`
   padding: 15px;
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 1);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px,
     rgba(0, 0, 0, 0.2) 0px 7px 13px -3px;
   border-radius: 10px;
@@ -45,7 +39,8 @@ export const CartWrapper = styled.div`
 export const CartItemsWrapper = styled.div``;
 
 export const CartItemsTitle = styled.h4`
-font-weight:500;
+  font-weight: 500;
+  margin-bottom: 20px;
 `;
 
 export const CardItems = styled.div`
@@ -55,6 +50,7 @@ export const CardItems = styled.div`
   justify-content: flex-start;
   border-radius: 5px;
   border: 0.5px solid lightgray;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 `;
 
 export const CardItem = styled.div`
@@ -62,10 +58,9 @@ export const CardItem = styled.div`
   height: 80px;
   padding: 5px;
   display: flex;
-  /* flex-wrap: nowrap; */
   align-items: center;
   justify-content: space-around;
-  border: 0.5px solid lightgray;
+  border: 0.1px solid rgba(225, 225, 225, 0.5);
 `;
 
 export const CartContent = styled.div`
@@ -92,6 +87,10 @@ export const CardSummary = styled.div`
   border: 2px solid lightgray;
 `;
 
+export const CardItemLink = styled(Link)`
+  height: 78px;
+`;
+
 export const CartItemImg = styled.img`
   height: 100%;
   object-fit: contain;
@@ -106,7 +105,8 @@ export const CardItemDeleteButton = styled.button`
   border-radius: 2px;
   transition: all 0.2s ease-in-out;
   margin-right: 5px;
-  :hover{
+  cursor: pointer;
+  :hover {
     background-color: #870a30;
   }
 `;

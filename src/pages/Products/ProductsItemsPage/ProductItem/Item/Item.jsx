@@ -21,7 +21,7 @@ import {
   ItemDescribe,
 } from "./ItemElement";
 
-const Item = ({ data, requestData }) => {
+const Item = ({ data,category, requestData }) => {
   const [cart, pushToCart] = useContext(CartContext);
 
   let selectSize = "";
@@ -46,6 +46,7 @@ const Item = ({ data, requestData }) => {
         const newItem = {
           ...requestData,
           size: selectSize,
+          category: category ,
         };
       return pushToCart(newItem);
     } else {

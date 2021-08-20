@@ -27,7 +27,13 @@ const ProductsItemsApp = (props) => {
   return (
     <>
       {checkData ? (
-        requestData.id && <Item data={data} requestData={requestData} />
+        requestData.id && (
+          <Item
+            data={data}
+            category={params.category}
+            requestData={requestData}
+          />
+        )
       ) : (
         <BadUrl />
       )}

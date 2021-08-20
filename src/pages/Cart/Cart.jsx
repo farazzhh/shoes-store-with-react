@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { BackButtonPublic } from "../../components/PublicComponents/BackButton/BackButton";
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { CartContext } from "../../providers/CartContext";
@@ -10,6 +11,7 @@ import {
   CardItems,
   CardItem,
   CardItemSpan,
+  CardItemLink,
   CartItemImg,
   CardItemDeleteButton,
   CartContent,
@@ -63,10 +65,12 @@ const Cart = () => {
           <CardItems>
             {cartData.map((item, index) => (
               <CardItem>
-                <CartItemImg
-                  src={`${process.env.PUBLIC_URL}${item.images[0]}`}
-                  alt={item.name}
-                />
+                <CardItemLink to={`/products/${item.category}/${item.id}`}>
+                  <CartItemImg
+                    src={`${process.env.PUBLIC_URL}${item.images[0]}`}
+                    alt={item.name}
+                  />
+                </CardItemLink>
                 <CartContent>
                   <CardItemSpan>{item.name}</CardItemSpan>
                   <CardItemSpan>size : {item.size}</CardItemSpan>
