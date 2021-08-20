@@ -313,32 +313,6 @@
             "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/3.jpg",
             "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/4.jpg"
           ]
-        },
-        {
-          "id": 44,
-          "name": "FoggySands",
-          "price": "179$",
-          "sizes": ["40", "41", "42", "43", "44"],
-          "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
-          "images": [
-            "/assets/images/Products Images/ProductItem/sneackers/FoggySands/1.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/FoggySands/2.png",
-            "/assets/images/Products Images/ProductItem/sneackers/FoggySands/3.png",
-            "/assets/images/Products Images/ProductItem/sneackers/FoggySands/4.png"
-          ]
-        },
-        {
-          "id": 55,
-          "name": "CHRISTIAN LOUBOUTIN",
-          "price": "199$",
-          "sizes": ["40", "41", "42", "43", "44"],
-          "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
-          "images": [
-            "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/1.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/2.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/3.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/4.jpg"
-          ]
         }
       ],
       "img": "/assets/images/Products Images/sportsshoes web.jpg"
@@ -346,32 +320,7 @@
     {
       "category": "Casuals",
       "products": [
-        {
-          "id": 11,
-          "name": "adidasBasket Slippers",
-          "price": "169$",
-          "sizes": ["40", "41", "42", "43", "44"],
-          "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
-          "images": [
-            "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/1.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/2.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/3.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/4.jpg"
-          ]
-        },
-        {
-          "id": 22,
-          "name": "Canyon Green",
-          "price": "149$",
-          "sizes": ["40", "41", "42", "43", "44"],
-          "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
-          "images": [
-            "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/1.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/2.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/3.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/4.jpg"
-          ]
-        },
+        
         {
           "id": 33,
           "name": "Canyon oat",
@@ -489,19 +438,6 @@
       "category": "Street Style",
       "products": [
         {
-          "id": 11,
-          "name": "adidasBasket Slippers",
-          "price": "169$",
-          "sizes": ["40", "41", "42", "43", "44"],
-          "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
-          "images": [
-            "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/1.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/2.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/3.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/4.jpg"
-          ]
-        },
-        {
           "id": 22,
           "name": "Canyon Green",
           "price": "149$",
@@ -515,19 +451,6 @@
           ]
         },
         {
-          "id": 33,
-          "name": "Canyon oat",
-          "price": "129$",
-          "sizes": ["40", "41", "42", "43", "44"],
-          "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
-          "images": [
-            "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/1.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/2.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/3.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/4.jpg"
-          ]
-        },
-        {
           "id": 44,
           "name": "FoggySands",
           "price": "179$",
@@ -538,19 +461,6 @@
             "/assets/images/Products Images/ProductItem/sneackers/FoggySands/2.png",
             "/assets/images/Products Images/ProductItem/sneackers/FoggySands/3.png",
             "/assets/images/Products Images/ProductItem/sneackers/FoggySands/4.png"
-          ]
-        },
-        {
-          "id": 55,
-          "name": "CHRISTIAN LOUBOUTIN",
-          "price": "199$",
-          "sizes": ["40", "41", "42", "43", "44"],
-          "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
-          "images": [
-            "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/1.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/2.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/3.jpg",
-            "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/4.jpg"
           ]
         }
       ],

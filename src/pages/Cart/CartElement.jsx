@@ -49,22 +49,22 @@ export const CardItems = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 5px;
-  border: 0.5px solid lightgray;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-`;
+  row-gap: 10px;
+  `;
 
 export const CardItem = styled.div`
   width: 100%;
-  height: 80px;
-  padding: 5px;
+  /* padding: 5px; */
   display: flex;
+  overflow: hidden;
+  /* row-gap: 50px; */
   align-items: center;
-  justify-content: space-around;
-  border: 0.1px solid rgba(225, 225, 225, 0.5);
+  /* justify-content: space-around; */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 `;
 
 export const CartContent = styled.div`
-  padding: 5px;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 10px;
@@ -88,7 +88,7 @@ export const CardSummary = styled.div`
 `;
 
 export const CardItemLink = styled(Link)`
-  height: 78px;
+  height: 80px;
 `;
 
 export const CartItemImg = styled.img`

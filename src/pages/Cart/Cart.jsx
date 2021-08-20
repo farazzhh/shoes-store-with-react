@@ -60,7 +60,7 @@ const Cart = () => {
       <CartWrapper>
         <CartItemsWrapper>
           <CartItemsTitle>
-            You have {cartData.length} items in Cart
+            You have {cartData.length} items in your Cart
           </CartItemsTitle>
           <CardItems>
             {cartData.map((item, index) => (
