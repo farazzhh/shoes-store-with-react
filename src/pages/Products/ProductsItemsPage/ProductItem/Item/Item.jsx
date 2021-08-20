@@ -28,8 +28,10 @@ const Item = ({ data, requestData }) => {
   const imges = [];
   
   useEffect(() => {
-    window.scrollTo(0, 0);
-    
+     window.scrollTo(0, 0);
+  }, [])
+
+  useEffect(() => { 
     requestData.images.map((img) => {
       imges.push({
         original: `${process.env.PUBLIC_URL}${img}`,
@@ -37,7 +39,7 @@ const Item = ({ data, requestData }) => {
       });
     });
     
-  }, []);
+  }, );
     
   const addToCartHandler = () => {
       if (selectSize !== "") {

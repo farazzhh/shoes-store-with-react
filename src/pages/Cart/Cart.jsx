@@ -17,14 +17,15 @@ import {
 } from "./CartElement";
 
 const Cart = () => {
-  const [cart, pushToCart, removeItemFromCart] = useContext(CartContext);
+  const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext);
   let sum = 0;
   let cartEmpty = true;
 
-  if (cart) {
-    cart.map((item) => {
+  if (cartData) {
+  
+    cartData.map((item) => {
       sum += parseFloat(item.price);
-    })
+    });
     cartEmpty = false;
   } else {
     cartEmpty = true;
@@ -56,11 +57,16 @@ const Cart = () => {
       <BackButtonPublic />
       <CartWrapper>
         <CartItemsWrapper>
-          <CartItemsTitle>You have {cart.length} items in Cart</CartItemsTitle>
+          <CartItemsTitle>
+            You have {cartData.length} items in Cart
+          </CartItemsTitle>
           <CardItems>
-            {cart.map((item, index) => (
+            {cartData.map((item, index) => (
               <CardItem>
-                <CartItemImg src={`${process.env.PUBLIC_URL}${item.images[0]}`} alt={item.name} />
+                <CartItemImg
+                  src={`${process.env.PUBLIC_URL}${item.images[0]}`}
+                  alt={item.name}
+                />
                 <CartContent>
                   <CardItemSpan>{item.name}</CardItemSpan>
                   <CardItemSpan>size : {item.size}</CardItemSpan>
@@ -77,7 +83,7 @@ const Cart = () => {
         <div>
           <CartItemsTitle>Cart Summary</CartItemsTitle>
           <CardSummary>
-            <CardItemSpan>total numbers: {cart.length}</CardItemSpan>
+            <CardItemSpan>total numbers: {cartData.length}</CardItemSpan>
             <CardItemSpan>total Cost : {sum}$</CardItemSpan>
           </CardSummary>
         </div>
