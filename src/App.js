@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
