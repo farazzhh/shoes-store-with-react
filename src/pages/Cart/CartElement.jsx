@@ -6,7 +6,7 @@ export const CartSection = styled.section`
   min-width: 100vw;
   height: 100%;
   min-height: calc(100vh - 80px);
-  padding: 50px 0;
+  padding: 100px 0;
   position: relative;
   background: rgba(242, 197, 224, 0.7);
   display: flex;
@@ -54,26 +54,33 @@ export const CardItems = styled.div`
 
 export const CardItem = styled.div`
   width: 100%;
-  /* padding: 5px; */
   display: flex;
   overflow: hidden;
-  /* row-gap: 50px; */
   align-items: center;
-  /* justify-content: space-around; */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-`;
+  `;
 
 export const CartContent = styled.div`
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 10px;
   width: 100%;
+  text-align: center;
   justify-content: space-around;
+  align-items: center;
+
 `;
 
 export const CardItemSpan = styled.span`
-  font-weight: 300;
+  font-weight: 500;
+  width: 150px;
+  font-size: 16px;
+  text-align: center;
+  
+  @media screen and (max-width: 320px) {
+    width: 100px;
+    font-size: 14px;
+  }
 `;
 
 export const CardSummary = styled.div`
@@ -99,13 +106,14 @@ export const CartItemImg = styled.img`
 
 export const CardItemDeleteButton = styled.button`
   border: none;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
+  font-weight: 900;
   background-color: rgba(135, 10, 47, 0.5);
   color: white;
   border-radius: 2px;
   transition: all 0.2s ease-in-out;
-  margin-right: 5px;
+  margin-right: 10px;
   cursor: pointer;
   :hover {
     background-color: #870a30;
