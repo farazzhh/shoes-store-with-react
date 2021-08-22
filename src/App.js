@@ -37,6 +37,9 @@ function App(props) {
             <Route exact path="/">
               <Redirect to="/ShoesStore" />
             </Route>
+            <Route exact path="farazzhh.ir">
+              <Redirect to="/ShoesStore" />
+            </Route>
             <Route exact path="/products" component={Products} />
             <Route exact path="/aboutus" component={AboutUs} />
             <Route exact path="/contactus" component={ContactUs} />
