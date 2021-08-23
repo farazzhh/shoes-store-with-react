@@ -42,7 +42,6 @@ const [data, dataHandler, requestData, requestDataHandler] = useContext(Products
       {/* <ProductItemsPage /> */}
       <BGSection>
         {/* products parallex hero header from public components */}
-
         <PublicHeader
           title="Style"
           video={`${process.env.PUBLIC_URL}/assets/videos/sneackers header web.mp4`}
@@ -65,7 +64,7 @@ const [data, dataHandler, requestData, requestDataHandler] = useContext(Products
             width="40%"
             top={false}
             left={true}
-            opacity={0.3}
+            opacity={0.1}
             flipH={true}
           />
           <ProductsWrapper>

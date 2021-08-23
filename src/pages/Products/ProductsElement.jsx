@@ -9,7 +9,6 @@ export const ProductsSection = styled.section`
   overflow: hidden;
   background: rgb(255, 255, 255);
 
-
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
@@ -27,7 +26,7 @@ export const ProductsWrapper = styled.div`
   margin: 0 auto;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background: #5c001c;
+  background: rgba(135, 10, 47, 0.1);
   box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
   border-radius: 10px;
   border: #870a30 1px solid;
@@ -57,8 +56,8 @@ export const ProductsContent = styled.div`
 export const ProductsTitle = styled.h1`
   font-size: 50px;
   font-weight: 900;
-  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
-  color: #fff;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  color: #000;
   @media screen and (max-width: 768px) {
     font-size: 45px;
   }
@@ -72,8 +71,8 @@ export const ProductsTitle = styled.h1`
 export const ProductsDescribe = styled.p`
   font-weight: 600;
   font-size: 20px;
-  color: #fff;
-  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
+  color: #000;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
   margin: 10px 0;
   @media screen and (max-width: 768px) {
     font-size: 18px;
@@ -140,7 +139,7 @@ export const ProductsItemsTitle = styled.span`
   font-size: 18px;
   font-weight: 400;
   margin: 5px 0 10px 0;
-  text-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
   letter-spacing: 1px;
   transition: all 0.2s ease-in-out;
 

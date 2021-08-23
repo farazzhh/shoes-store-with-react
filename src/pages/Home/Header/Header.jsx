@@ -7,7 +7,6 @@ import SlideShow from "./SlideShow";
 const Header = () => {
   return (
     <HeaderSection>
-
         {/* React Slide Show */}
         <SlideShow />
         

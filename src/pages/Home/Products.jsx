@@ -27,11 +27,20 @@ const Products = () => {
         <ProductsSection id="products">
           <BackgroundPng
             src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}
-            width="30%"
+            width="40%"
+            top={true}
+            left={false}
+            opacity={0.1}
+            flipH={false}
+          />
+          <BackgroundPng
+            src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}
+            alt="logo"
+            width="35%"
             top={false}
             left={false}
-            opacity={0.3}
-            flipH={true}
+            opacity={0.1}
+            flipH={false}
           />
           <ProductsWrapper>
             <ProductsContent>

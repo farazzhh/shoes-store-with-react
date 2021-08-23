@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Contact = styled.section`
@@ -96,7 +95,6 @@ export const ContactInf = styled.div`
   `;
 
 export const ContactAddress = styled.p`
-min-width: 350px; 
   font-size: 18px;
   @media screen and (max-width: 768px) {
     font-size: 16px;
@@ -124,7 +122,7 @@ export const ContactsSocialWrapper = styled.div`
   }
 `;
 
-export const ContactsSocialLink = styled(Link)`
+export const ContactsSocialLink = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: center;

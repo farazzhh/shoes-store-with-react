@@ -22,20 +22,12 @@ const AboutUs = () => {
     <BGSection>
       <About id="aboutus">
         <BackgroundPng
-          width="20%"
-          src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus.png`}
-          top={true}
-          left={true}
-          opacity={0.1}
-          flipH={false}
-        />
-        <BackgroundPng
           src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus2 web.png`}
           width="30%"
           top={false}
-          left={false}
+          left={true}
           opacity={0.1}
-          flipH={false}
+          flipH={true}
         />
         <AboutContainer>
           <AboutWrapper>
@@ -58,6 +50,14 @@ const AboutUs = () => {
                 consequatur beatae odit veritatis, nostrum reprehenderit sunt
                 quaerat provident.
               </AboutDescribe>
+              <BackgroundPng
+                width="50%"
+                src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus.png`}
+                top={false}
+                left={false}
+                opacity={0.07}
+                flipH={true}
+              />
             </AboutContent>
           </AboutWrapper>
         </AboutContainer>

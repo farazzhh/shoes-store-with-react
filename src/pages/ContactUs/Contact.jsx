@@ -25,22 +25,6 @@ const ContactUs = () => {
   return (
     <BGSection>
       <Contact id="contactus">
-        <BackgroundPng
-          width="30%"
-          src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
-          top={false}
-          left={false}
-          opacity={0.3}
-          flipH={false}
-        />
-        <BackgroundPng
-          width="20%"
-          src={`${process.env.PUBLIC_URL}/assets/images/png/contact.png`}
-          top={true}
-          left={true}
-          opacity={0.3}
-          flipH={true}
-        />
         <ContactContainer>
           <ContactWrapper>
             <ContactVideo
@@ -52,6 +36,14 @@ const ContactUs = () => {
             <ContactContent>
               <ContactTitle>Contact us</ContactTitle>
               <BorderBottom height="2px" />
+              <BackgroundPng
+                width="40%"
+                src={`${process.env.PUBLIC_URL}/assets/images/png/contact.png`}
+                top={true}
+                left={true}
+                opacity={0.1}
+                flipH={true}
+              />
               <ContactDescribe>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Recusandae eaque dolor commodi illo animi corporis autem atque
@@ -64,6 +56,14 @@ const ContactUs = () => {
               </ContactDescribe>
               <BorderBottom height="2px" />
             </ContactContent>
+            <BackgroundPng
+              width="30%"
+              src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
+              top={false}
+              left={false}
+              opacity={0.07}
+              flipH={false}
+            />
             <ContactInf>
               <ContactAddress>
                 Call us: +1 (713) 999-8888
@@ -80,7 +80,7 @@ const ContactUs = () => {
                 <ContactsSocialText>Contact Us with : </ContactsSocialText>
                 <div>
                   <ContactsSocialLink
-                    to="https://www.instagram.com/"
+                    href="https://www.instagram.com/"
                     target="_blank"
                   >
                     <ContactsSocialImage
@@ -88,13 +88,13 @@ const ContactUs = () => {
                       alt="instagram icon"
                     />
                   </ContactsSocialLink>
-                  <ContactsSocialLink to="https://wa.me/" target="_blank">
+                  <ContactsSocialLink href="https://wa.me/" target="_blank">
                     <ContactsSocialImage
                       src={`${process.env.PUBLIC_URL}/assets/images/whatsapp.png`}
                       alt="whatsapp icon"
                     />
                   </ContactsSocialLink>
-                  <ContactsSocialLink to="mailto: Mysupport@gmail.com">
+                  <ContactsSocialLink href="mailto: Mysupport@gmail.com">
                     <ContactsSocialImage
                       src={`${process.env.PUBLIC_URL}/assets/images/gmail.png`}
                       alt="gmail icon"
