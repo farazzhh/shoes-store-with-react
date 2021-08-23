@@ -2,14 +2,15 @@ import styled from "styled-components";
 
 export const SideBarContainer = styled.aside`
   width: ${({ toggle }) => (toggle ? "200px" : "100px")};
-  height: ${({ toggle }) => (toggle ? "200px" : "40px")};
+  height: ${({ toggle }) => (toggle ? "230px" : "40px")};
   background-color: ${({ toggle }) =>
     toggle ? "rgba(239,104,180, 0.7)" : "rgb(239,104,180)"};
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
   display: flex;
-  justify-content: center;
+  border-radius: 2px;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0px;
@@ -20,7 +21,6 @@ export const SideBarContainer = styled.aside`
 `;
 
 export const Icon = styled.div`
-  position: ${({ toggle }) => (toggle ? "absolute" : "static")};
   left: 5px;
   padding: 5px;
   display: flex;
@@ -29,7 +29,8 @@ export const Icon = styled.div`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   z-index: 10;
-
+  background: rgb(239, 104, 180);
+  border-radius: 1px;
   span {
     text-align: center;
     transition: all 0.5s ease-in-out;
@@ -64,29 +65,42 @@ export const SideBarMenu = styled.ul`
   transition: width 1s ease-in-out;
   transition: opacity 1s ease-in-out;
   overflow: hidden;
-
   input {
     margin-right: 5px;
   }
   label {
     font-weight: 300;
   }
+  button {
+    font-weight: 600;
+    border: none;
+    width: 80px;
+    margin-top: 30px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    :hover {
+      background: rgb(216, 216, 216);
+    }
+  }
 `;
 
 export const SelectionDiv = styled.div`
   width: 100%;
   display: flex;
-  justify-content: end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 
   select {
     border: none;
     outline: none;
     border-radius: 2px;
-    font-size: 16px;
-    font-weight: 300;
-    width: 80%;
+    font-size: 14px;
+    font-weight: 400;
+    width: 70%;
+    padding: 2px;
     text-align: center;
   }
 `;
