@@ -9,9 +9,9 @@ import {
   ItemsName,
   ItemsPrice,
 } from "./ProductItemsPageElement";
-import { BackButtonPublic } from "../../../components/PublicComponents/BackButton/BackButton";
 import { ProductsContext } from "../../../providers/ProductsContext";
 import { Link } from "react-router-dom";
+import SideBarProducts from "../../../components/SideBarProducts/SideBarProducts";
 
 const ProductItemsPage = ({ props }) => {
   const [data, dataHandler, requestData, requestDataHandler] =
@@ -29,8 +29,8 @@ const ProductItemsPage = ({ props }) => {
     <>
       {requestData.Products && (
         <PIP id={requestData.category}>
-          <BackButtonPublic />
           <PIPItemsWrapper>
+            <SideBarProducts />
             <PIPItemsItem>
               {requestData.Products.map((item, index) => (
                 <Link

@@ -8,12 +8,19 @@ export const PIP = styled.section`
   min-height: 100vh;
   min-width: 100vw;
   background: lightgray;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
 `;
 
 export const PIPItemsWrapper = styled.div`
-  /* padding: 20px; */
-  
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.5);
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 80px 0;
+  border-radius: 10px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 `;
 
 export const PIPItemsItem = styled(Link)`
@@ -25,14 +32,13 @@ export const PIPItemsItem = styled(Link)`
   justify-content: center;
   grid-row-gap: 50px;
   grid-column-gap: 2%;
-  
-  @media all and (max-width: 480px){
+
+  @media all and (max-width: 480px) {
     grid-row-gap: 20px;
   }
 `;
 
 export const ItemsWrapper = styled.div`
-
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);

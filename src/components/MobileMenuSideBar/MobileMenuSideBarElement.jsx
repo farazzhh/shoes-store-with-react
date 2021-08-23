@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const SideBarContainer = styled.aside`
   width: ${({ toggle }) => (toggle ? "100vw" : "0")};
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   display: flex;
@@ -24,12 +24,11 @@ export const SideBarWrapper = styled.div`
   width: 90%;
   height: 70%;
   border-radius: 10px;
-  background-color: #870a30;
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
-    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 10px;
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
 `;
@@ -39,17 +38,16 @@ export const Icon = styled.div`
   top: 0;
   right: 0;
   margin: 40px;
-  border: 1px solid hotpink;
+  border: 1px solid #870a30;
   display: flex;
   border-radius: 50%;
   cursor: pointer;
-
 `;
 
 export const CloseIcon = styled(FaTimes)`
   width: 25px;
   height: 25px;
-  color: #fff;
+  color: #870a30;
   @media all and (max-width: 480px) {
     width: 20px;
     height: 20px;
@@ -70,15 +68,15 @@ export const SideBarMenu = styled.ul`
 `;
 
 export const SideBarLink = styled(Link)`
-  padding: 1rem 2rem;
-  color: white;
+  padding: 0.7rem 2rem;
+  color: #870a30;
   cursor: pointer;
   text-decoration: none;
   list-style: none;
   font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  border-top: rgb(255, 255, 255) 2px solid;
-  border-bottom: rgb(255, 255, 255) 2px solid;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  border-top: #870a30 2px solid;
+  border-bottom: #870a30 2px solid;
   border-radius: 10px;
 
   @media all and (max-width: 480px) {

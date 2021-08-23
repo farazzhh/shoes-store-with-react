@@ -41,7 +41,11 @@ const Item = ({ data, category, requestData }) => {
       category: category,
     };
     pushToCart(newItem);
-   };
+  };
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   return (
     <>
