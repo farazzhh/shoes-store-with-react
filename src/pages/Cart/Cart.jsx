@@ -33,25 +33,25 @@ const Cart = () => {
 
   return (
     <CartSection>
+      <BackButtonPublic />
       <BackgroundPng
         src={`${process.env.PUBLIC_URL}/assets/images/png/cartBgpng.png`}
-        width="30%"
+        width="50%"
         top={false}
         left={false}
-        opacity={0.1}
+        opacity={0.07}
         flipH={true}
       />
-      <BackgroundPng
-        src={`${process.env.PUBLIC_URL}/assets/images/png/shoebox.png`}
-        width="30%"
-        top={true}
-        left={true}
-        opacity={0.1}
-        flipH={false}
-      />
-
-      <BackButtonPublic />
       <CartWrapper>
+        <BackgroundPng
+          src={`${process.env.PUBLIC_URL}/assets/images/png/shoebox.png`}
+          width="100%"
+          top={true}
+          left={true}
+          opacity={0.05}
+          flipH={false}
+        />
+
         <CartItemsWrapper>
           <CartItemsTitle>
             You have {cartData && cartData.length} items in your Cart

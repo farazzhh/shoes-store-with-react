@@ -1,7 +1,14 @@
 import React, { useEffect, useContext } from "react";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
-import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
+// import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Redirect,
+  Switch,
+  HashRouter,
+} from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
 import SignIn from "./pages/Sign/SignIn";
 import Products from "./pages/Products/Products";
@@ -13,7 +20,7 @@ import ProductsApp from "./pages/Products/ProductsItemsPage/ProductsApp";
 import ProductsItemsApp from "./pages/Products/ProductsItemsPage/ProductItem/ProductsItemsApp.jsx";
 import Cart from "./pages/Cart/Cart";
 import { ProductsContext } from "./providers/ProductsContext";
-import { FindUrl } from "./FindUrl";
+import { BadUrl } from "./components/PublicComponents/BadUrl";
 function App(props) {
 
   const [data, dataHandler, requestData, requestDataHandler] =
@@ -25,7 +32,7 @@ function App(props) {
   },);
   
   return (
-    <Router >
+    <HashRouter>
       {data.items && (
         <div className="App">
           <SideBar />
@@ -52,13 +59,15 @@ function App(props) {
             <Route exact path="/Cart">
               <Redirect to="/cart" />
             </Route>
-            <Route path="*" components={FindUrl} />
+            <Route path="*">
+              <BadUrl />
+            </Route>
           </Switch>
 
           <Footer />
         </div>
       )}
-    </Router>
+    </HashRouter>
   );
 }
 

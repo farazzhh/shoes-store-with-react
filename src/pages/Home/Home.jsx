@@ -10,9 +10,6 @@ const Home = (props) => {
     window.scrollTo(0, 0);
   }, []);
 
-  const params = props.match.params;
-
-console.log(params);
   return (
     <>
       <HeaderSection />

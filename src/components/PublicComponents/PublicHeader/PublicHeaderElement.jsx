@@ -54,9 +54,6 @@ export const PIPImageCover = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  z-index: 11;
-  /* background-color: red; */
 `;
 
 export const PIPTitleWrapper = styled.div`

@@ -27,12 +27,12 @@ export const ProductsWrapper = styled.div`
   margin: 0 auto;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background: rgba(255, 105, 180,0.6);
+  background: #5c001c;
   box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
   border-radius: 10px;
   border: #870a30 1px solid;
   border-bottom: #870a30 3px solid;
- 
+
   @media screen and (max-width: 768px) {
     width: 80%;
     padding: 50px 10px;
