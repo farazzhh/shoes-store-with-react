@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 export const SideBarContainer = styled.aside`
-  width: ${({ toggle }) => (toggle ? "200px" : "100px")};
+  width: ${({ toggle }) => (toggle ? "250px" : "100px")};
   height: ${({ toggle }) => (toggle ? "230px" : "40px")};
   background-color: ${({ toggle }) =>
-    toggle ? "rgba(239,104,180, 0.7)" : "rgb(239,104,180)"};
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
+    toggle ? "rgba(239,104,180, 1)" : "rgb(239,104,180)"};
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
   display: flex;
   border-radius: 2px;
@@ -18,6 +16,8 @@ export const SideBarContainer = styled.aside`
   overflow: hidden;
   transition: all ease-in-out 0.5s;
   z-index: 99;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 `;
 
 export const Icon = styled.div`
@@ -51,10 +51,10 @@ export const CloseIcon = styled.img`
 `;
 export const SideBarMenuWrapper = styled.div`
   height: 100%;
-  width: 150px;
+  width: 200px;
 `;
 
-export const SideBarMenu = styled.ul`
+export const SideBarMenu = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -104,16 +104,4 @@ export const SelectionDiv = styled.div`
     text-align: center;
   }
 `;
-export const SideBarLink = styled.span`
-  padding: 1rem 2rem;
-  cursor: pointer;
-  border: 1px solid brown;
-  text-decoration: none;
-  list-style: none;
-  font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-  @media all and (max-width: 480px) {
-    padding: 0.5rem 1rem;
-    font-weight: 500;
-  }
-`;
+

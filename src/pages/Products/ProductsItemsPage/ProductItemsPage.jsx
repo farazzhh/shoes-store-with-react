@@ -1,7 +1,8 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import {
   PIP,
   PIPItemsWrapper,
+  PIPTitle,
   PIPItemsItem,
   ItemsWrapper,
   ItemsImage,
@@ -10,13 +11,14 @@ import {
   ItemsPrice,
 } from "./ProductItemsPageElement";
 import { ProductsContext } from "../../../providers/ProductsContext";
+import { BorderBottom } from "../../../components/PublicComponents/BorderBottom";
 import { Link } from "react-router-dom";
 import SideBarProducts from "../../../components/SideBarProducts/SideBarProducts";
 
 const ProductItemsPage = ({ props }) => {
   const [data, dataHandler, requestData, requestDataHandler] =
     useContext(ProductsContext);
-
+  const [itemsPageData, setItemsPageData] = useState(requestData);
   const clickHandler = (item) => {
     requestDataHandler(item);
   };
@@ -25,19 +27,32 @@ const ProductItemsPage = ({ props }) => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+      if (requestData) {
+        setItemsPageData(requestData);
+      }
+  });
+  
+
   return (
     <>
-      {requestData.Products && (
-        <PIP id={requestData.category}>
+      {itemsPageData.Products && (
+        <PIP id={itemsPageData.category}>
           <PIPItemsWrapper>
-            <SideBarProducts />
+            <PIPTitle>{itemsPageData.category}
+            <BorderBottom width="300px" margin="20px auto"/>
+            </PIPTitle>
+            <SideBarProducts
+              itemsPageData={itemsPageData}
+              setItemsPageData={setItemsPageData}
+            />
             <PIPItemsItem>
-              {requestData.Products.map((item, index) => (
+              {itemsPageData.Products.map((item, index) => (
                 <Link
                   key={index}
                   onClick={() => clickHandler(item)}
                   to={{
-                    pathname: requestData.category + "/" + item.id,
+                    pathname: itemsPageData.category + "/" + item.id,
                     query: { item },
                   }}
                 >

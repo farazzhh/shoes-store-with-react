@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import { MobileMenuContext } from "../../providers/MobileMenuContext";
+import React, { useRef, useState } from "react";
 import {
   SideBarContainer,
   SelectionDiv,
@@ -7,16 +6,13 @@ import {
   CloseIcon,
   SideBarMenuWrapper,
   SideBarMenu,
-  SideBarLink,
 } from "./SideBarProductsElement";
-const SideBarProducts = () => {
+const SideBarProducts = ({ itemsPageData, setItemsPageData }) => {
   const [toggle, setToggle] = useState(false);
   const [selectInputSort, seSelectInputSort] = useState(["A-Z", "Z-A"]);
-  const [selectInputStatus, seSelectInputStatus] = useState(false);
   const selectInputRef = useRef(null);
-  const optionSelectRef1 = useRef(null);
-  const optionSelectRef2 = useRef(null);
 
+  // select method of sort
   const inputClickHandler = (e) => {
     if (e === "price") {
       seSelectInputSort(["Low to High", "High to Low"]);
@@ -24,6 +20,31 @@ const SideBarProducts = () => {
       seSelectInputSort(["A-Z", "Z-A"]);
     }
   };
+
+  // sort items
+  const sortButtonHandler = () => {
+    const selectedText =
+      selectInputRef.current.options[selectInputRef.current.selectedIndex].text;
+    const list = { ...itemsPageData };
+    if (selectedText === "Low to High") {
+      list.Products.sort((a, b) => (a.price > b.price ? 1 : -1));
+      setItemsPageData(list);
+    } else if (selectedText === "High to Low") {
+      list.Products.sort((a, b) => (a.price < b.price ? 1 : -1));
+      setItemsPageData(list);
+    } else if (selectedText === "Z-A") {
+      list.Products.sort((a, b) =>
+        a.name.toUpperCase() < b.name.toUpperCase() ? 1 : -1
+      );
+      setItemsPageData(list);
+    } else if (selectedText === "A-Z") {
+      list.Products.sort((a, b) =>
+        a.name.toUpperCase() > b.name.toUpperCase() ? 1 : -1
+      );
+      setItemsPageData(list);
+    }
+  };
+
   return (
     <>
       <SideBarContainer toggle={toggle}>
@@ -54,18 +75,13 @@ const SideBarProducts = () => {
             <br />
             <SelectionDiv>
               <select ref={selectInputRef} name="priceSort" id="priceSort">
-                <option ref={optionSelectRef1} value="highlow">
-                  {selectInputSort[0]}
-                </option>
-                <option ref={optionSelectRef2} value="lowhigh">
-                  {selectInputSort[1]}
-                </option>
+                <option value="highlow">{selectInputSort[0]}</option>
+                <option value="lowhigh">{selectInputSort[1]}</option>
               </select>
             </SelectionDiv>
-            <button>OK</button>
+            <button onClick={sortButtonHandler}>OK</button>
           </SideBarMenu>
         </SideBarMenuWrapper>
-        {/* </SideBarWrapper> */}
       </SideBarContainer>
     </>
   );
