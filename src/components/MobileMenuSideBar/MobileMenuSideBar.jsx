@@ -26,7 +26,7 @@ const SideBar = () => {
               <SideBarLink to="/aboutus" onClick={toggleMobileMenu}>
                 About us
               </SideBarLink>
-              <SideBarLink to="/products" onClick={toggleMobileMenu}>
+              <SideBarLink to="/Products" onClick={toggleMobileMenu}>
                 Products
               </SideBarLink>
               <SideBarLink to="/contactus" onClick={toggleMobileMenu}>

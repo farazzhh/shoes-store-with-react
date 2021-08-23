@@ -2,7 +2,7 @@
   "items": [
     {
       "category": "Sneakers",
-      "products": [
+      "Products": [
         {
           "id": 1,
           "name": "adidasBasket",
@@ -203,7 +203,7 @@
     },
     {
       "category": "Slippers",
-      "products": [
+      "Products": [
         {
           "id": 11,
           "name": "adidasBasket Slippers",
@@ -274,7 +274,7 @@
     },
     {
       "category": "Sports",
-      "products": [
+      "Products": [
         {
           "id": 11,
           "name": "adidasBasket Slippers",
@@ -319,7 +319,7 @@
     },
     {
       "category": "Casuals",
-      "products": [
+      "Products": [
         
         {
           "id": 33,
@@ -365,7 +365,7 @@
     },
     {
       "category": "Boots",
-      "products": [
+      "Products": [
         {
           "id": 11,
           "name": "adidasBasket Slippers",
@@ -436,7 +436,7 @@
     },
     {
       "category": "Street Style",
-      "products": [
+      "Products": [
         {
           "id": 22,
           "name": "Canyon Green",
@@ -467,15 +467,15 @@
       "img": "/assets/images/Products Images/shoe11 web.jpg"
     }
   ],
-  "navbarmenu": [
+  "navBarMenu": [
     {
       "name": "About Us",
       "to": "/aboutus"
     },
     {
       "name": "Products",
-      "to": "/products",
-      "submenu": [
+      "to": "/Products",
+      "subMenu": [
         { "name": "Sneakers", "to": "/Sneakers" },
         { "name": "Slippers", "to": "/Slippers" },
         { "name": "Sports", "to": "/Sports" },

@@ -128,7 +128,7 @@ export const ItemSizeInput = styled.input`
 export const ItemAddToCartBtn = styled.input`
   margin: 20px auto;
   width: 100%;
-  padding: 15px 0;
+  height: 50px;
   border: 2px solid #870a30;
   border-radius: 8px;
   font-weight: bold;
@@ -146,6 +146,10 @@ export const ItemAddToCartBtn = styled.input`
     background: rgba(255, 105, 180, 1);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
     transform: translateY(1.5px);
+  }
+  :disabled{
+    background: #f9c3de;
+
   }
 `;
 export const ItemDescribe = styled.p`

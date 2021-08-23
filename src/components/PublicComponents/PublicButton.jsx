@@ -17,8 +17,8 @@ export const PublicButton = styled(LinkR)`
   margin: ${({ margin }) => (margin ? "0 auto 20px auto" : null)};
   padding: ${({ big }) => (big ? " 20px 30px" : " 10px 20px")};
   width: ${({ width }) => (width ? `${width}` : null)};
-  ${({ transparent }) =>
-    !transparent
+  ${({ transparency }) =>
+    !(transparency)
       ? "background:  rgba(255, 105, 180, 1)"
       : "background:  rgba(255, 105, 180, 0.5)"};
   text-align: center;
@@ -42,7 +42,7 @@ export const PublicButton = styled(LinkR)`
     font-size: 14px;
     padding: 2px 20px;
   }
-  
+
   @media screen and (max-width: 480px) {
     max-width: 80%;
     font-size: 12px;

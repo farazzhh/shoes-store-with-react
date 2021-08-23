@@ -22,7 +22,7 @@ to{ background-color: red;}
 
 export const BackButtonAnimate = keyframes`
 from{ opacity : 0 ;}
-to{ opacity : 0.7 ;}
+to{ opacity : 0.5 ;}
 `;
 
 export const SubMenuAnimate = keyframes`

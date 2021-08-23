@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
-import { Link as LinkR } from "react-router-dom";
+import { Link, Link as LinkR } from "react-router-dom";
 
 export const Nav = styled.nav`
   position: sticky;
@@ -28,7 +28,7 @@ export const NavWrapper = styled.div`
 
 `;
 
-export const NavWrapperLogo = styled.a`
+export const NavWrapperLogo = styled(Link)`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -131,12 +131,11 @@ export const NavMenuItem = styled(LinkR)`
     border-bottom: rgba(255, 105, 180, 1) 2px solid;
     transform: translateY(2px);
     /* ul is submenu */
-    @media screen and (min-width: 769px){
+    @media screen and (min-width: 769px) {
       ul {
         opacity: 1;
-        height: ${({ subMenuHeight }) => subMenuHeight};
+        height: ${({ submenuheight }) => submenuheight};
       }
-
     }
   }
 `;
@@ -210,6 +209,8 @@ export const NavCartMobile = styled(LinkR)`
   }
 `;
 export const NavCartImage = styled.img`
+  margin-right: 2px;
   height: 17px;
   object-fit: contain;
+  
 `;

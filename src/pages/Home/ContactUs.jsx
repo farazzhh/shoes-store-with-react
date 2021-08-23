@@ -17,7 +17,6 @@ import {
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng.jsx";
 import { BGSection } from "../../components/PublicComponents/BGSection";
-import { Link } from "react-router-dom";
 import { PublicButton } from "../../components/PublicComponents/PublicButton.jsx";
 
 const ContactUs = () => {
@@ -80,7 +79,7 @@ const ContactUs = () => {
                 <ContactsSocialText>Check Us in : </ContactsSocialText>
                 <div>
                   <ContactsSocialLink
-                    href="https://www.instagram.com/"
+                    to="https://www.instagram.com/"
                     target="_blank"
                   >
                     <ContactsSocialImage
@@ -88,13 +87,13 @@ const ContactUs = () => {
                       alt="instagram icon"
                     />
                   </ContactsSocialLink>
-                  <ContactsSocialLink href="https://wa.me/" target="_blank">
+                  <ContactsSocialLink to="https://wa.me/" target="_blank">
                     <ContactsSocialImage
                       src={`${process.env.PUBLIC_URL}/assets/images/whatsapp.png`}
                       alt="whatsapp icon"
                     />
                   </ContactsSocialLink>
-                  <ContactsSocialLink href="mailto: Mysupport@gmail.com">
+                  <ContactsSocialLink to="mailto: Mysupport@gmail.com">
                     <ContactsSocialImage
                       src={`${process.env.PUBLIC_URL}/assets/images/gmail.png`}
                       alt="gmail icon"
@@ -103,9 +102,14 @@ const ContactUs = () => {
                 </div>
               </ContactsSocialWrapper>
             </ContactInf>
-            <PublicButton to="/contactus" margin="true" width="95%" transparent={true}>
+            <PublicButton
+              to="/contactus"
+              margin="true"
+              width="95%"
+              transparency="true"
+            >
               See More
-            </PublicButton> 
+            </PublicButton>
           </ContactWrapper>
         </ContactContainer>
       </Contact>

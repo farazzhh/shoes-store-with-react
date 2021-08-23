@@ -13,6 +13,7 @@ import ProductsApp from "./pages/Products/ProductsItemsPage/ProductsApp";
 import ProductsItemsApp from "./pages/Products/ProductsItemsPage/ProductItem/ProductsItemsApp.jsx";
 import Cart from "./pages/Cart/Cart";
 import { ProductsContext } from "./providers/ProductsContext";
+import { FindUrl } from "./FindUrl";
 function App(props) {
 
   const [data, dataHandler, requestData, requestDataHandler] =
@@ -24,33 +25,34 @@ function App(props) {
   },);
   
   return (
-    <Router>
+    <Router >
       {data.items && (
         <div className="App">
           <SideBar />
           <Nav />
           <Switch>
-            <Route exact path="/ShoesStore" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/Home">
-              <Redirect to="/ShoesStore" />
+              <Redirect to="/" />
             </Route>
-            <Route exact path="/">
-              <Redirect to="/ShoesStore" />
+            <Route exact path="/ShoesStore">
+              <Redirect to="/" />
             </Route>
-            <Route exact path="farazzhh.ir">
-              <Redirect to="/ShoesStore" />
-            </Route>
-            <Route exact path="/products" component={Products} />
+            <Route exact path="/Products" component={Products} />
             <Route exact path="/aboutus" component={AboutUs} />
             <Route exact path="/contactus" component={ContactUs} />
             <Route exact path="/Signin" component={SignIn} />
-            <Route exact path="/products/:category" component={ProductsApp} />
+            <Route exact path="/Products/:category" component={ProductsApp} />
             <Route
               exact
-              path="/products/:category/:id"
+              path="/Products/:category/:id"
               component={ProductsItemsApp}
             ></Route>
             <Route exact path="/cart" component={Cart} />
+            <Route exact path="/Cart">
+              <Redirect to="/cart" />
+            </Route>
+            <Route path="*" components={FindUrl} />
           </Switch>
 
           <Footer />

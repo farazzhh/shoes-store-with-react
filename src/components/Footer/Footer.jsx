@@ -4,11 +4,11 @@ import { BGSection } from "../PublicComponents/BGSection";
 import {
   FooterContainer,
   FooterWrap,
-  FooterLinksContainer,
-  FooterLinkWrapper,
-  FooterLinkItems,
-  FooterLinkTitle,
-  FooterLink,
+  // FooterLinksContainer,
+  // FooterLinkWrapper,
+  // FooterLinkItems,
+  // FooterLinkTitle,
+  // FooterLink,
   SocialMedia,
   SocialMediaWrap,
   SocialLogo,
@@ -20,9 +20,7 @@ import {
 } from "./FooterElement";
 
 const Footer = () => {
-  const toggleHome = () => {
-    // scroll.scrollToTop();
-  };
+  
   return (
     <BGSection>
       <FooterContainer>
@@ -80,28 +78,28 @@ const Footer = () => {
                 </WebSiteRights>
                 <SocialIcons>
                   <SocialIconLink
-                    hred="//www.facebook.com"
+                    to="//www.facebook.com"
                     target="_blank"
                     aria-label="Facebook"
                   >
                     <FaFacebook />
                   </SocialIconLink>
                   <SocialIconLink
-                    hred="//www.instagram.com"
+                    to="//www.instagram.com"
                     target="_blank"
                     aria-label="Instgaram"
                   >
                     <FaInstagram />
                   </SocialIconLink>
                   <SocialIconLink
-                    hred="//www.youtube.com"
+                    to="//www.youtube.com"
                     target="_blank"
                     aria-label="Youtube"
                   >
                     <FaYoutube />
                   </SocialIconLink>
                   <SocialIconLink
-                    hred="//www.twitter.com"
+                    to="//www.twitter.com"
                     target="_blank"
                     aria-label="Twiiter"
                   >

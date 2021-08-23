@@ -22,7 +22,7 @@ export const SideBarContainer = styled.aside`
 export const SideBarWrapper = styled.div`
   max-width: 450px;
   width: 90%;
-  height: 80%;
+  height: 70%;
   border-radius: 10px;
   background-color: #870a30;
   display: flex;

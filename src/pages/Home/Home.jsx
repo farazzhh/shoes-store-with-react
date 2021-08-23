@@ -5,11 +5,14 @@ import ContactUs from "./ContactUs";
 import Products from "./Products.jsx";
 import styled from "styled-components";
 
-const Home = () => {
+const Home = (props) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const params = props.match.params;
+
+console.log(params);
   return (
     <>
       <HeaderSection />

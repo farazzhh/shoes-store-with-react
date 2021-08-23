@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { SubMenuList, SubMenuListItem } from "./SubMenuElement";
 
-const SubMenu = ({ menu, subMenu, subMenuHeight }) => {
+const SubMenuComponents = ({ menu, subMenu, subMenuHeight }) => {
   return (
     <SubMenuList height={subMenuHeight}>
-      {subMenu.map((item) => (
-        <SubMenuListItem to={`/${menu}${item.to}`}>{item.name}</SubMenuListItem>
+      {subMenu.map((item, index) => (
+        <SubMenuListItem key={index} to={`/${menu}${item.to}`}>
+          {item.name}
+        </SubMenuListItem>
       ))}
     </SubMenuList>
   );
 };
 
-export default SubMenu;
+export default SubMenuComponents;

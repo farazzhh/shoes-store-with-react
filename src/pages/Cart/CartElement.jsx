@@ -12,7 +12,12 @@ export const CartSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 480px) {
+    padding: 80px 0;
+  }
 `;
+
 
 export const CartWrapper = styled.div`
   max-width: 900px;

@@ -12,30 +12,27 @@ const ProductsItemsApp = (props) => {
 
   useEffect(() => {
     const [resultCategory] = res.filter(
-      (item) => item.category == params.category
+      (item) => item.category === params.category
     );
-    const [resultId] = resultCategory.products.filter(
+    const [resultId] = resultCategory.Products.filter(
       (item) => item.id == params.id
     );
 
     if (resultCategory && resultId) {
       setCheckData(true);
     }
+
     requestDataHandler(resultId);
-  }, [params.category]);
+  }, []);
 
   return (
     <>
-      {checkData ? (
-        requestData.id && (
-          <Item
-            data={data}
-            category={params.category}
-            requestData={requestData}
-          />
-        )
-      ) : (
-        <BadUrl />
+      {requestData.id && (
+        <Item
+          data={data}
+          category={params.category}
+          requestData={requestData}
+        />
       )}
     </>
   );

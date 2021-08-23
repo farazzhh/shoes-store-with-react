@@ -71,7 +71,7 @@ export const FooterLinkTitle = styled.h1`
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 `;
 
-export const FooterLink = styled.a`
+export const FooterLink = styled(Link)`
   text-align: center;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   text-decoration: none;
@@ -153,7 +153,7 @@ export const SocialIcons = styled.div`
   }
 `;
 
-export const SocialIconLink = styled.a`
+export const SocialIconLink = styled(Link)`
   font-size: 24px;
   cursor: pointer;
 `;

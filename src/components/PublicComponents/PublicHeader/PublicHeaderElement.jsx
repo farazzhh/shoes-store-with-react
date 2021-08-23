@@ -1,8 +1,5 @@
 import styled from "styled-components";
-import {
-  OpacityAnimate,
-  OpacityLetterSpacing,
-} from "../keyframes";
+import { OpacityAnimate, OpacityLetterSpacing } from "../keyframes";
 
 export const PIPHeader = styled.div`
   width: 100vw;
@@ -51,6 +48,16 @@ export const PIPImage = styled.video`
   object-fit: cover;
   object-position: center center;
 `;
+export const PIPImageCover = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 11;
+  /* background-color: red; */
+`;
 
 export const PIPTitleWrapper = styled.div`
   display: flex;
@@ -60,7 +67,7 @@ export const PIPTitleWrapper = styled.div`
   width: 100%;
   height: 100%;
   padding: 30px;
-  `;
+`;
 
 export const PIPTitle = styled.h1`
   opacity: 0;

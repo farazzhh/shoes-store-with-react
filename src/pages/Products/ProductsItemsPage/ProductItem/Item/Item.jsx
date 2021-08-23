@@ -3,7 +3,6 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/scss/image-gallery.css";
 import { BackButtonPublic } from "../../../../../components/PublicComponents/BackButton/BackButton.jsx";
 import { CartContext } from "../../../../../providers/CartContext.js";
-import { ProductsContext } from "../../../../../providers/ProductsContext.js";
 import {
   ItemSection,
   ItemWrapper,
@@ -21,38 +20,28 @@ import {
   ItemDescribe,
 } from "./ItemElement";
 
-const Item = ({ data,category, requestData }) => {
+const Item = ({ data, category, requestData }) => {
   const [cart, pushToCart] = useContext(CartContext);
 
-  let selectSize = "";
   const imges = [];
-  
+  const [selectSize, setSelectSize] = useState("");
   useEffect(() => {
-     window.scrollTo(0, 0);
-  }, [])
-
-  useEffect(() => { 
     requestData.images.map((img) => {
       imges.push({
         original: `${process.env.PUBLIC_URL}${img}`,
         thumbnail: `${process.env.PUBLIC_URL}${img}`,
       });
     });
-    
-  }, );
-    
+  });
+
   const addToCartHandler = () => {
-      if (selectSize !== "") {
-        const newItem = {
-          ...requestData,
-          size: selectSize,
-          category: category ,
-        };
-      return pushToCart(newItem);
-    } else {
-      alert("Select Size");
-    }
-  };
+    const newItem = {
+      ...requestData,
+      size: selectSize,
+      category: category,
+    };
+    pushToCart(newItem);
+   };
 
   return (
     <>
@@ -75,27 +64,38 @@ const Item = ({ data,category, requestData }) => {
 
                 <ItemSizeInputLabelWrapper>
                   {requestData.sizes.map((size, index) => (
-                    <ItemSizeInputLabel>
+                    <ItemSizeInputLabel key={index}>
                       <ItemSizeInput
                         type="radio"
                         id={index}
                         name="ItemSize"
                         value={size}
-                        onClick={() => {
-                          return (selectSize = size);
-                        }}
                       />
-                      <ItemSizeLabel for={index}>{size}</ItemSizeLabel>
+                      <ItemSizeLabel
+                        htmlFor={index}
+                        onClick={() => setSelectSize(size)}
+                      >
+                        {size}
+                      </ItemSizeLabel>
                     </ItemSizeInputLabel>
                   ))}
                 </ItemSizeInputLabelWrapper>
               </ItemSizesWrapper>
-              <ItemAddToCartBtn
-                type="submit"
-                name="submit"
-                value="Add to Card"
-                onClick={addToCartHandler}
-              />
+              {selectSize ? (
+                <ItemAddToCartBtn
+                  type="submit"
+                  name="submit"
+                  value="Add to Card"
+                  onClick={addToCartHandler}
+                />
+              ) : (
+                <ItemAddToCartBtn
+                  type="submit"
+                  name="submit"
+                  value="Add to Card"
+                  disabled
+                />
+              )}
               <span>
                 <strong>Describtion:</strong>
                 <ItemDescribe>{requestData.describe}</ItemDescribe>

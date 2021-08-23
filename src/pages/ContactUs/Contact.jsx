@@ -80,7 +80,7 @@ const ContactUs = () => {
                 <ContactsSocialText>Contact Us with : </ContactsSocialText>
                 <div>
                   <ContactsSocialLink
-                    href="https://www.instagram.com/"
+                    to="https://www.instagram.com/"
                     target="_blank"
                   >
                     <ContactsSocialImage
@@ -88,13 +88,13 @@ const ContactUs = () => {
                       alt="instagram icon"
                     />
                   </ContactsSocialLink>
-                  <ContactsSocialLink href="https://wa.me/" target="_blank">
+                  <ContactsSocialLink to="https://wa.me/" target="_blank">
                     <ContactsSocialImage
                       src={`${process.env.PUBLIC_URL}/assets/images/whatsapp.png`}
                       alt="whatsapp icon"
                     />
                   </ContactsSocialLink>
-                  <ContactsSocialLink href="mailto: Mysupport@gmail.com">
+                  <ContactsSocialLink to="mailto: Mysupport@gmail.com">
                     <ContactsSocialImage
                       src={`${process.env.PUBLIC_URL}/assets/images/gmail.png`}
                       alt="gmail icon"

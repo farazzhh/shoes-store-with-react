@@ -2,10 +2,13 @@ import styled from "styled-components";
 export const About = styled.section`
   width: 100vw;
   padding: 200px 0;
-  background:  rgba(135, 10, 47, 0.9) ;
+  background: rgba(135, 10, 47, 0.9);
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 30px 0;
   }
 `;
 

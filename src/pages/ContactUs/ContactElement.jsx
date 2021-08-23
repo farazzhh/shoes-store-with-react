@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Contact = styled.section`
@@ -123,7 +124,7 @@ export const ContactsSocialWrapper = styled.div`
   }
 `;
 
-export const ContactsSocialLink = styled.a`
+export const ContactsSocialLink = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: center;

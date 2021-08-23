@@ -3,14 +3,15 @@ export const CartContext = createContext();
 
 export const CartProvider = (props) => {
   const [cartData, setCartData] = useState([]);
-  const [result, setResult] = useState();
-
-  const pushToCart = (newitem) => {
-    setResult(newitem);
+  
+  const pushToCart = (newItem) => {
+    let data = [...cartData, newItem]; 
+    setCartData(data);
+    localStorage.setItem("cartList", JSON.stringify(data));
   };
 
   const removeItemFromCart = (id) => {
-    const data = [...cartData];
+    let data = [...cartData];
     data.splice(id, 1);
     setCartData(data);
     localStorage.removeItem("cartList");
@@ -18,17 +19,20 @@ export const CartProvider = (props) => {
   };
 
   useEffect(() => {
-    if (result) {
-      const data = [...cartData];
-      data.push(result);
-      setCartData(data);
-      localStorage.setItem("cartList", JSON.stringify(data));
-    }
-  }, [result]);
+    const loadDataFromLocalStorage = () => {
+      const data = JSON.parse(localStorage.getItem("cartList"));
+      if (data) {
+        if (cartData) {
+          let [re] = [...cartData,data];
+          setCartData(re);
+        } else {
+          let re = [...data];
+          setCartData(re);
+        }
+      }
+    };
 
-  useEffect(() => {
-    const data = JSON.parse(localStorage.getItem("cartList"));
-    setCartData(data);
+    loadDataFromLocalStorage();
   }, []);
 
   return (

@@ -1,6 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { MobileMenuContext } from "../../providers/MobileMenuContext";
 import { ProductsContext } from "../../providers/ProductsContext";
+import { CartContext } from "../../providers/CartContext";
 import {
   Nav,
   NavWrapper,
@@ -12,28 +13,31 @@ import {
   NavCartImage,
   NavMenuWrapper,
   NavMenu,
-  NavMenuItemWrapper,
   NavMenuItem,
   SignButton,
   NavMobileWrapper,
   MobileIcon,
 } from "./NavElement";
-import SubMenu from "./SubMenu";
+import SubMenuComponents from "./SubMenu";
 
 const NavBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
-  
-  const [data, dataHandler, requestData, requestDataHandler] =
+const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext)
+  const [data] =
     useContext(ProductsContext);
-  
+
   const subMenuHeight = (subMenu) => {
     return (subMenu.length * 40).toString() + "px";
-  }
-
+  };
+  const computSubMenuHeight = (menuItems) => {
+    if (menuItems.subMenu) {
+      return subMenuHeight(menuItems.subMenu);
+    }
+  };
   return (
     <Nav className="nav">
       <NavWrapper>
-        <NavWrapperLogo href="/">
+        <NavWrapperLogo to="/">
           <Logo
             src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
             alt="logo"
@@ -43,30 +47,22 @@ const NavBar = () => {
 
         <NavMenuWrapper>
           <NavMenu>
-            {data.navbarmenu &&
-              data.navbarmenu.map((menuItems) => (
-    <>
-                  <NavMenuItem
-                    to={`${menuItems.to}`}
-                    subMenuHeight={
-                      menuItems.submenu &&
-                      (() => subMenuHeight(menuItems.submenu))
-                    }
-                  >
-                    {menuItems.name}
+            {data.navBarMenu &&
+              data.navBarMenu.map((menuItems, index) => (
+                <NavMenuItem
+                  key={index}
+                  to={`${menuItems.to}`}
+                  submenuheight={() => computSubMenuHeight(menuItems)}
+                >
+                  {menuItems.name}
 
-                    {menuItems.submenu && (
-                      <SubMenu
-                        menu={menuItems.name}
-                        subMenu={menuItems.submenu}
-                        subMenuHeight={
-                          menuItems.submenu &&
-                          (() => subMenuHeight(menuItems.submenu))
-                        }
-                      />
-                    )}
-                  </NavMenuItem>
-              </>
+                  {menuItems.subMenu && (
+                    <SubMenuComponents
+                      menu={menuItems.name}
+                      subMenu={menuItems.subMenu}
+                    />
+                  )}
+                </NavMenuItem>
               ))}
 
             <SignButton to="/signin">Sign up/in</SignButton>
@@ -74,14 +70,16 @@ const NavBar = () => {
               <NavCartImage
                 src={`${process.env.PUBLIC_URL}/assets/images/png/cart.png`}
               />
+              {cartData.length}
             </NavCart>
           </NavMenu>
         </NavMenuWrapper>
         <NavMobileWrapper>
-          <NavCartMobile to="/cart" mobileMenu={true}>
+          <NavCartMobile to="/cart">
             <NavCartImage
               src={`${process.env.PUBLIC_URL}/assets/images/png/cart.png`}
             />
+            {cartData.length}
           </NavCartMobile>
           <MobileIcon onClick={toggleMobileMenu} />
         </NavMobileWrapper>

@@ -43,11 +43,11 @@ const Products = () => {
               {data.items.map((item, index) => (
                 <ProductsItems
                   key={index}
-                  to={{ pathname: `/products/${item.category}` }}
+                  to={{ pathname: `/Products/${item.category}` }}
                 >
                   <ProductsItemsImage>
                     <ProductsImage
-                      src={`${process.env.PUBLIC_URL}/${item.img}`}
+                      src={`${process.env.PUBLIC_URL}${item.img}`}
                     />
                   </ProductsItemsImage>
                   <ProductsItemsTitle>{item.category}</ProductsItemsTitle>

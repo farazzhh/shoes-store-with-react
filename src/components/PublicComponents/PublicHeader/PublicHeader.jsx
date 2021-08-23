@@ -5,6 +5,7 @@ import {
   PIPHeroWrapper,
   PIPHeroWrapperBG,
   PIPImage,
+  PIPImageCover,
   PIPTitleWrapper,
   PIPTitle,
   PIPDescribe,
@@ -13,7 +14,15 @@ import {
 const PublicHeader = ({ title, video }) => {
   return (
     <PIPHeader>
-      <PIPImage src={video} autoPlay muted type="video/mp4" />
+      <PIPImage
+        src={video}
+        webkit-playsinline
+        playsinline
+        autoPlay
+        muted
+        type="video/mp4"
+      />
+      <PIPImageCover/>
       <PIPHeroWrapper>
         <PIPHeroWrapperBG />
         <PIPTitleWrapper>

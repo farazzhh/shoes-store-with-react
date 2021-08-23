@@ -65,13 +65,11 @@ const Slideshow = () => {
         ))}
       </Slide>
       <HeroWrapper>
-        <HeroTitle>
-          Respect
-        </HeroTitle>
-          <BorderBottom />
+        <HeroTitle>Respect</HeroTitle>
+        <BorderBottom />
         <HeroDescribe>Your Feet</HeroDescribe>
         <PublicButtonWrapper>
-          <PublicButton to="/signin" transparent="true">
+          <PublicButton to="/signin" transparency="true" >
             <strong>Sign Up</strong>/<small>Sign in</small>
             <Icon icon={awsomeIcon} />
           </PublicButton>

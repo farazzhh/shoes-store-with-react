@@ -61,7 +61,7 @@ const AboutUs = () => {
                 consequatur beatae odit veritatis, nostrum reprehenderit sunt
                 quaerat provident.
               </AboutDescribe>
-              <PublicButton to="/aboutus" margin="true" transparent={true}>
+              <PublicButton to="/aboutus" margin="true" transparency="true">
                 See More
               </PublicButton>
             </AboutContent>
