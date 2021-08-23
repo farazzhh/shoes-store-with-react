@@ -2,7 +2,7 @@ import styled from "styled-components";
 export const About = styled.section`
   width: 100vw;
   padding: 200px 0;
-  background: rgba(135, 10, 47, 0.1);
+  background: rgb(243,230,234);
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
@@ -16,15 +16,10 @@ export const AboutContainer = styled.div`
   width: 70%;
   max-width: 1100px;
   margin: 0 auto;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255,1);
-  
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
-    rgba(90, 125, 188, 0.05) 0px 0.25em 1em; 
+  background: linear-gradient( to right, #fff 50%, rgb(243, 230, 234));
+  box-shadow: rgba(0, 0, 0, 0.1) -3px -3px 3px;
   border-radius: 10px;
   overflow: hidden;
-  border-bottom: #870a30 1px solid;
   border-left: #870a30 1px solid;
   @media screen and (max-width: 1024px) {
     width: 75%;
@@ -79,7 +74,7 @@ export const AboutDescribe = styled.p`
 
 export const AboutImageGalleryWrapper = styled.div`
   margin: 150px auto 0 auto;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 1);
   width: 90%;
   max-width: 1100px;
   border-radius: 10px;

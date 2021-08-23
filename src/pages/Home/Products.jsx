@@ -30,16 +30,7 @@ const Products = () => {
             width="40%"
             top={true}
             left={false}
-            opacity={0.1}
-            flipH={false}
-          />
-          <BackgroundPng
-            src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}
-            alt="logo"
-            width="35%"
-            top={false}
-            left={false}
-            opacity={0.1}
+            opacity={0.2}
             flipH={false}
           />
           <ProductsWrapper>

@@ -26,6 +26,22 @@ const ContactUs = () => {
   return (
     <BGSection>
       <Contact id="contactus">
+        <BackgroundPng
+          width="20%"
+          src={`${process.env.PUBLIC_URL}/assets/images/png/womancall.png`}
+          top={true}
+          left={false}
+          opacity={0.07}
+          flipH={false}
+        />
+        <BackgroundPng
+          width="30%"
+          src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
+          top={false}
+          left={true}
+          opacity={0.1}
+          flipH={true}
+        />
         <ContactContainer>
           <ContactWrapper>
             <ContactVideo
@@ -41,9 +57,9 @@ const ContactUs = () => {
                 width="40%"
                 src={`${process.env.PUBLIC_URL}/assets/images/png/contact.png`}
                 top={true}
-                left={true}
+                left={false}
                 opacity={0.1}
-                flipH={true}
+                flipH={false}
               />
               <ContactDescribe>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -57,14 +73,7 @@ const ContactUs = () => {
               </ContactDescribe>
               <BorderBottom height="2px" />
             </ContactContent>
-            <BackgroundPng
-              width="30%"
-              src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
-              top={false}
-              left={false}
-              opacity={0.07}
-              flipH={false}
-            />
+
             <ContactInf>
               <ContactAddress>
                 Call us: +1 (713) 999-8888
@@ -105,7 +114,7 @@ const ContactUs = () => {
             <PublicButton
               to="/contactus"
               margin="true"
-              width="95%"
+              width="300px"
               transparency="true"
             >
               See More

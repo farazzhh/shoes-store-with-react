@@ -61,7 +61,7 @@ const AboutUs = () => {
                 opacity={0.07}
                 flipH={true}
               />
-              <PublicButton to="/aboutus" margin="true" transparency="true">
+              <PublicButton to="/aboutus" margin="true" transparency="true" width="300px">
                 See More
               </PublicButton>
             </AboutContent>

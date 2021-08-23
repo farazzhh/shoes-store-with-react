@@ -21,11 +21,9 @@ export const ContactContainer = styled.div`
   margin: 0 auto;
   padding-bottom: 10px;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
-    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  background: linear-gradient(to left, #fff 30%, rgb(243, 230, 234));
+  box-shadow: rgba(0, 0, 0, 0.1) -3px -3px 3px;
   border-radius: 10px;
-  border-bottom: #870a30 1px solid;
   border-left: #870a30 1px solid;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);

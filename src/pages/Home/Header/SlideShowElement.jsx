@@ -38,13 +38,10 @@ export const HeroWrapper = styled.div`
   justify-content: center;
 
   @media screen and (max-width: 768px) {
-    width: 65%;
+    width: 100%;
     background: rgba(0, 0, 0, 0.3);
     -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
-  }
-  @media screen and (max-width: 481px) {
-    width: 100%;
     align-items: center;
   }
   @media screen and (min-width: 1200px) {

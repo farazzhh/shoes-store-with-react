@@ -27,14 +27,14 @@ export const ProductsWrapper = styled.div`
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   background: rgba(135, 10, 47, 0.1);
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 10px;
   border-radius: 10px;
-  border: #870a30 1px solid;
+  border-left: #870a30 1px solid;
   border-bottom: #870a30 3px solid;
 
   @media screen and (max-width: 768px) {
     width: 80%;
-    padding: 50px 10px;
+    padding: 50px 5px;
   }
   @media screen and (max-width: 480px) {
     width: 90%;
@@ -90,8 +90,8 @@ export const ProductsMenuItems = styled.ul`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  row-gap: 15px;
-  column-gap: 15px;
+  row-gap: 10px;
+  column-gap: 10px;
   padding: 10px;
 `;
 
@@ -120,6 +120,9 @@ export const ProductsItems = styled(LinkR)`
     }
   }
 
+  @media screen and (max-width: 768px) {
+    width: 150px;
+  }
   @media screen and (max-width: 480px) {
     width: 90%;
   }
