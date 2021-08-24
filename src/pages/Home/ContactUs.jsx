@@ -31,7 +31,7 @@ const ContactUs = () => {
           src={`${process.env.PUBLIC_URL}/assets/images/png/womancall.png`}
           top={true}
           left={false}
-          opacity={0.07}
+          opacity={0.04}
           flipH={false}
         />
         <BackgroundPng
@@ -49,6 +49,7 @@ const ContactUs = () => {
               controls
               muted
               type="video/mp4"
+              autoPlay
             />
             <ContactContent>
               <ContactTitle>Contact us</ContactTitle>
@@ -114,7 +115,7 @@ const ContactUs = () => {
             <PublicButton
               to="/contactus"
               margin="true"
-              width="300px"
+              width="250px"
               transparency="true"
             >
               See More

@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const FooterContainer = styled.footer`
   width: 100vw;
   padding: 20px 0;
-  background: rgb(236, 143, 208);
+  background: #fff;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
 `;
@@ -113,10 +113,10 @@ export const SocialMediaWrap = styled.div`
 export const Logo = styled.img`
   width: 50px;
   height: 50px;
-  background-color: white;
+  background-color: rgb(239,104,180);
   padding: 5px;
   border-radius: 50%;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   @media screen and (max-width: 820px) {
     margin: 10px 0;
   }

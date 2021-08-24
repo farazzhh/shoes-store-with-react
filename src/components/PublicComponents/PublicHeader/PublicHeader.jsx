@@ -22,7 +22,7 @@ const PublicHeader = ({ title, video }) => {
         muted
         type="video/mp4"
       />
-      <PIPImageCover/>
+      <PIPImageCover />
       <PIPHeroWrapper>
         <PIPHeroWrapperBG />
         <PIPTitleWrapper>

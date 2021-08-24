@@ -12,7 +12,7 @@ export const CartSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-
+overflow: hidden;
   @media screen and (max-width: 480px) {
     padding: 30px 0;
   }

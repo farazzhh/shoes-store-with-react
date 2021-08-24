@@ -3,6 +3,7 @@ import { FontAwesomeIcon as icon } from "@fortawesome/react-fontawesome";
 
 export const HeaderSection = styled.header`
   width: 100vw;
+  height: calc(100vh - 90px);
   overflow: hidden;
   position: sticky;
   top: 80px;

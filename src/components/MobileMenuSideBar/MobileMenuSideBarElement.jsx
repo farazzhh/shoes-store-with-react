@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const SideBarContainer = styled.aside`
   width: ${({ toggle }) => (toggle ? "100vw" : "0")};
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.9);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   display: flex;
@@ -20,11 +20,11 @@ export const SideBarContainer = styled.aside`
 `;
 
 export const SideBarWrapper = styled.div`
-  max-width: 450px;
-  width: 90%;
-  height: 70%;
+  min-width: 250px;
+  width: 80%;
+  padding: 40px 0;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@ export const Icon = styled.div`
   padding: 0.3rem;
   top: 0;
   right: 0;
-  margin: 40px;
+  margin: 10px;
   border: 1px solid #870a30;
   display: flex;
   border-radius: 50%;
@@ -71,6 +71,7 @@ export const SideBarLink = styled(Link)`
   padding: 0.7rem 2rem;
   color: #870a30;
   cursor: pointer;
+  margin: 15px 0;
   text-decoration: none;
   list-style: none;
   font-weight: 600;

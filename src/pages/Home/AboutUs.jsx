@@ -38,11 +38,11 @@ const AboutUs = () => {
               controls
               muted
               type="video/mp4"
+              autoPlay
             />
-
             <AboutContent>
               <AboutTitle>About us</AboutTitle>
-              <BorderBottom/>
+              <BorderBottom />
               <AboutDescribe>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Recusandae eaque dolor commodi illo animi corporis autem atque
@@ -61,7 +61,12 @@ const AboutUs = () => {
                 opacity={0.07}
                 flipH={true}
               />
-              <PublicButton to="/aboutus" margin="true" transparency="true" width="300px">
+              <PublicButton
+                to="/aboutus"
+                margin="true"
+                transparency="true"
+                width="250px"
+              >
                 See More
               </PublicButton>
             </AboutContent>

@@ -12,6 +12,9 @@ export const ProductsSection = styled.section`
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
+  @media screen and (max-width: 480px) {
+    padding: 60px 0;
+  }
 `;
 
 export const ProductsWrapper = styled.div`
@@ -26,7 +29,7 @@ export const ProductsWrapper = styled.div`
   margin: 0 auto;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background: rgba(135, 10, 47, 0.1);
+  background: rgb(250, 171, 194);
   box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 10px;
   border-radius: 10px;
   border-left: #870a30 1px solid;

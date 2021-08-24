@@ -10,7 +10,7 @@ export const SideBarContainer = styled.aside`
   border-radius: 2px;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
   overflow: hidden;

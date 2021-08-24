@@ -1,4 +1,4 @@
-import React,{useEffect , useContext} from "react";
+import React, { useEffect, useContext, useRef } from "react";
 import {
   ProductsSection,
   ProductsWrapper,
@@ -15,15 +15,35 @@ import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import { ProductsContext } from "../../providers/ProductsContext";
+import PublicHeader from "../../components/PublicComponents/PublicHeader/PublicHeader";
 const Products = () => {
   const [data] = useContext(ProductsContext);
+  const inputRef = useRef(null);
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    window.addEventListener("scroll", function (e) {
+      if (inputRef.current !== null) {
+        if (window.scrollY > inputRef.current.offsetHeight + 80) {
+          // class width-0 made in App.css
+          inputRef.current.classList.add("width-0");
+        } else {
+          inputRef.current.classList.remove("width-0");
+        }
+      }
+    });
   }, [data]);
   return (
     <>
       {/* <ProductItemsPage /> */}
+
       <BGSection>
+        {/* products parallex hero header from public components */}
+        <PublicHeader
+          title="Style"
+          video={`${process.env.PUBLIC_URL}/assets/videos/sneackers header web.mp4`}
+          ref={inputRef}
+        />
         <ProductsSection id="products">
           <BackgroundPng
             src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}

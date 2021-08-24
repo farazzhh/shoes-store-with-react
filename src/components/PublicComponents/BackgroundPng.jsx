@@ -11,7 +11,7 @@ export const BackgroundPng = styled.img`
   transform: ${({ flipH }) => (flipH ? `scaleX(-1)` : "")};
   opacity: ${({ opacity }) => (opacity ? `${Number(opacity)}` : null)};
   object-fit: contain;
-
+  max-height: 100%;
   @media all and (max-width: 480px){
     width: 50%;
   }

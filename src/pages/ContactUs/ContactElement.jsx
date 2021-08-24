@@ -7,11 +7,13 @@ export const Contact = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(255, 255, 255);
+  background: rgb(250, 171, 194);
   overflow: hidden;
-
-  @media all and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     padding: 100px 0;
+  }
+  @media screen and (max-width: 480px) {
+    padding: 60px 0;
   }
 `;
 
@@ -21,7 +23,7 @@ export const ContactContainer = styled.div`
   margin: 0 auto;
   padding-bottom: 10px;
   overflow: hidden;
-  background: linear-gradient(to left, #fff 30%, rgb(243, 230, 234));
+  background: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) -3px -3px 3px;
   border-radius: 10px;
   border-left: #870a30 1px solid;

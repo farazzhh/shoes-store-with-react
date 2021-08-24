@@ -43,6 +43,7 @@ const SideBarProducts = ({ itemsPageData, setItemsPageData }) => {
       );
       setItemsPageData(list);
     }
+    setToggle(!toggle);
   };
 
   return (
