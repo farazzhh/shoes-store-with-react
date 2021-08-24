@@ -18,6 +18,7 @@ import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng.jsx";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import { PublicButton } from "../../components/PublicComponents/PublicButton.jsx";
+import PublicHeader from "../../components/PublicComponents/PublicHeader/PublicHeader.jsx";
 
 const ContactUs = () => {
   useEffect(() => {
@@ -25,13 +26,19 @@ const ContactUs = () => {
   }, []);
   return (
     <BGSection>
+      <PublicHeader
+        title="Contact Us"
+        describe="let us know you"
+        type="image"
+        src={`${process.env.PUBLIC_URL}/assets/images/shoe8.jpg`}
+      />
       <Contact id="contactus">
         <BackgroundPng
           width="20%"
           src={`${process.env.PUBLIC_URL}/assets/images/png/womancall.png`}
           top={true}
           left={false}
-          opacity={0.04}
+          opacity={0.1}
           flipH={false}
         />
         <BackgroundPng
@@ -47,9 +54,10 @@ const ContactUs = () => {
             <ContactVideo
               src={`${process.env.PUBLIC_URL}/assets/videos/contactus web.mp4`}
               controls
+            playsInline
               muted
               type="video/mp4"
-              autoPlay
+            
             />
             <ContactContent>
               <ContactTitle>Contact us</ContactTitle>

@@ -44,10 +44,9 @@ const [data, dataHandler, requestData, requestDataHandler] = useContext(Products
         {/* products parallex hero header from public components */}
         <PublicHeader
           title="Style"
+          type="video"
           video={`${process.env.PUBLIC_URL}/assets/videos/sneackers header web.mp4`}
-          ref={inputRef}
         />
-
         <ProductsSection id="products">
           <BackgroundPng
             src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const PIP = styled.section`
-  padding: 50px 0 100px 0;
+  /* padding: 50px 0 100px 0; */
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -18,7 +18,7 @@ export const PIPItemsWrapper = styled.div`
   width: 95%;
   margin: 0 auto;
   padding: 80px 0;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 `;

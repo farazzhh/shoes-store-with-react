@@ -7,8 +7,8 @@ export const Contact = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(250, 171, 194);
   overflow: hidden;
+
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }

@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import {
   Contact,
   ContactContainer,
@@ -17,6 +17,7 @@ import {
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng.jsx";
 import { BGSection } from "../../components/PublicComponents/BGSection";
+import PublicHeader from "../../components/PublicComponents/PublicHeader/PublicHeader";
 
 const ContactUs = () => {
   useEffect(() => {
@@ -24,13 +25,19 @@ const ContactUs = () => {
   }, []);
   return (
     <BGSection>
+      <PublicHeader
+        title="Contact Us"
+        describe="let us know you"
+        type="image"
+        src={`${process.env.PUBLIC_URL}/assets/images/shoe8.jpg`}
+      />
       <Contact id="contactus">
         <BackgroundPng
           width="20%"
           src={`${process.env.PUBLIC_URL}/assets/images/png/womancall.png`}
           top={true}
           left={false}
-          opacity={0.07}
+          opacity={0.1}
           flipH={false}
         />
         <BackgroundPng
@@ -43,12 +50,12 @@ const ContactUs = () => {
         />
         <ContactContainer>
           <ContactWrapper>
-            <ContactVideo
-              src={`${process.env.PUBLIC_URL}/assets/videos/contactus web.mp4`}
-              controls
-              muted
-              type="video/mp4"
-            />
+            <ContactVideo controls preload="auto" muted class="video-js">
+              <source
+                src={`${process.env.PUBLIC_URL}/assets/videos/contactus web.mp4`}
+                type="video/mp4"
+              />
+            </ContactVideo>
             <ContactContent>
               <ContactTitle>Contact us</ContactTitle>
               <BorderBottom height="2px" />
@@ -120,6 +127,3 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
-
-
-

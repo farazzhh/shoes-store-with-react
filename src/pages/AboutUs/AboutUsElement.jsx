@@ -2,7 +2,6 @@ import styled from "styled-components";
 export const About = styled.section`
   width: 100vw;
   padding: 200px 0;
-  background: rgb(250, 171, 194);
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
@@ -17,7 +16,7 @@ export const AboutContainer = styled.div`
   max-width: 1100px;
   margin: 0 auto;
   background:  #fff; 
-  box-shadow: rgba(0, 0, 0, 0.1) -3px -3px 3px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px;
   border-radius: 10px;
   overflow: hidden;
   border-left: #870a30 1px solid;

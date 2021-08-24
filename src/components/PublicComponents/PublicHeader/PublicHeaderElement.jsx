@@ -1,8 +1,13 @@
 import styled from "styled-components";
-import { OpacityAnimate, OpacityLetterSpacing } from "../keyframes";
+import {
+  OpacityAnimate,
+  OpacityLetterSpacing,
+  SlideAnimate,
+} from "../keyframes";
 
 export const PIPHeader = styled.div`
   width: 100vw;
+  min-height: calc(100vh - 80px);
   overflow: hidden;
   position: sticky;
   top: 80px;
@@ -31,23 +36,29 @@ export const PIPHeroWrapper = styled.div`
 
 export const PIPHeroWrapperBG = styled.div`
   position: absolute;
-  opacity: 0;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
-  animation: ${OpacityAnimate} 5s linear 6s forwards;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 `;
 
-export const PIPImage = styled.video`
+export const PIPVideo = styled.video`
   width: 100%;
   height: calc(100vh - 80px);
   object-fit: cover;
   object-position: center center;
 `;
+
+export const PIPImage = styled.img`
+  width: 100%;
+  height: calc(100vh - 80px);
+  object-fit: cover;
+  object-position: center center;
+`;
+
 export const PIPImageCover = styled.div`
   position: absolute;
   top: 0;
@@ -67,13 +78,11 @@ export const PIPTitleWrapper = styled.div`
 `;
 
 export const PIPTitle = styled.h1`
-  opacity: 0;
+  /* opacity: 0; */
   color: #fff;
   font-size: 100px;
-  text-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
-  letter-spacing: -20px;
-  animation: ${OpacityAnimate} 6s linear 6s forwards,
-    ${OpacityLetterSpacing} 7s linear 5s forwards;
+  text-shadow: 0 0px 5px rgba(255, 255, 255, 0.8);
+  letter-spacing: -10px;
 `;
 
 export const PIPDescribe = styled.p`
@@ -82,5 +91,4 @@ export const PIPDescribe = styled.p`
   font-size: 35px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
   letter-spacing: -5px;
-  animation: ${OpacityAnimate} 2s linear 11s forwards;
 `;

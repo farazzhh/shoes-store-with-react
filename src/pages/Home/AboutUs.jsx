@@ -3,6 +3,7 @@ import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { PublicButton } from "../../components/PublicComponents/PublicButton";
+import PublicHeader from "../../components/PublicComponents/PublicHeader/PublicHeader";
 
 import {
   About,
@@ -22,6 +23,12 @@ const AboutUs = () => {
   }, []);
   return (
     <BGSection>
+      <PublicHeader
+        title="About Us"
+        describe="Meet ShoesStore"
+        type="image"
+        src={`${process.env.PUBLIC_URL}/assets/images/shoe6.jpg`}
+      />
       <About id="aboutus">
         <BackgroundPng
           src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus2 web.png`}
@@ -37,8 +44,8 @@ const AboutUs = () => {
               src={`${process.env.PUBLIC_URL}/assets/videos/aboutusweb.mp4`}
               controls
               muted
+              playsInline
               type="video/mp4"
-              autoPlay
             />
             <AboutContent>
               <AboutTitle>About us</AboutTitle>

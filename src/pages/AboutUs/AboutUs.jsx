@@ -1,8 +1,8 @@
-
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
+import PublicHeader from "../../components/PublicComponents/PublicHeader/PublicHeader";
 import AboutImageGallery from "./AboutImageGallery.jsx";
 import {
   About,
@@ -15,11 +15,32 @@ import {
   AboutImageGalleryWrapper,
 } from "./AboutUsElement";
 const AboutUs = () => {
+  const inputRef = useRef(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    window.addEventListener("scroll", function (e) {
+      if (inputRef.current !== null) {
+        if (window.scrollY > inputRef.current.offsetHeight + 80) {
+          // class width-0 made in App.css
+          inputRef.current.classList.add("width-0");
+        } else {
+          inputRef.current.classList.remove("width-0");
+        }
+      }
+    });
   }, []);
+
   return (
     <BGSection>
+      <PublicHeader
+        title="About Us"
+        describe="Meet ShoesStore"
+        type="image"
+        src={`${process.env.PUBLIC_URL}/assets/images/shoe6.jpg`}
+        ref={inputRef}
+      />
       <About id="aboutus">
         <BackgroundPng
           src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus2 web.png`}

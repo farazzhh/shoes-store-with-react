@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { BorderBottom } from "../BorderBottom";
 import {
   PIPHeader,
   PIPHeroWrapper,
   PIPHeroWrapperBG,
+  PIPVideo,
   PIPImage,
   PIPImageCover,
   PIPTitleWrapper,
@@ -11,17 +12,23 @@ import {
   PIPDescribe,
 } from "./PublicHeaderElement.jsx";
 
-const PublicHeader = ({ title, video }) => {
+const PublicHeader = ({ title, describe, type, src }) => {
+  
   return (
     <PIPHeader>
-      <PIPImage
-        src={video}
-        webkit-playsinline
-        playsinline
-        autoPlay
-        muted
-        type="video/mp4"
-      />
+      <div >
+        {type === "video" ? (
+          <PIPVideo
+            src={src}
+            webkit-playsinline
+            playsinline
+            muted
+            type="video/mp4"
+          />
+        ) : (
+          <PIPImage src={src} alt="image header" />
+        )}
+      </div>
       <PIPImageCover />
       <PIPHeroWrapper>
         <PIPHeroWrapperBG />
@@ -30,7 +37,7 @@ const PublicHeader = ({ title, video }) => {
             {title}
             <BorderBottom />
           </PIPTitle>
-          <PIPDescribe>choose yours</PIPDescribe>
+          <PIPDescribe>{describe}</PIPDescribe>
         </PIPTitleWrapper>
       </PIPHeroWrapper>
     </PIPHeader>

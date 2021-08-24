@@ -40,9 +40,9 @@ const Products = () => {
       <BGSection>
         {/* products parallex hero header from public components */}
         <PublicHeader
-          title="Style"
+          title="New Styles"
+          type="video"
           video={`${process.env.PUBLIC_URL}/assets/videos/sneackers header web.mp4`}
-          ref={inputRef}
         />
         <ProductsSection id="products">
           <BackgroundPng

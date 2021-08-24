@@ -1,18 +1,23 @@
 import { keyframes } from "styled-components";
 
 export const OpacityAnimate = keyframes`
-from{ opacity : 0 ;}
-to{ opacity: 100%;}
+0%{ opacity: 100%;}
+50%{ opacity : 0 ;}
+100%{ opacity: 100%;}
 `;
 
 export const OpacityLetterSpacing = keyframes`
-from{letter-spacing: -20px;}
-to{letter-spacing: -10px;}
+0%{letter-spacing: -10px;}
+50%{letter-spacing: -8px;}
+100%{letter-spacing: -10px;}
 `;
 
 export const SlideAnimate = keyframes`
-from{ transform: scale(1 , 1);}
-to{ transform: scale(1.1,1.1);}
+0%{ transform: translate(-5px,-5px);}
+25%{ transform: translate(0px,5px);}
+50%{ transform: translate(8px,-3px);}
+75%{ transform: translate(13px,-8px);}
+100%{ transform: translate(-5px,-5px);}
 `;
 
 export const BGAnimate = keyframes`

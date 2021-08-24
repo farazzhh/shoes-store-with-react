@@ -7,7 +7,7 @@ export const ProductsSection = styled.section`
   padding: 200px 0;
   position: relative;
   overflow: hidden;
-  background: rgb(255, 255, 255);
+  /* background: rgb(255, 255, 255); */
 
   @media screen and (max-width: 768px) {
     padding: 100px 0;
@@ -29,7 +29,7 @@ export const ProductsWrapper = styled.div`
   margin: 0 auto;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background: rgb(250, 171, 194);
+  background: rgb(250, 250, 250);
   box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 10px;
   border-radius: 10px;
   border-left: #870a30 1px solid;
@@ -100,7 +100,7 @@ export const ProductsMenuItems = styled.ul`
 
 export const ProductsItems = styled(LinkR)`
   width: 200px;
-  background: rgba(255, 255, 255, 1);
+  background: #ffffff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
@@ -112,7 +112,7 @@ export const ProductsItems = styled(LinkR)`
   align-items: center;
   transition: all 0.2s ease-in-out;
   backface-visibility: hidden;
-  border-bottom: #870a30 2px solid;
+  border: #870a30 1px solid;
   overflow: hidden;
   cursor: pointer;
   &:hover {
