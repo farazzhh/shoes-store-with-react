@@ -1,4 +1,4 @@
-import React,{useEffect,useContext,useRef} from "react";
+import React, { useEffect, useContext, useRef, useReducer } from "react";
 import {
   ProductsSection,
   ProductsWrapper,
@@ -20,9 +20,15 @@ import { ProductsContext  } from "../../providers/ProductsContext";
 const Products = () => {
 const [data, dataHandler, requestData, requestDataHandler] = useContext(ProductsContext);
  const inputRef = useRef(null);
+  const [, forceUpdate] = useReducer((x) => x + 1, 0);
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-    
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+    forceUpdate();
+  
      window.addEventListener("scroll", function (e) {
        if (inputRef.current !== null) {
          if (window.scrollY > inputRef.current.offsetHeight + 80) {
@@ -44,29 +50,29 @@ const [data, dataHandler, requestData, requestDataHandler] = useContext(Products
         {/* products parallex hero header from public components */}
         <PublicHeader
           title="Style"
-          type="video"
-          video={`${process.env.PUBLIC_URL}/assets/videos/sneackers header web.mp4`}
+          type="images"
+          src={`${process.env.PUBLIC_URL}/assets/images/shoe16 web.jpg`}
         />
         <ProductsSection id="products">
-          <BackgroundPng
-            src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}
-            alt="logo"
-            width="30%"
-            top={true}
-            left={false}
-            opacity={0.3}
-            flipH={true}
-          />
-          <BackgroundPng
-            src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}
-            alt="logo"
-            width="40%"
-            top={false}
-            left={true}
-            opacity={0.1}
-            flipH={true}
-          />
           <ProductsWrapper>
+            <BackgroundPng
+              src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}
+              alt="logo"
+              width="20%"
+              top={false}
+              left={true}
+              opacity={0.2}
+              flipH={true}
+            />
+            <BackgroundPng
+              src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}
+              alt="logo"
+              width="30%"
+              top={true}
+              left={false}
+              opacity={0.3}
+              flipH={true}
+            />
             <ProductsContent>
               <ProductsTitle>Products List</ProductsTitle>
               <BorderBottom />

@@ -40,20 +40,30 @@ const Products = () => {
       <BGSection>
         {/* products parallex hero header from public components */}
         <PublicHeader
-          title="New Styles"
-          type="video"
-          video={`${process.env.PUBLIC_URL}/assets/videos/sneackers header web.mp4`}
+          title="Style"
+          type="images"
+          src={`${process.env.PUBLIC_URL}/assets/images/header3.jpg`}
         />
         <ProductsSection id="products">
-          <BackgroundPng
-            src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}
-            width="40%"
-            top={true}
-            left={false}
-            opacity={0.2}
-            flipH={false}
-          />
           <ProductsWrapper>
+            <BackgroundPng
+              src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}
+              alt="logo"
+              width="20%"
+              top={false}
+              left={true}
+              opacity={1}
+              flipH={false}
+            />
+            <BackgroundPng
+              src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}
+              alt="logo"
+              width="30%"
+              top={true}
+              left={false}
+              opacity={0.8}
+              flipH={true}
+            />
             <ProductsContent>
               <ProductsTitle>Products List</ProductsTitle>
               <BorderBottom />

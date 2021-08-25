@@ -1,5 +1,6 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useReducer, useEffect } from "react";
 import { BorderBottom } from "../BorderBottom";
+import AOS from "aos";
 import {
   PIPHeader,
   PIPHeroWrapper,
@@ -13,10 +14,17 @@ import {
 } from "./PublicHeaderElement.jsx";
 
 const PublicHeader = ({ title, describe, type, src }) => {
+  AOS.init({
+    duration: 2000,
+    delay:200,
+  });
   
+  useEffect(() => {
+
+  }, []);
   return (
     <PIPHeader>
-      <div >
+      <div>
         {type === "video" ? (
           <PIPVideo
             src={src}
@@ -32,10 +40,10 @@ const PublicHeader = ({ title, describe, type, src }) => {
       <PIPImageCover />
       <PIPHeroWrapper>
         <PIPHeroWrapperBG />
-        <PIPTitleWrapper>
+        <PIPTitleWrapper data-aos="fade-up">
           <PIPTitle>
             {title}
-            <BorderBottom />
+            <BorderBottom height="5px" />
           </PIPTitle>
           <PIPDescribe>{describe}</PIPDescribe>
         </PIPTitleWrapper>

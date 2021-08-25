@@ -3,18 +3,12 @@ import styled from "styled-components";
 export const Contact = styled.section`
   width: 100vw;
   min-height: 800px;
-  padding: 200px 0;
+  padding: 100px 0 250px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }
-  @media screen and (max-width: 480px) {
-    padding: 60px 0;
-  }
 `;
 
 export const ContactContainer = styled.div`
@@ -22,7 +16,7 @@ export const ContactContainer = styled.div`
   max-width: 1100px;
   margin: 0 auto;
   padding-bottom: 10px;
-  overflow: hidden;
+  /* overflow: hidden; */
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) -3px -3px 3px;
   border-radius: 10px;

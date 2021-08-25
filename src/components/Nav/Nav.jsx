@@ -22,9 +22,8 @@ import SubMenuComponents from "./SubMenu";
 
 const NavBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
-const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext)
-  const [data] =
-    useContext(ProductsContext);
+  const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext);
+  const [data] = useContext(ProductsContext);
 
   const subMenuHeight = (subMenu) => {
     return (subMenu.length * 40).toString() + "px";

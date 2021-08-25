@@ -1,9 +1,9 @@
 import React, { useEffect, useContext } from "react";
 import "./App.css";
+import "animate.css";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 import Footer from "./components/Footer/Footer";
-// import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import {
-  BrowserRouter,
   Route,
   Redirect,
   Switch,

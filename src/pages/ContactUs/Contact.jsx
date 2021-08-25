@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useReducer } from "react";
 import {
   Contact,
   ContactContainer,
@@ -20,8 +20,13 @@ import { BGSection } from "../../components/PublicComponents/BGSection";
 import PublicHeader from "../../components/PublicComponents/PublicHeader/PublicHeader";
 
 const ContactUs = () => {
+  const [, forceUpdate] = useReducer((x) => x + 1, 0);
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+    forceUpdate();
   }, []);
   return (
     <BGSection>
@@ -32,9 +37,10 @@ const ContactUs = () => {
         src={`${process.env.PUBLIC_URL}/assets/images/shoe8.jpg`}
       />
       <Contact id="contactus">
+        <ContactContainer>
         <BackgroundPng
-          width="20%"
-          src={`${process.env.PUBLIC_URL}/assets/images/png/womancall.png`}
+          width="30%"
+          src={`${process.env.PUBLIC_URL}/assets/images/png/contactus3.png`}
           top={true}
           left={false}
           opacity={0.1}
@@ -48,7 +54,6 @@ const ContactUs = () => {
           opacity={0.1}
           flipH={true}
         />
-        <ContactContainer>
           <ContactWrapper>
             <ContactVideo controls preload="auto" muted class="video-js">
               <source

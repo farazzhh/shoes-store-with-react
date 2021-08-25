@@ -16,8 +16,6 @@ import {
 } from "../AboutUs/AboutUsElement";
 const AboutUs = () => {
 
-  
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -30,16 +28,16 @@ const AboutUs = () => {
         src={`${process.env.PUBLIC_URL}/assets/images/shoe6.jpg`}
       />
       <About id="aboutus">
+        <AboutContainer>
+          <AboutWrapper>
         <BackgroundPng
           src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus2 web.png`}
           width="30%"
-          top={false}
+          top={true}
           left={true}
-          opacity={0.1}
+          opacity={0.3}
           flipH={true}
         />
-        <AboutContainer>
-          <AboutWrapper>
             <AboutVideoBg
               src={`${process.env.PUBLIC_URL}/assets/videos/aboutusweb.mp4`}
               controls
@@ -65,7 +63,7 @@ const AboutUs = () => {
                 src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus.png`}
                 top={false}
                 left={false}
-                opacity={0.07}
+                opacity={0.1}
                 flipH={true}
               />
               <PublicButton

@@ -14,9 +14,9 @@ export const OpacityLetterSpacing = keyframes`
 
 export const SlideAnimate = keyframes`
 0%{ transform: translate(-5px,-5px);}
-25%{ transform: translate(0px,5px);}
-50%{ transform: translate(8px,-3px);}
-75%{ transform: translate(13px,-8px);}
+25%{ transform: translate(0px,0px);}
+50%{ transform: translate(-2px,-1px);}
+75%{ transform: translate(0px,0px);}
 100%{ transform: translate(-5px,-5px);}
 `;
 

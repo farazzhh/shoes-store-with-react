@@ -41,8 +41,8 @@ export const PIPHeroWrapperBG = styled.div`
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.4);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 `;
 
 export const PIPVideo = styled.video`
@@ -78,11 +78,14 @@ export const PIPTitleWrapper = styled.div`
 `;
 
 export const PIPTitle = styled.h1`
-  /* opacity: 0; */
   color: #fff;
   font-size: 100px;
   text-shadow: 0 0px 5px rgba(255, 255, 255, 0.8);
   letter-spacing: -10px;
+
+  @media screen and (max-width: 480px){
+    font-size: 70px;
+  }
 `;
 
 export const PIPDescribe = styled.p`

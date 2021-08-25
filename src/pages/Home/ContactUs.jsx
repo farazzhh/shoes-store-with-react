@@ -21,6 +21,8 @@ import { PublicButton } from "../../components/PublicComponents/PublicButton.jsx
 import PublicHeader from "../../components/PublicComponents/PublicHeader/PublicHeader.jsx";
 
 const ContactUs = () => {
+ 
+ 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -33,31 +35,22 @@ const ContactUs = () => {
         src={`${process.env.PUBLIC_URL}/assets/images/shoe8.jpg`}
       />
       <Contact id="contactus">
-        <BackgroundPng
-          width="20%"
-          src={`${process.env.PUBLIC_URL}/assets/images/png/womancall.png`}
-          top={true}
-          left={false}
-          opacity={0.1}
-          flipH={false}
-        />
-        <BackgroundPng
-          width="30%"
-          src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
-          top={false}
-          left={true}
-          opacity={0.1}
-          flipH={true}
-        />
         <ContactContainer>
+          <BackgroundPng
+            width="30%"
+            src={`${process.env.PUBLIC_URL}/assets/images/png/contactus3.png`}
+            top={true}
+            left={false}
+            opacity={0.5}
+            flipH={false}
+          />
           <ContactWrapper>
             <ContactVideo
               src={`${process.env.PUBLIC_URL}/assets/videos/contactus web.mp4`}
               controls
-            playsInline
+              playsInline
               muted
               type="video/mp4"
-            
             />
             <ContactContent>
               <ContactTitle>Contact us</ContactTitle>
@@ -120,6 +113,14 @@ const ContactUs = () => {
                 </div>
               </ContactsSocialWrapper>
             </ContactInf>
+            <BackgroundPng
+              width="20%"
+              src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
+              top={false}
+              left={true}
+              opacity={0.4}
+              flipH={true}
+            />
             <PublicButton
               to="/contactus"
               margin="true"

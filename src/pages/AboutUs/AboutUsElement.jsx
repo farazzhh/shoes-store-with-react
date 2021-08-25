@@ -1,13 +1,7 @@
 import styled from "styled-components";
 export const About = styled.section`
   width: 100vw;
-  padding: 200px 0;
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }
-  @media screen and (max-width: 480px) {
-    padding: 60px 0;
-  }
+  padding: 100px 0 250px 0;
 `;
 
 // AboutVideo, AboutVideoBg, AboutContent, AboutTitle, AboutDescribe;
@@ -18,7 +12,7 @@ export const AboutContainer = styled.div`
   background:  #fff; 
   box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px;
   border-radius: 10px;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-left: #870a30 1px solid;
   @media screen and (max-width: 1024px) {
     width: 75%;

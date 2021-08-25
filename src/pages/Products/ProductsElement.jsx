@@ -4,17 +4,9 @@ import { Link as LinkR } from "react-router-dom";
 export const ProductsSection = styled.section`
   width: 100vw;
   height: auto;
-  padding: 200px 0;
+  padding: 100px 0 250px 0;
   position: relative;
-  overflow: hidden;
-  /* background: rgb(255, 255, 255); */
 
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }
-  @media screen and (max-width: 480px) {
-    padding: 60px 0;
-  }
 `;
 
 export const ProductsWrapper = styled.div`

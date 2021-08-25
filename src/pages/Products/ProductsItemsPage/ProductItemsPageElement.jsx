@@ -18,7 +18,6 @@ export const PIPItemsWrapper = styled.div`
   width: 95%;
   margin: 0 auto;
   padding: 80px 0;
-  /* border-radius: 10px; */
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   overflow: hidden;
 `;
