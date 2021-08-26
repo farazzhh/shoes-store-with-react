@@ -41,8 +41,9 @@ const Products = () => {
         {/* products parallex hero header from public components */}
         <PublicHeader
           title="Style"
-          type="images"
-          src={`${process.env.PUBLIC_URL}/assets/images/header3.jpg`}
+          describe="let's play the Game"
+          type="bg"
+          
         />
         <ProductsSection id="products">
           <ProductsWrapper>
@@ -52,7 +53,7 @@ const Products = () => {
               width="20%"
               top={false}
               left={true}
-              opacity={1}
+              opacity={0.3}
               flipH={false}
             />
             <BackgroundPng
@@ -61,7 +62,7 @@ const Products = () => {
               width="30%"
               top={true}
               left={false}
-              opacity={0.8}
+              opacity={0.3}
               flipH={true}
             />
             <ProductsContent>

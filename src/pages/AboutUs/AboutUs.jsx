@@ -34,20 +34,21 @@ useEffect(() => {
       />
       <About id="aboutus">
         <AboutContainer>
+          <BackgroundPng
+            src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus2 web.png`}
+            width="30%"
+            top={true}
+            left={true}
+            opacity={0.3}
+            flipH={true}
+          />
           <AboutWrapper>
-            <BackgroundPng
-              src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus2 web.png`}
-              width="30%"
-              top={true}
-              left={true}
-              opacity={0.2}
-              flipH={true}
-            />{" "}
             <AboutVideoBg
               src={`${process.env.PUBLIC_URL}/assets/videos/aboutusweb.mp4`}
-              muted
-              type="video/mp4"
               controls
+              muted
+              playsInline
+              type="video/mp4"
             />
             <AboutContent>
               <AboutTitle>About us</AboutTitle>
@@ -63,15 +64,15 @@ useEffect(() => {
                 quaerat provident.
               </AboutDescribe>
             </AboutContent>
-            <BackgroundPng
-              width="50%"
-              src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus.png`}
-              top={false}
-              left={false}
-              opacity={0.07}
-              flipH={true}
-            />
           </AboutWrapper>
+          <BackgroundPng
+            width="50%"
+            src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus.png`}
+            top={false}
+            left={false}
+            opacity={0.1}
+            flipH={true}
+          />
         </AboutContainer>
 
         {/* Image Gallery Slide Show */}

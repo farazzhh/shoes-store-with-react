@@ -4,7 +4,7 @@ export const SideBarContainer = styled.aside`
   width: ${({ toggle }) => (toggle ? "250px" : "100px")};
   height: ${({ toggle }) => (toggle ? "230px" : "40px")};
   background-color: ${({ toggle }) =>
-    toggle ? "rgba(239,104,180, 1)" : "rgb(239,104,180)"};
+    toggle && "rgba(239,104,180, 1)" };
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
   display: flex;
   border-radius: 2px;

@@ -118,7 +118,7 @@ const ContactUs = () => {
               src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
               top={false}
               left={true}
-              opacity={0.4}
+              opacity={0.3}
               flipH={true}
             />
             <PublicButton

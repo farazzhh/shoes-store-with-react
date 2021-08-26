@@ -15,11 +15,13 @@ import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import PublicHeader from "../../components/PublicComponents/PublicHeader/PublicHeader";
-import { ProductsContext  } from "../../providers/ProductsContext";
+import { ProductsContext } from "../../providers/ProductsContext";
 
 const Products = () => {
-const [data, dataHandler, requestData, requestDataHandler] = useContext(ProductsContext);
- const inputRef = useRef(null);
+  const [data, dataHandler, requestData, requestDataHandler] =
+    useContext(ProductsContext);
+
+  const inputRef = useRef(null);
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
 
   useEffect(() => {
@@ -28,21 +30,19 @@ const [data, dataHandler, requestData, requestDataHandler] = useContext(Products
       left: 0,
     });
     forceUpdate();
-  
-     window.addEventListener("scroll", function (e) {
-       if (inputRef.current !== null) {
-         if (window.scrollY > inputRef.current.offsetHeight + 80) {
-           // class width-0 made in App.css
-           inputRef.current.classList.add("width-0");
-         } else {
-           inputRef.current.classList.remove("width-0");
 
-         }
-       }
-     });
-    
-}, [data]);
-  
+    window.addEventListener("scroll", function (e) {
+      if (inputRef.current !== null) {
+        if (window.scrollY > inputRef.current.offsetHeight + 80) {
+          // class width-0 made in App.css
+          inputRef.current.classList.add("width-0");
+        } else {
+          inputRef.current.classList.remove("width-0");
+        }
+      }
+    });
+  }, [data]);
+
   return (
     <>
       {/* <ProductItemsPage /> */}
@@ -50,7 +50,7 @@ const [data, dataHandler, requestData, requestDataHandler] = useContext(Products
         {/* products parallex hero header from public components */}
         <PublicHeader
           title="Style"
-          type="images"
+          type="image"
           src={`${process.env.PUBLIC_URL}/assets/images/shoe16 web.jpg`}
         />
         <ProductsSection id="products">
@@ -61,7 +61,7 @@ const [data, dataHandler, requestData, requestDataHandler] = useContext(Products
               width="20%"
               top={false}
               left={true}
-              opacity={0.2}
+              opacity={0.3}
               flipH={true}
             />
             <BackgroundPng
@@ -71,7 +71,7 @@ const [data, dataHandler, requestData, requestDataHandler] = useContext(Products
               top={true}
               left={false}
               opacity={0.3}
-              flipH={true}
+              flipH={false}
             />
             <ProductsContent>
               <ProductsTitle>Products List</ProductsTitle>

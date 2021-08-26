@@ -15,15 +15,6 @@ export const ContactContainer = styled.div`
   width: 70%;
   max-width: 1100px;
   margin: 0 auto;
-  padding-bottom: 10px;
-  /* overflow: hidden; */
-  background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.1) -3px -3px 3px;
-  border-radius: 10px;
-  border-left: #870a30 1px solid;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-
   @media screen and (max-width: 1024px) {
     width: 80%;
   }
@@ -33,6 +24,14 @@ export const ContactContainer = styled.div`
 `;
 
 export const ContactWrapper = styled.div`
+  overflow: hidden;
+  padding-bottom: 10px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) -3px -3px 3px;
+  border-radius: 10px;
+  border-left: #870a30 1px solid;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -15,7 +15,6 @@ import {
   AboutDescribe,
 } from "../AboutUs/AboutUsElement";
 const AboutUs = () => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -29,15 +28,15 @@ const AboutUs = () => {
       />
       <About id="aboutus">
         <AboutContainer>
+          <BackgroundPng
+            src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus2 web.png`}
+            width="30%"
+            top={true}
+            left={true}
+            opacity={0.3}
+            flipH={true}
+          />
           <AboutWrapper>
-        <BackgroundPng
-          src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus2 web.png`}
-          width="30%"
-          top={true}
-          left={true}
-          opacity={0.3}
-          flipH={true}
-        />
             <AboutVideoBg
               src={`${process.env.PUBLIC_URL}/assets/videos/aboutusweb.mp4`}
               controls
@@ -58,14 +57,6 @@ const AboutUs = () => {
                 consequatur beatae odit veritatis, nostrum reprehenderit sunt
                 quaerat provident.
               </AboutDescribe>
-              <BackgroundPng
-                width="50%"
-                src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus.png`}
-                top={false}
-                left={false}
-                opacity={0.1}
-                flipH={true}
-              />
               <PublicButton
                 to="/aboutus"
                 margin="true"
@@ -76,6 +67,14 @@ const AboutUs = () => {
               </PublicButton>
             </AboutContent>
           </AboutWrapper>
+              <BackgroundPng
+                width="50%"
+                src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus.png`}
+                top={false}
+                left={false}
+                opacity={0.1}
+                flipH={true}
+              />
         </AboutContainer>
       </About>
     </BGSection>

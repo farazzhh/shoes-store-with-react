@@ -9,20 +9,20 @@ export const AboutContainer = styled.div`
   width: 70%;
   max-width: 1100px;
   margin: 0 auto;
-  background:  #fff; 
-  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px;
-  border-radius: 10px;
-  /* overflow: hidden; */
-  border-left: #870a30 1px solid;
   @media screen and (max-width: 1024px) {
     width: 75%;
   }
   @media screen and (max-width: 768px) {
     width: 95%;
   }
-`;
+  `;
 
 export const AboutWrapper = styled.div`
+box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px;
+border-left: #870a30 1px solid;
+background: #fff;
+border-radius: 10px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -72,7 +72,7 @@ export const AboutImageGalleryWrapper = styled.div`
   max-width: 1100px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px;
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px;
   border-bottom: #870a30 3px solid;
   border-left: #870a30 1px solid;
   overflow: hidden;

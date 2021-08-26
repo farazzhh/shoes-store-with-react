@@ -28,7 +28,7 @@ export const PIPHeroWrapper = styled.div`
   left: 0;
   @media screen and (max-width: 768) {
     align-items: center;
-    background: rgba(0, 0, 0, 0.3);
+    /* background: rgba(0, 0, 0, 0.3); */
     -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
   }
@@ -58,6 +58,11 @@ export const PIPImage = styled.img`
   object-fit: cover;
   object-position: center center;
 `;
+export const PIPBG = styled.div`
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: white;
+`;
 
 export const PIPImageCover = styled.div`
   position: absolute;
@@ -82,9 +87,8 @@ export const PIPTitle = styled.h1`
   font-size: 100px;
   text-shadow: 0 0px 5px rgba(255, 255, 255, 0.8);
   letter-spacing: -10px;
-
   @media screen and (max-width: 480px){
-    font-size: 70px;
+    font-size: 80px;
   }
 `;
 
