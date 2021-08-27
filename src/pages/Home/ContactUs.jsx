@@ -104,25 +104,16 @@ const ContactUs = () => {
                   </ContactsSocialLink>
                 </div>
               </ContactsSocialWrapper>
-            </ContactInf>
-
             <PublicButton
               to="/contactus"
               margin="true"
-              width="250px"
               transparency="true"
+              width="250px"
             >
               See More
             </PublicButton>
+            </ContactInf>
           </ContactWrapper>
-          <BackgroundPng
-            width="20%"
-            src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
-            top={false}
-            left={true}
-            opacity={0.3}
-            flipH={true}
-          />
           <BackgroundPng
             width="30%"
             src={`${process.env.PUBLIC_URL}/assets/images/png/contactus3.png`}
@@ -130,6 +121,14 @@ const ContactUs = () => {
             left={false}
             opacity={0.5}
             flipH={false}
+          />
+          <BackgroundPng
+            width="20%"
+            src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
+            top={false}
+            left={true}
+            opacity={0.3}
+            flipH={true}
           />
         </ContactContainer>
       </Contact>

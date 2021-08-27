@@ -18,7 +18,7 @@ export const PublicButton = styled(LinkR)`
   padding: ${({ big }) => (big ? " 20px 30px" : " 10px 20px")};
   width: ${({ width }) => (width ? `${width}` : null)};
   ${({ transparency }) =>
-    !transparency ? "background:  rgba(255, 105, 180, 1)" : "background:#fff"};
+    !transparency ? "background:  rgba(255, 105, 180, 1)" : "background:#fff;"};
   text-align: center;
   font-size: 16px;
   border-radius: 5px;
@@ -28,6 +28,7 @@ export const PublicButton = styled(LinkR)`
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   font-weight: 800;
+  z-index: 10;
   &:hover {
     background: #870a30;
     color: #fff;

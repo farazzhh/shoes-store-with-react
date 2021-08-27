@@ -49,11 +49,11 @@ const PublicHeader = ({ title, describe, type, src }) => {
               <BackgroundPng
                 src={`${process.env.PUBLIC_URL}/assets/images/png/sneaker.png`}
                 alt="logo"
-                width="40%"
+                width="30%"
                 top={false}
                 left={false}
                 opacity={0.1}
-                flipH={true}
+                flipH={false}
               />
             </>
           ) : null}

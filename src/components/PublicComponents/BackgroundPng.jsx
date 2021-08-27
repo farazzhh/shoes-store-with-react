@@ -12,9 +12,10 @@ export const BackgroundPng = styled.img`
   opacity: ${({ opacity }) => (opacity ? `${Number(opacity)}` : null)};
   object-fit: contain;
   max-height: 100%;
+
   @media all and (max-width: 480px) {
     width: 50%;
     ${({ left }) => (left ? "left: -5px;" : "right: -5px;")};
-    ${({ top }) => (top ? "top: -70px;" : "bottom: -70px;")};
+    ${({ top }) => (top ? "top: -60px;" : "bottom: -30px;")};
   }
 `;
