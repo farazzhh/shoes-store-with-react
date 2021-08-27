@@ -1,9 +1,76 @@
+import React, {  useEffect } from "react";
+import { BorderBottom } from "./BorderBottom";
+import AOS from "aos";
 import styled from "styled-components";
-import {
-  OpacityAnimate,
-  OpacityLetterSpacing,
-  SlideAnimate,
-} from "../keyframes";
+
+import { BackgroundPng } from "./BackgroundPng";
+
+const PublicHeader = ({ title, describe, type, src }) => {
+  AOS.init({
+    once: true,
+    duration: 2000,
+    delay: 200,
+  });
+
+  useEffect(() => {}, []);
+  return (
+    <PIPHeader>
+      <div>
+        {type === "video" ? (
+          <PIPVideo
+            src={src}
+            webkit-playsinline
+            playsinline
+            muted
+            type="video/mp4"
+          />
+        ) : type === "image" ? (
+          <PIPImage src={src} alt="image header" />
+        ) : (
+          <PIPBG />
+        )}
+      </div>
+      <PIPImageCover />
+      <PIPHeroWrapper>
+        <PIPHeroWrapperBG />
+
+        <PIPTitleWrapper data-aos="fade-up">
+          {type === "bg" ? (
+            <>
+              <BackgroundPng
+                src={`${process.env.PUBLIC_URL}/assets/images/png/airmax.png`}
+                alt="logo"
+                width="20%"
+                top={true}
+                left={true}
+                opacity={0.5}
+                flipH={true}
+              />
+              <BackgroundPng
+                src={`${process.env.PUBLIC_URL}/assets/images/png/sneaker.png`}
+                alt="logo"
+                width="40%"
+                top={false}
+                left={false}
+                opacity={0.1}
+                flipH={true}
+              />
+            </>
+          ) : null}
+          <PIPTitle>
+            {title}
+            <BorderBottom height="5px" />
+          </PIPTitle>
+
+          <PIPDescribe>{describe}</PIPDescribe>
+        </PIPTitleWrapper>
+      </PIPHeroWrapper>
+    </PIPHeader>
+  );
+};
+
+export default PublicHeader;
+
 
 export const PIPHeader = styled.div`
   width: 100vw;
@@ -87,7 +154,7 @@ export const PIPTitle = styled.h1`
   font-size: 100px;
   text-shadow: 0 0px 5px rgba(255, 255, 255, 0.8);
   letter-spacing: -10px;
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
     font-size: 80px;
   }
 `;

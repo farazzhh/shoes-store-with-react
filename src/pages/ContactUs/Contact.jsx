@@ -17,7 +17,7 @@ import {
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng.jsx";
 import { BGSection } from "../../components/PublicComponents/BGSection";
-import PublicHeader from "../../components/PublicComponents/PublicHeader/PublicHeader";
+import PublicHeader from "../../components/PublicComponents/PublicHeader";
 
 const ContactUs = () => {
   const [, forceUpdate] = useReducer((x) => x + 1, 0);

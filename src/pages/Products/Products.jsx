@@ -14,7 +14,7 @@ import {
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { BGSection } from "../../components/PublicComponents/BGSection";
-import PublicHeader from "../../components/PublicComponents/PublicHeader/PublicHeader";
+import PublicHeader from "../../components/PublicComponents/PublicHeader";
 import { ProductsContext } from "../../providers/ProductsContext";
 
 const Products = () => {

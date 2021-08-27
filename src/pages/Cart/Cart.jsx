@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { BackButtonPublic } from "../../components/PublicComponents/BackButton/BackButton";
+import { BackButtonPublic } from "../../components/PublicComponents/BackButton";
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { CartContext } from "../../providers/CartContext";
 import {

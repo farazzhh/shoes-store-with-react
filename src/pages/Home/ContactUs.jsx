@@ -18,7 +18,7 @@ import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng.jsx";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import { PublicButton } from "../../components/PublicComponents/PublicButton.jsx";
-import PublicHeader from "../../components/PublicComponents/PublicHeader/PublicHeader.jsx";
+import PublicHeader from "../../components/PublicComponents/PublicHeader.jsx";
 
 const ContactUs = () => {
  

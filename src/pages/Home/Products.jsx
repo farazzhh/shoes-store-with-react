@@ -15,7 +15,7 @@ import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import { ProductsContext } from "../../providers/ProductsContext";
-import PublicHeader from "../../components/PublicComponents/PublicHeader/PublicHeader";
+import PublicHeader from "../../components/PublicComponents/PublicHeader";
 const Products = () => {
   const [data] = useContext(ProductsContext);
   const inputRef = useRef(null);

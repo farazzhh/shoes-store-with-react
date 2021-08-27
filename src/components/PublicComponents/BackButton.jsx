@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BackButtonAnimate, ScaleAnimate } from "../keyframes";
+import { BackButtonAnimate, ScaleAnimate } from "./keyframes";
 
 export const BackButtonPublic = () => {
 

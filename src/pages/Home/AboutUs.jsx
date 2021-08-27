@@ -3,7 +3,7 @@ import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { PublicButton } from "../../components/PublicComponents/PublicButton";
-import PublicHeader from "../../components/PublicComponents/PublicHeader/PublicHeader";
+import PublicHeader from "../../components/PublicComponents/PublicHeader";
 
 import {
   About,
