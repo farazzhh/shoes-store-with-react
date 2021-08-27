@@ -4,14 +4,20 @@ import ProductItemsPage from "./ProductItemsPage";
 import { ProductsContext } from "../../../providers/ProductsContext";
 
 const ProductsApp = (props) => {
+
+  // data is full dataJson and resultData is category or item was selected with user
   const [data, dataHandler, requestData, requestDataHandler] =
     useContext(ProductsContext);
+  
   const [checkData, setCheckData] = useState(false);
 
+  // get path from params
   const params = props.match.params;
 
   useEffect(() => {
     if (data.items) {
+
+      // filter target category prom DataJson
       const [result] = data.items.filter(
         (item) => item.category === params.category
       );
@@ -19,7 +25,7 @@ const ProductsApp = (props) => {
       result && setCheckData(true);
     }
   }, [params.category]);
-
+// call components to render the category was filtered before
   return <ProductItemsPage props={props} />;
 };
 
