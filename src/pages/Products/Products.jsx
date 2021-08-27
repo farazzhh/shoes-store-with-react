@@ -30,18 +30,7 @@ const Products = () => {
       left: 0,
     });
     forceUpdate();
-
-    window.addEventListener("scroll", function (e) {
-      if (inputRef.current !== null) {
-        if (window.scrollY > inputRef.current.offsetHeight + 80) {
-          // class width-0 made in App.css
-          inputRef.current.classList.add("width-0");
-        } else {
-          inputRef.current.classList.remove("width-0");
-        }
-      }
-    });
-  }, [data]);
+  }, []);
 
   return (
     <>

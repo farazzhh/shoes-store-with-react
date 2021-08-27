@@ -32,6 +32,8 @@ const ProductItemsPage = ({ props }) => {
             <PIPTitle>{itemsPageData.category}
             <BorderBottom width="300px" margin="20px auto"/>
             </PIPTitle>
+
+            {/*Sortbar in products for sort items*/}
             <SideBarProducts
               itemsPageData={itemsPageData}
               setItemsPageData={setItemsPageData}
