@@ -43,7 +43,7 @@ const PublicHeader = ({ title, describe, type, src }) => {
                 width="20%"
                 top={true}
                 left={true}
-                opacity={0.5}
+                opacity={0.3}
                 flipH={true}
               />
               <BackgroundPng
@@ -52,7 +52,7 @@ const PublicHeader = ({ title, describe, type, src }) => {
                 width="30%"
                 top={false}
                 left={false}
-                opacity={0.1}
+                opacity={0.3}
                 flipH={false}
               />
             </>
