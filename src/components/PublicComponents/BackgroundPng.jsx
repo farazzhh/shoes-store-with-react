@@ -12,7 +12,6 @@ export const BackgroundPng = styled.img`
   opacity: ${({ opacity }) => (opacity ? `${Number(opacity)}` : null)};
   object-fit: contain;
   max-height: 100%;
-  z-index: 10;
   @media all and (max-width: 480px) {
     width: 50%;
     ${({ left }) => (left ? "left: -5px;" : "right: -5px;")};

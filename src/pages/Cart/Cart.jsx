@@ -67,7 +67,13 @@ const Cart = () => {
                     />
                   </CardItemLink>
                   <CartContent>
-                    <CardItemSpan>{item.name}</CardItemSpan>
+                    <CardItemSpan>
+                      <CardItemLink
+                        to={`/Products/${item.category}/${item.id}`}
+                      >
+                        {item.name}{" "}
+                      </CardItemLink>
+                    </CardItemSpan>
                     <CardItemSpan>size : {item.size}</CardItemSpan>
                     <CardItemSpan>Qty : 1</CardItemSpan>
                     <CardItemSpan>price: {item.price}</CardItemSpan>

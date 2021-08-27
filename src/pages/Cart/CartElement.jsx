@@ -8,7 +8,7 @@ export const CartSection = styled.section`
   min-height: calc(100vh - 80px);
   padding: 100px 0;
   position: relative;
-  background: rgba(242, 197, 224, 0.7);
+  background: rgb(211, 208, 208);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,9 +26,8 @@ export const CartWrapper = styled.div`
   padding: 15px;
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
-  background: rgba(255, 255, 255, 1);
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px,
-    rgba(0, 0, 0, 0.2) 0px 7px 13px -3px;
+  background: rgb(255, 255, 250);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 35px;
   border-radius: 10px;
   border-bottom: #870a30 1px solid;
   border-left: #870a30 1px solid;
@@ -62,7 +61,8 @@ export const CardItem = styled.div`
   display: flex;
   overflow: hidden;
   align-items: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid lightgray;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
   `;
 
 export const CartContent = styled.div`
@@ -97,16 +97,22 @@ export const CardSummary = styled.div`
   justify-content: space-around;
   column-gap: 100px;
   align-items: center;
-  border: 2px solid lightgray;
+  border: 1px solid lightgray;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
 `;
 
 export const CardItemLink = styled(Link)`
   height: 80px;
+  cursor: pointer;
+  :hover {
+    color: #870a30;
+  }
 `;
 
 export const CartItemImg = styled.img`
   height: 100%;
   object-fit: contain;
+  border-radius: 50%;
 `;
 
 export const CardItemDeleteButton = styled.button`
