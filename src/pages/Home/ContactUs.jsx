@@ -36,14 +36,6 @@ const ContactUs = () => {
       />
       <Contact id="contactus">
         <ContactContainer>
-          <BackgroundPng
-            width="30%"
-            src={`${process.env.PUBLIC_URL}/assets/images/png/contactus3.png`}
-            top={true}
-            left={false}
-            opacity={0.5}
-            flipH={false}
-          />
           <ContactWrapper>
             <ContactVideo
               src={`${process.env.PUBLIC_URL}/assets/videos/contactus web.mp4`}
@@ -60,7 +52,7 @@ const ContactUs = () => {
                 src={`${process.env.PUBLIC_URL}/assets/images/png/contact.png`}
                 top={true}
                 left={false}
-                opacity={0.1}
+                opacity={0.15}
                 flipH={false}
               />
               <ContactDescribe>
@@ -113,14 +105,7 @@ const ContactUs = () => {
                 </div>
               </ContactsSocialWrapper>
             </ContactInf>
-            <BackgroundPng
-              width="20%"
-              src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
-              top={false}
-              left={true}
-              opacity={0.3}
-              flipH={true}
-            />
+
             <PublicButton
               to="/contactus"
               margin="true"
@@ -130,6 +115,22 @@ const ContactUs = () => {
               See More
             </PublicButton>
           </ContactWrapper>
+          <BackgroundPng
+            width="20%"
+            src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
+            top={false}
+            left={true}
+            opacity={0.3}
+            flipH={true}
+          />
+          <BackgroundPng
+            width="30%"
+            src={`${process.env.PUBLIC_URL}/assets/images/png/contactus3.png`}
+            top={true}
+            left={false}
+            opacity={0.5}
+            flipH={false}
+          />
         </ContactContainer>
       </Contact>
     </BGSection>
