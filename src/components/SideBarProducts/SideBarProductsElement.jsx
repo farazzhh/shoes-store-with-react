@@ -4,7 +4,7 @@ export const SideBarContainer = styled.aside`
   width: ${({ toggle }) => (toggle ? "250px" : "100px")};
   height: ${({ toggle }) => (toggle ? "230px" : "40px")};
   background-color: ${({ toggle }) =>
-    toggle && "rgba(239,104,180, 1)" };
+    toggle ? "rgba(239,104,180, 0.7)" : "rgba(239,104,180,1)"};
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
   display: flex;
   border-radius: 2px;
@@ -31,6 +31,8 @@ export const Icon = styled.div`
   z-index: 10;
   background: rgb(239, 104, 180);
   border-radius: 1px;
+  border: ${({ toggle }) =>
+    toggle ? "1px solid rgba(0, 0, 0, 0.1)" : "1px solid rgba(0, 0, 0, 0)"};
   span {
     text-align: center;
     transition: all 0.5s ease-in-out;
@@ -81,7 +83,7 @@ export const SideBarMenu = styled.div`
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     :hover {
-      background: rgb(216, 216, 216);
+      box-shadow: 0 0px 15px rgba(255, 255, 255, 0.3);
     }
   }
 `;
@@ -104,4 +106,3 @@ export const SelectionDiv = styled.div`
     text-align: center;
   }
 `;
-
