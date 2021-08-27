@@ -25,6 +25,8 @@ const Item = ({ data, category, requestData }) => {
 
   const imges = [];
   const [selectSize, setSelectSize] = useState("");
+
+  // put process.env.PUBLIC_URL befor image adress 
   useEffect(() => {
     requestData.images.map((img) => {
       imges.push({
@@ -34,6 +36,7 @@ const Item = ({ data, category, requestData }) => {
     });
   });
 
+  // make object with all item property plus selected size and item's category
   const addToCartHandler = () => {
     const newItem = {
       ...requestData,
@@ -42,10 +45,11 @@ const Item = ({ data, category, requestData }) => {
     };
     pushToCart(newItem);
   };
-  
+
+  // this useEffect is for go to top of the page when loaded
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [])
+  }, []);
 
   return (
     <>
@@ -67,6 +71,7 @@ const Item = ({ data, category, requestData }) => {
                 <span>Select Size :</span>
 
                 <ItemSizeInputLabelWrapper>
+                  {/* this map is for render available sizes */}
                   {requestData.sizes.map((size, index) => (
                     <ItemSizeInputLabel key={index}>
                       <ItemSizeInput
@@ -85,6 +90,8 @@ const Item = ({ data, category, requestData }) => {
                   ))}
                 </ItemSizeInputLabelWrapper>
               </ItemSizesWrapper>
+
+              {/* this condition is for disbaling add to cart button befor selecting size */}
               {selectSize ? (
                 <ItemAddToCartBtn
                   type="submit"
