@@ -89,14 +89,14 @@ const Item = ({ data, category, requestData }) => {
                 <ItemAddToCartBtn
                   type="submit"
                   name="submit"
-                  value="Add to Card"
+                  value="Add to Cart"
                   onClick={addToCartHandler}
                 />
               ) : (
                 <ItemAddToCartBtn
                   type="submit"
                   name="submit"
-                  value="Add to Card"
+                  value="Add to Cart"
                   disabled
                 />
               )}
