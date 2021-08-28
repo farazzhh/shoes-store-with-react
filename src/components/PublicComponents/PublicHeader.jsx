@@ -48,7 +48,7 @@ const PublicHeader = ({ title, describe, type, src }) => {
                 mobileWidth="40%"
               />
               <BackgroundPng
-                src={`${process.env.PUBLIC_URL}/assets/images/png/sneaker.png`}
+                src={`${process.env.PUBLIC_URL}/assets/images/png/allStar.png`}
                 alt="logo"
                 width="30%"
                 top={false}

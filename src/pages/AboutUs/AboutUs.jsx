@@ -30,7 +30,7 @@ useEffect(() => {
         title="About Us"
         describe="Meet ShoesStore"
         type="image"
-        src={`${process.env.PUBLIC_URL}/assets/images/shoe6.jpg`}
+        src={`${process.env.PUBLIC_URL}/assets/images/shoe13web.jpg`}
       />
       <About id="aboutus">
         <AboutContainer>

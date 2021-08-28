@@ -195,9 +195,13 @@ export const NavCart = styled(LinkR)`
   }
 `;
 export const NavCartImageSpan = styled.span`
-  color: #870a30;
-  text-decoration: underline;
+  color: #fff;
+  font-size: 14px;
+  min-width: 20px;
+  text-align: center;
+  border-radius: 50%;
   font-weight: 500;
+  background-color: #870a30;
 `;
 
 export const NavCartMobile = styled(LinkR)`

@@ -34,7 +34,7 @@ const ContactUs = () => {
         title="Contact Us"
         describe="let us know you"
         type="image"
-        src={`${process.env.PUBLIC_URL}/assets/images/shoe8.jpg`}
+        src={`${process.env.PUBLIC_URL}/assets/images/shoe8web.jpg`}
       />
       <Contact id="contactus">
         <ContactContainer>

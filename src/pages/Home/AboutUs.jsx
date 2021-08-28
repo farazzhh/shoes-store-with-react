@@ -24,7 +24,7 @@ const AboutUs = () => {
         title="About Us"
         describe="Meet ShoesStore"
         type="image"
-        src={`${process.env.PUBLIC_URL}/assets/images/shoe13.jpg`}
+        src={`${process.env.PUBLIC_URL}/assets/images/shoe13web.jpg`}
       />
       <About id="aboutus">
         <AboutContainer>
