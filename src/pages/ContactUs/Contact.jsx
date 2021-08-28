@@ -38,22 +38,6 @@ const ContactUs = () => {
       />
       <Contact id="contactus">
         <ContactContainer>
-        <BackgroundPng
-          width="30%"
-          src={`${process.env.PUBLIC_URL}/assets/images/png/contactus3.png`}
-          top={true}
-          left={false}
-          opacity={0.1}
-          flipH={false}
-        />
-        <BackgroundPng
-          width="30%"
-          src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
-          top={false}
-          left={true}
-          opacity={0.1}
-          flipH={true}
-        />
           <ContactWrapper>
             <ContactVideo controls preload="auto" muted class="video-js">
               <source
@@ -124,7 +108,25 @@ const ContactUs = () => {
                 </div>
               </ContactsSocialWrapper>
             </ContactInf>
+            <BackgroundPng
+              width="50%"
+              mobileWidth="300px"
+              src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
+              top={false}
+              left={true}
+              opacity={0.1}
+              flipH={true}
+            />
           </ContactWrapper>
+          <BackgroundPng
+            width="20%"
+            mobileWidth="30%"
+            src={`${process.env.PUBLIC_URL}/assets/images/png/contactus3.png`}
+            top={true}
+            left={false}
+            opacity={0.5}
+            flipH={false}
+          />
         </ContactContainer>
       </Contact>
     </BGSection>

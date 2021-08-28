@@ -68,11 +68,11 @@ const AboutUs = () => {
             flipH={true}
           />
           <BackgroundPng
-            width="50%"
+            width="40%"
             src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus.png`}
             top={false}
             left={false}
-            opacity={0.3}
+            opacity={0.1}
             flipH={true}
           />
         </AboutContainer>

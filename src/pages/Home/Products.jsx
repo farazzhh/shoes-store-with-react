@@ -39,12 +39,7 @@ const Products = () => {
 
       <BGSection>
         {/* products parallex hero header from public components */}
-        <PublicHeader
-          title="Style"
-          describe="let's play the Game"
-          type="bg"
-          
-        />
+        <PublicHeader title="Style" describe="let's play the Game" type="bg" />
         <ProductsSection id="products">
           <ProductsWrapper>
             <BackgroundPng
@@ -55,6 +50,7 @@ const Products = () => {
               left={true}
               opacity={0.3}
               flipH={false}
+              mobileWidth="40%"
             />
             <BackgroundPng
               src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}
@@ -64,6 +60,7 @@ const Products = () => {
               left={false}
               opacity={0.3}
               flipH={true}
+              mobileWidth="50%"
             />
             <ProductsContent>
               <ProductsTitle>Products List</ProductsTitle>

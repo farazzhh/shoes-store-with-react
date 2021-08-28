@@ -1,10 +1,10 @@
 import styled from "styled-components";
+
 export const About = styled.section`
   width: 100vw;
   padding: 100px 0 250px 0;
 `;
 
-// AboutVideo, AboutVideoBg, AboutContent, AboutTitle, AboutDescribe;
 export const AboutContainer = styled.div`
   width: 70%;
   max-width: 1100px;
@@ -15,13 +15,13 @@ export const AboutContainer = styled.div`
   @media screen and (max-width: 768px) {
     width: 95%;
   }
-  `;
+`;
 
 export const AboutWrapper = styled.div`
-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px;
-border-left: #870a30 1px solid;
-background: #fff;
-border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px;
+  border-left: #870a30 1px solid;
+  background: #fff;
+  border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;

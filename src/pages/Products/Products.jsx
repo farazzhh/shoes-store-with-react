@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useRef, useReducer } from "react";
+import React, { useEffect, useContext, useReducer } from "react";
 import {
   ProductsSection,
   ProductsWrapper,
@@ -21,7 +21,6 @@ const Products = () => {
   const [data, dataHandler, requestData, requestDataHandler] =
     useContext(ProductsContext);
 
-  const inputRef = useRef(null);
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
 
   useEffect(() => {
@@ -51,7 +50,8 @@ const Products = () => {
               top={false}
               left={true}
               opacity={0.3}
-              flipH={true}
+              flipH={false}
+              mobileWidth="40%"
             />
             <BackgroundPng
               src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}
@@ -60,7 +60,8 @@ const Products = () => {
               top={true}
               left={false}
               opacity={0.3}
-              flipH={false}
+              flipH={true}
+              mobileWidth="50%"
             />
             <ProductsContent>
               <ProductsTitle>Products List</ProductsTitle>

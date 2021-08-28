@@ -37,13 +37,12 @@ const ContactUs = () => {
       <Contact id="contactus">
         <ContactContainer>
           <ContactWrapper>
-            <ContactVideo
-              src={`${process.env.PUBLIC_URL}/assets/videos/contactus web.mp4`}
-              controls
-              playsInline
-              muted
-              type="video/mp4"
-            />
+            <ContactVideo controls preload="auto" muted class="video-js">
+              <source
+                src={`${process.env.PUBLIC_URL}/assets/videos/contactus web.mp4`}
+                type="video/mp4"
+              />
+            </ContactVideo>
             <ContactContent>
               <ContactTitle>Contact us</ContactTitle>
               <BorderBottom height="2px" />
@@ -55,6 +54,7 @@ const ContactUs = () => {
                 opacity={0.15}
                 flipH={false}
               />
+
               <ContactDescribe>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Recusandae eaque dolor commodi illo animi corporis autem atque
@@ -105,6 +105,15 @@ const ContactUs = () => {
                 </div>
               </ContactsSocialWrapper>
             </ContactInf>
+            <BackgroundPng
+              width="50%"
+              mobileWidth="300px"
+              src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
+              top={false}
+              left={true}
+              opacity={0.1}
+              flipH={true}
+            />
             <PublicButton
               to="/contactus"
               margin="true"
@@ -116,19 +125,12 @@ const ContactUs = () => {
           </ContactWrapper>
           <BackgroundPng
             width="20%"
+            mobileWidth="30%"
             src={`${process.env.PUBLIC_URL}/assets/images/png/contactus3.png`}
             top={true}
             left={false}
             opacity={0.5}
             flipH={false}
-          />
-          <BackgroundPng
-            width="30%"
-            src={`${process.env.PUBLIC_URL}/assets/images/png/contactus web.png`}
-            top={false}
-            left={true}
-            opacity={0.3}
-            flipH={true}
           />
         </ContactContainer>
       </Contact>

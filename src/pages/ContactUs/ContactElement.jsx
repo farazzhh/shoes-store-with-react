@@ -98,7 +98,8 @@ export const ContactAddress = styled.p`
 `;
 
 export const ContactsSocialWrapper = styled.div`
-  width: 40%; 
+  width: 40%;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

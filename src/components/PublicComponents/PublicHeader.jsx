@@ -45,6 +45,7 @@ const PublicHeader = ({ title, describe, type, src }) => {
                 left={true}
                 opacity={0.3}
                 flipH={true}
+                mobileWidth="40%"
               />
               <BackgroundPng
                 src={`${process.env.PUBLIC_URL}/assets/images/png/sneaker.png`}
@@ -54,6 +55,7 @@ const PublicHeader = ({ title, describe, type, src }) => {
                 left={false}
                 opacity={0.3}
                 flipH={false}
+                mobileWidth="50%"
               />
             </>
           ) : null}
