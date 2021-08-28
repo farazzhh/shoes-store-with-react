@@ -25,7 +25,6 @@ export const NavWrapper = styled.div`
   align-items: center;
   width: 90%;
   height: 100%;
-
 `;
 
 export const NavWrapperLogo = styled(Link)`
@@ -195,6 +194,12 @@ export const NavCart = styled(LinkR)`
     transform: translateY(2px);
   }
 `;
+export const NavCartImageSpan = styled.span`
+  color: #870a30;
+  text-decoration: underline;
+  font-weight: 500;
+`;
+
 export const NavCartMobile = styled(LinkR)`
   height: 100%;
   width: 60px;
@@ -212,5 +217,4 @@ export const NavCartImage = styled.img`
   margin-right: 2px;
   height: 17px;
   object-fit: contain;
-  
 `;

@@ -11,6 +11,7 @@ import {
   NavCart,
   NavCartMobile,
   NavCartImage,
+  NavCartImageSpan,
   NavMenuWrapper,
   NavMenu,
   NavMenuItem,
@@ -69,7 +70,10 @@ const NavBar = () => {
               <NavCartImage
                 src={`${process.env.PUBLIC_URL}/assets/images/png/cart.png`}
               />
-              {cartData.length}
+              <NavCartImageSpan>
+                {" "}
+                {cartData.length === 0 ? null : cartData.length}
+              </NavCartImageSpan>
             </NavCart>
           </NavMenu>
         </NavMenuWrapper>
@@ -78,7 +82,10 @@ const NavBar = () => {
             <NavCartImage
               src={`${process.env.PUBLIC_URL}/assets/images/png/cart.png`}
             />
-            {cartData.length}
+            <NavCartImageSpan>
+              {" "}
+              {cartData.length === 0 ? null : cartData.length}
+            </NavCartImageSpan>
           </NavCartMobile>
           <MobileIcon onClick={toggleMobileMenu} />
         </NavMobileWrapper>
