@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Slide } from "react-slideshow-image";
+import { faSignInAlt as awsomeIcon } from "@fortawesome/free-solid-svg-icons";
 import "./SlideShow.css";
 import "react-slideshow-image/dist/styles.css";
 import { BorderBottom } from "../../../components/PublicComponents/BorderBottom";
@@ -14,13 +15,11 @@ import {
   SlideShowWrapper,
   Icon,
 } from "./SlideShowElement";
-import { faSignInAlt as awsomeIcon } from "@fortawesome/free-solid-svg-icons";
 const slideImages = [
-  "./assets/images/header Slideshow/header3 web.jpg",
-  "./assets/images/header Slideshow/header1 web.jpg",
-  "./assets/images/header Slideshow/header2 web.jpg",
-  "./assets/images/header Slideshow/header3.jpg",
-  "./assets/images/header Slideshow/header4 web.jpg",
+  "./assets/images/header Slideshow/header3web.jpg",
+  "./assets/images/header Slideshow/header1web.jpg",
+  "./assets/images/header Slideshow/header4web.jpg",
+  "./assets/images/header Slideshow/header5web.jpg",
 ];
 
 const Slideshow = () => {
@@ -29,12 +28,11 @@ const Slideshow = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", function (e) {
-      if (inputRef.current !== null ) {
+      if (inputRef.current !== null) {
         if (window.scrollY > inputRef.current.offsetHeight + 80) {
           // class width-0 made in App.css
           inputRef.current.classList.add("width-0");
           setAutoplay(false);
-
         } else {
           inputRef.current.classList.remove("width-0");
           setAutoplay(true);
@@ -48,7 +46,7 @@ const Slideshow = () => {
       <Slide
         easing="ease"
         arrows={false}
-        duration={2000}
+        duration={3000}
         autoplay={autoplay}
         infinite={true}
       >
@@ -69,7 +67,7 @@ const Slideshow = () => {
         <BorderBottom />
         <HeroDescribe>Your Feet</HeroDescribe>
         <PublicButtonWrapper>
-          <PublicButton to="/signin" transparency="true" >
+          <PublicButton to="/signin" transparency="true">
             <strong>Sign Up</strong>/<small>Sign in</small>
             <Icon icon={awsomeIcon} />
           </PublicButton>

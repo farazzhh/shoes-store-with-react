@@ -4,7 +4,7 @@ import { Link as LinkR } from "react-router-dom";
 export const ProductsSection = styled.section`
   width: 100vw;
   height: auto;
-  padding: 100px 0 250px 0;
+  padding: 200px 0 250px 0;
   position: relative;
 
 `;
