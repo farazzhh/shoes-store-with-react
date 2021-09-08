@@ -3,12 +3,7 @@ import "./App.css";
 import "animate.css";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Footer from "./components/Footer/Footer";
-import {
-  Route,
-  Redirect,
-  Switch,
-  HashRouter,
-} from "react-router-dom";
+import { Route, Redirect, Switch, HashRouter } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
 import SignIn from "./pages/Sign/SignIn";
 import Products from "./pages/Products/Products";
@@ -22,15 +17,19 @@ import Cart from "./pages/Cart/Cart";
 import { ProductsContext } from "./providers/ProductsContext";
 import { BadUrl } from "./components/PublicComponents/BadUrl";
 function App(props) {
-
   const [data, dataHandler, requestData, requestDataHandler] =
-  useContext(ProductsContext);
-    
+    useContext(ProductsContext);
+
   useEffect(() => {
-    import("./data.json").then((res) => dataHandler(res.default));
-    
-  },);
-  
+    fetch("http://localhost:8000/database")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => dataHandler(data));
+
+    // import("./data.json").then((res) => dataHandler(res.default));
+  },[]);
+
   return (
     <HashRouter>
       {data.items && (
