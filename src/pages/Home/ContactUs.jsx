@@ -37,7 +37,7 @@ const ContactUs = () => {
       <Contact id="contactus">
         <ContactContainer>
           <ContactWrapper>
-            <ContactVideo controls preload="auto" muted class="video-js">
+            <ContactVideo controls preload="auto" muted className="video-js">
               <source
                 src={`${process.env.PUBLIC_URL}/assets/videos/contactus web.mp4`}
                 type="video/mp4"
