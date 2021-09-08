@@ -19,7 +19,7 @@ const slideImages = [
   "./assets/images/header Slideshow/header3web.jpg",
   "./assets/images/header Slideshow/header1web.jpg",
   "./assets/images/header Slideshow/header4web.jpg",
-  "./assets/images/header Slideshow/header5web.jpg",
+  "./assets/images/header Slideshow/header31.jpg",
 ];
 
 const Slideshow = () => {

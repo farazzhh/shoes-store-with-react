@@ -36,7 +36,6 @@ function App(props) {
       alert('Something Worng')
     })
 
-    // import("./data.json").then((res) => dataHandler(res.default));
   },[]);
 
   return (
