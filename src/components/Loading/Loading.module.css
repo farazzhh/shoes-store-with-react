@@ -1,4 +1,36 @@
-
+@-webkit-keyframes loadingD {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes loadingD {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes loadingD {
+   0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes loadingD {
   0% {
     transform: rotate(0deg);
@@ -20,12 +52,12 @@
   background-color: whitesmoke;
 }
 .ring {
-  width: 10px;
-  height: 10px;
+  width: 50px;
+  height: 50px;
   margin: 0 auto;
   padding: 10px;
-  border: 7px dashed #4b9cdb;
+  border: 10px dashed #4b9cdb;
   border-radius: 100%;
   display: inline-block;
-  animation: loadingD 1.5s 0.3s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+   animation: loadingD 1.5s 0.3s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
 }
