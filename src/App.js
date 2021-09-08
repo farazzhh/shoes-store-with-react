@@ -22,7 +22,6 @@ function App(props) {
    const [data, dataHandler, requestData, requestDataHandler] =
      useContext(ProductsContext);
   const isPending = useFetch("http://localhost:8000/database");
-  console.log(isPending);
   return (
     <HashRouter>
       {isPending && <Loading />}
