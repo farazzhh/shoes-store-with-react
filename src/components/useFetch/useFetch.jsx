@@ -8,25 +8,28 @@ const useFetch = (url) => {
   const abortCont = new AbortController();
 
   useEffect(() => {
-    fetch(url,{signal: abortCont.signal})
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        dataHandler(data);
-        setIsPending(false);
-      })
-      .catch((err) => {
-        if (err.name === "AbortError") {
-          console.log("fetch aborted");
-        } else {
-          alert("Something Worng");
-        }
-      });
-      return () => abortCont.abort();
-  }, [url]);
+    // fetch(url,{signal: abortCont.signal})
+    //   .then((res) => {
+    //     return res.json();
+    //   })
+    //   .then((data) => {
+    //     dataHandler(data);
+    // })
+    // .catch((err) => {
+    //     if (err.name === "AbortError") {
+    //         console.log("fetch aborted");
+            
+    //     }
+    // });
 
-  return isPending;
+     import("../../data.json").then((res) => dataHandler(res.default.database));
+     setTimeout(() => {
+       setIsPending(false);
+     }, 600);
+
+  });
+    
+    return {isPending}
 };
 
 export default useFetch;
