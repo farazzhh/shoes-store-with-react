@@ -29,7 +29,7 @@ const useFetch = (url) => {
 
   });
     
-    return {isPending}
+    return {data,isPending}
 };
 
 export default useFetch;
