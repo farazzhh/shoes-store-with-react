@@ -35,7 +35,7 @@ const Cart = () => {
     <CartSection>
       <BackButtonPublic />
       <BackgroundPng
-        src={`${process.env.PUBLIC_URL}/assets/images/png/cartBgpng.png`}
+        src={`${process.env.PUBLIC_URL}/assets/images/png/cartBG.png`}
         width="50%"
         top={false}
         left={false}
