@@ -19,7 +19,7 @@ import Loading from "./components/Loading/Loading";
 import useFetch from "./components/useFetch/useFetch";
 import { ProductsContext } from "./providers/ProductsContext";
 function App(props) {
-   const [data, dataHandler, requestData, requestDataHandler] =
+   const [data] =
      useContext(ProductsContext);
   const isPending = useFetch("http://localhost:8000/database");
   return (
