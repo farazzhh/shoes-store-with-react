@@ -22,12 +22,12 @@ const useFetch = (url) => {
     //     }
     // });
 
-     import("../../data.json").then((res) => dataHandler(res.default.database));
-     setTimeout(() => {
-       setIsPending(false);
-     }, 600);
-
-  });
+    const importData = async () => {
+      await import("../../data.json").then((res) => dataHandler(res.default.database));
+      setIsPending(false);
+    }
+    importData();
+  },[]);
     
     return {data,isPending}
 };
