@@ -25,6 +25,7 @@ import Loading from './components/Loading/Loading'
 import useFetch from "./components/useFetch/useFetch";
 function App(props) {
   // const [data, dataHandler, requestData, requestDataHandler] = useContext(ProductsContext);
+  
   const { data,isPending } = useFetch("../../data.json");
   
   return (
