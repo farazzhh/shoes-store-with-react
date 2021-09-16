@@ -19,12 +19,11 @@ import ContactUs from "./pages/ContactUs/Contact";
 import ProductsApp from "./pages/Products/ProductsItemsPage/ProductsApp";
 import ProductsItemsApp from "./pages/Products/ProductsItemsPage/ProductItem/ProductsItemsApp.jsx";
 import Cart from "./pages/Cart/Cart";
-import { ProductsContext } from "./providers/ProductsContext";
 import { BadUrl } from "./components/PublicComponents/BadUrl";
 import Loading from './components/Loading/Loading'
 import useFetch from "./components/useFetch/useFetch";
+
 function App(props) {
-  // const [data, dataHandler, requestData, requestDataHandler] = useContext(ProductsContext);
   
   const { data,isPending } = useFetch("../../data.json");
   

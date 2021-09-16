@@ -4,17 +4,20 @@ import "./index.css";
 import App from "./App";
 import { CartProvider } from "./providers/CartContext";
 import { MobileMenuProvider } from "./providers/MobileMenuContext";
-import { ProductsProvider } from "./providers/ProductsContext";
+import { DataProvider } from "./providers/DataContext";
+import { UserDataProvider } from "./providers/UserDataContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProductsProvider>
+    <UserDataProvider>
+    <DataProvider>
       <MobileMenuProvider>
         <CartProvider>
           <App />
         </CartProvider>
       </MobileMenuProvider>
-    </ProductsProvider>
+    </DataProvider>
+    </UserDataProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
