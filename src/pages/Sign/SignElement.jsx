@@ -29,8 +29,10 @@ export const FormsWrapper = styled.div`
 `;
 
 export const FormContent = styled.div`
-  height: 800px;
+  height: ${({ sw }) => (!sw ? "700px" : " 0px")};
+  border: 1px solid black;
   overflow: hidden;
+  transition: all 0.3;
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -47,27 +49,27 @@ export const FormContent = styled.div`
 `;
 
 export const SignUpForm = styled.form`
-  background-color: white;
+  background-color: #dbd9d9;
   width: 100%;
-  height: ${({ sw }) => (!sw ? "800px" : " 0px")};
+  height: ${({ sw }) => (!sw ? "700px" : " 0px")};
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   z-index: 1;
-  padding: ${({ sw }) => (sw ? null : " 80px 50px")};
+  padding: ${({ sw }) => (sw ? null : "  50px")};
   transition: all 0.3s;
   @media screen and (max-width: 400px) {
     padding: 32px 32px;
   }
 `;
 export const SignInForm = styled.form`
+  background-color: #faf5f5;
   height: ${({ sw }) => (!sw ? "0px" : " 800px")};
   width: 100%;
   transition: all 0.3s;
   overflow: hidden;
-  background-color: whitesmoke;
-  padding: ${({ sw }) => (!sw ? null : " 80px 50px")};
+  padding: ${({ sw }) => (!sw ? null : " 50px")};
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -119,11 +121,12 @@ export const FormLabel = styled.label`
 
 export const FormInput = styled.input`
   padding: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 25 px;
   border: none;
   outline: none;
-  background: whitesmoke;
-  border-radius: 4px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: inset rgba(0, 0, 0, 0.4) 1px 1px 4px;
 `;
 
 export const FormButton = styled.button`

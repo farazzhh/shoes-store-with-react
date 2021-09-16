@@ -15,7 +15,7 @@ import {
 } from "./SignElement";
 
 const Sign = () => {
-  const [sw, setSw] = useState(false);
+  const [sw, setSw] = useState(true);
 
   const clickHandler = () => {
     setSw(!sw)
