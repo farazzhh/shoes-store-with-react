@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 import { BGSection } from "../PublicComponents/BGSection";
 import {
@@ -14,19 +14,20 @@ import {
   SocialLogo,
   WebSiteRights,
   SocialIcons,
-    SocialIconLink,
-    Logo,
-  Title
+  SocialIconLink,
+  Logo,
+  Title,
 } from "./FooterElement";
 
 const Footer = () => {
-  
+
+
   return (
     <BGSection>
       <FooterContainer>
         <FooterWrap>
           {/* <FooterLinksContainer> */}
-            {/* <FooterLinkWrapper>
+          {/* <FooterLinkWrapper>
               <FooterLinkItems>
                 <FooterLinkTitle>About Us</FooterLinkTitle>
                 <FooterLink to="/">How it Works</FooterLink>
@@ -64,18 +65,20 @@ const Footer = () => {
               </FooterLinkItems>
             </FooterLinkWrapper> */}
 
-            <SocialMedia>
-              <SocialMediaWrap>
-                <SocialLogo to="/">
-                  <Logo
-                    src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
-                    alt="logo"
-                  />
-                  <Title>ShoesStore</Title>
-                </SocialLogo>
+          <SocialMedia>
+            <SocialMediaWrap>
+              <SocialLogo to="/">
+                <Logo
+                  src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                  alt="logo"
+                />
+                <Title>ShoesStore</Title>
+              </SocialLogo>
+
                 <WebSiteRights>
                   Company {new Date().getFullYear()} All Rights reserved.
                 </WebSiteRights>
+
                 <SocialIcons>
                   <SocialIconLink
                     to="//www.facebook.com"
@@ -106,8 +109,8 @@ const Footer = () => {
                     <FaTwitter />
                   </SocialIconLink>
                 </SocialIcons>
-              </SocialMediaWrap>
-            </SocialMedia>
+            </SocialMediaWrap>
+          </SocialMedia>
           {/* </FooterLinksContainer> */}
         </FooterWrap>
       </FooterContainer>
