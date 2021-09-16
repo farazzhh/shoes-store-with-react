@@ -12,14 +12,15 @@ import {
   FormLabel,
   FormInput,
   Text,
+  FormButton,
 } from "./SignElement";
 
 const Sign = () => {
   const [sw, setSw] = useState(true);
 
   const clickHandler = () => {
-    setSw(!sw)
-  }
+    setSw(!sw);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -37,56 +38,67 @@ const Sign = () => {
             <FormContent>
               <SignUpForm action="#" sw={sw}>
                 <FormH1>Sign Up</FormH1>
-                <FormLabel htmlFor="for">Username :</FormLabel>
-                <FormInput
-                  type="text"
-                  name="username"
-                  placeholder="Enter your username"
-                  required
-                />
-                <FormLabel htmlFor="for">Email</FormLabel>
-                <FormInput
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  required
-                />
-                <FormLabel htmlFor="for">Password</FormLabel>
-                <FormInput
-                  type="password"
-                  name="password"
-                  placeholder="Enter your password"
-                  required
-                />
-                <FormLabel htmlFor="for">Repeat Password</FormLabel>
-                <FormInput
-                  type="password"
-                  name="password2"
-                  placeholder="Repeat your password"
-                  required
-                />
+                <div>
+                  <FormLabel htmlFor="for">Username :</FormLabel>
+                  <FormInput
+                    type="text"
+                    name="username"
+                    placeholder="Enter your username"
+                    required
+                  />
+                </div>
+                <div>
+                  <FormLabel htmlFor="for">Email : </FormLabel>
+                  <FormInput
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div>
+                  <FormLabel htmlFor="for">Password :</FormLabel>
+                  <FormInput
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                </div>
+                <div>
+                  <FormLabel htmlFor="for">Repeat Password :</FormLabel>
+                  <FormInput
+                    type="password"
+                    name="password2"
+                    placeholder="Repeat your password"
+                    required
+                  />
+                </div>
                 {/* <FormButton type="submit">Continue</FormButton> */}
-                <PublicButton type="submit">Submit</PublicButton>
+                <FormButton type="submit">Submit</FormButton>
               </SignUpForm>
               <SignInForm action="#" sw={sw}>
                 <FormH1>Sign In</FormH1>
-                <FormLabel htmlFor="for">Username :</FormLabel>
-                <FormInput
-                  type="text"
-                  name="username"
-                  placeholder="Enter your username"
-                  required
-                />
-                <FormLabel htmlFor="for">Password:</FormLabel>
-                <FormInput
-                  type="password"
-                  name="password"
-                  placeholder="Enter your password"
-                  required
-                />
-            
+                <div>
+                  <FormLabel htmlFor="for">Username :</FormLabel>
+                  <FormInput
+                    type="text"
+                    name="username"
+                    placeholder="Enter your username"
+                    required
+                  />
+                </div>
+                <div>
+                  <FormLabel htmlFor="for">Password : </FormLabel>
+                  <FormInput
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                </div>
                 {/* <FormButton type="submit">Continue</FormButton> */}
-                <PublicButton type="submit">Submit</PublicButton>
+                <FormButton type="submit">Submit</FormButton>
                 <Text>Forgot password</Text>
               </SignInForm>
             </FormContent>

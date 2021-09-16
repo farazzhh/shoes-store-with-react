@@ -24,7 +24,7 @@ export const FormsWrapper = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 400px) {
-    height: 75%;
+    /* height: 75%; */
   }
 `;
 
@@ -55,10 +55,10 @@ export const SignUpForm = styled.form`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   z-index: 1;
   padding: ${({ sw }) => (sw ? null : "  50px")};
-  transition: all 0.3s;
+  transition: all 0.5s;
   @media screen and (max-width: 400px) {
     padding: 32px 32px;
   }
@@ -67,15 +67,16 @@ export const SignInForm = styled.form`
   background-color: #faf5f5;
   height: ${({ sw }) => (!sw ? "0px" : " 800px")};
   width: 100%;
-  transition: all 0.3s;
+  transition: all 0.5s;
   overflow: hidden;
   padding: ${({ sw }) => (!sw ? null : " 50px")};
   z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 20px;
   @media screen and (max-width: 400px) {
-    padding: 32px 32px;
+    padding: 32px;
   }
 `;
 export const SwitchSide = styled.div`
@@ -106,7 +107,6 @@ export const SwitchSide = styled.div`
 `;
 
 export const FormH1 = styled.h1`
-  margin-bottom: 40px;
   font-size: 20px;
   font-weight: 00;
   text-align: center;
@@ -114,14 +114,14 @@ export const FormH1 = styled.h1`
 `;
 
 export const FormLabel = styled.label`
-  margin-bottom: 9px;
   font-size: 14px;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
 `;
 
 export const FormInput = styled.input`
   padding: 16px;
-  margin-bottom: 25 px;
+  width: 100%;
+  /* margin-bottom: 25 px; */
   border: none;
   outline: none;
   background: white;
@@ -130,16 +130,19 @@ export const FormInput = styled.input`
 `;
 
 export const FormButton = styled.button`
-  background: #ff59b4;
-  padding: 14px 0;
+  background: rgba(135, 10, 48, 0.7);
+  color: white;
+  padding: 10px 0;
   border: none;
   border-radius: 4px;
   box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
   font-size: 20px;
   cursor: pointer;
+  text-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px;
+  transition: all 0.1s;
   &:hover {
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
-    background: #ff49b4;
+    background: rgb(135, 10, 48);
   }
 `;
 
