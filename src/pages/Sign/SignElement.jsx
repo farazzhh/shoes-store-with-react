@@ -30,7 +30,8 @@ export const FormContent = styled.div`
   background-color: whitesmoke;
   overflow: hidden;
   transition: all 0.3s;
-  width: 500px;
+  max-width: 500px;
+  width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,9 +41,6 @@ export const FormContent = styled.div`
   border-radius: 5px;
   border-bottom: #870a30 3px solid;
   border-left: #870a30 1px solid;
-  @media screen and (max-width: 400px) {
-    width: 95%;
-  }
 `;
 
 export const SignUpForm = styled.form`

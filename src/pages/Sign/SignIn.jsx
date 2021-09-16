@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { BGSection } from "../../components/PublicComponents/BGSection";
-import { PublicButton } from "../../components/PublicComponents/PublicButton";
 import {
   Container,
   FormsWrapper,
