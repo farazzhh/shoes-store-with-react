@@ -156,6 +156,7 @@ export const PIPTitle = styled.h1`
   font-size: 100px;
   text-shadow: 0 0px 5px rgba(255, 255, 255, 0.8);
   letter-spacing: -10px;
+  position: relative;
   @media screen and (max-width: 480px) {
     font-size: 80px;
   }
