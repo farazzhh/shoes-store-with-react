@@ -1,10 +1,12 @@
-import React,{useEffect} from "react";
+import React, { useEffect, useState } from "react";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import { PublicButton } from "../../components/PublicComponents/PublicButton";
 import {
   Container,
-  FormWrap,
-  Form,
+  FormsWrapper,
+  SignUpForm,
+  SwitchSide,
+  SignInForm,
   FormContent,
   FormH1,
   FormLabel,
@@ -12,7 +14,13 @@ import {
   Text,
 } from "./SignElement";
 
-const SignIn = () => {
+const Sign = () => {
+  const [sw, setSw] = useState(false);
+
+  const clickHandler = () => {
+    setSw(!sw)
+  }
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -20,24 +28,73 @@ const SignIn = () => {
     <>
       <BGSection>
         <Container>
-          <FormWrap>
+          <FormsWrapper>
+            <SwitchSide>
+              <span onClick={clickHandler}>
+                Switch to{!sw ? " Sign In" : " Sign UP"}
+              </span>
+            </SwitchSide>
             <FormContent>
-              <Form action="#">
-                <FormH1>Sign in to your account</FormH1>
+              <SignUpForm action="#" sw={sw}>
+                <FormH1>Sign Up</FormH1>
+                <FormLabel htmlFor="for">Username :</FormLabel>
+                <FormInput
+                  type="text"
+                  name="username"
+                  placeholder="Enter your username"
+                  required
+                />
                 <FormLabel htmlFor="for">Email</FormLabel>
-                <FormInput type="email" required />
+                <FormInput
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
                 <FormLabel htmlFor="for">Password</FormLabel>
-                <FormInput type="password" required />
+                <FormInput
+                  type="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  required
+                />
+                <FormLabel htmlFor="for">Repeat Password</FormLabel>
+                <FormInput
+                  type="password"
+                  name="password2"
+                  placeholder="Repeat your password"
+                  required
+                />
                 {/* <FormButton type="submit">Continue</FormButton> */}
-                <PublicButton type="submit">Continue</PublicButton>
+                <PublicButton type="submit">Submit</PublicButton>
+              </SignUpForm>
+              <SignInForm action="#" sw={sw}>
+                <FormH1>Sign In</FormH1>
+                <FormLabel htmlFor="for">Username :</FormLabel>
+                <FormInput
+                  type="text"
+                  name="username"
+                  placeholder="Enter your username"
+                  required
+                />
+                <FormLabel htmlFor="for">Password:</FormLabel>
+                <FormInput
+                  type="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  required
+                />
+            
+                {/* <FormButton type="submit">Continue</FormButton> */}
+                <PublicButton type="submit">Submit</PublicButton>
                 <Text>Forgot password</Text>
-              </Form>
+              </SignInForm>
             </FormContent>
-          </FormWrap>
+          </FormsWrapper>
         </Container>
       </BGSection>
     </>
   );
 };
 
-export default SignIn;
+export default Sign;
