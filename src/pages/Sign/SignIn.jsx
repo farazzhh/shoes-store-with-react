@@ -8,7 +8,7 @@ import {
   SwitchSide,
   SignInForm,
   FormContent,
-  FormH1,
+  FormH2,
   FormLabel,
   FormInput,
   Text,
@@ -30,16 +30,13 @@ const Sign = () => {
       <BGSection>
         <Container>
           <FormsWrapper>
-            <SwitchSide>
-              <span onClick={clickHandler}>
-                Switch to{!sw ? " Sign In" : " Sign UP"}
-              </span>
-            </SwitchSide>
-            <FormContent>
+            <FormContent sw={sw}>
               <SignUpForm action="#" sw={sw}>
-                <FormH1>Sign Up</FormH1>
+                <FormH2 sw={sw}>Create an Account</FormH2>
                 <div>
-                  <FormLabel htmlFor="for">Username :</FormLabel>
+                  <FormLabel sw={sw} htmlFor="for">
+                    Username :
+                  </FormLabel>
                   <FormInput
                     type="text"
                     name="username"
@@ -48,7 +45,7 @@ const Sign = () => {
                   />
                 </div>
                 <div>
-                  <FormLabel htmlFor="for">Email : </FormLabel>
+                  <FormLabel sw={sw} htmlFor="for">Email : </FormLabel>
                   <FormInput
                     type="email"
                     name="email"
@@ -57,7 +54,7 @@ const Sign = () => {
                   />
                 </div>
                 <div>
-                  <FormLabel htmlFor="for">Password :</FormLabel>
+                  <FormLabel sw={sw} htmlFor="for">Password :</FormLabel>
                   <FormInput
                     type="password"
                     name="password"
@@ -66,7 +63,7 @@ const Sign = () => {
                   />
                 </div>
                 <div>
-                  <FormLabel htmlFor="for">Repeat Password :</FormLabel>
+                  <FormLabel sw={sw} htmlFor="for">Repeat Password :</FormLabel>
                   <FormInput
                     type="password"
                     name="password2"
@@ -75,12 +72,25 @@ const Sign = () => {
                   />
                 </div>
                 {/* <FormButton type="submit">Continue</FormButton> */}
-                <FormButton type="submit">Submit</FormButton>
+                <FormButton type="submit" sw={sw}>
+                  Submit
+                </FormButton>
               </SignUpForm>
-              <SignInForm action="#" sw={sw}>
-                <FormH1>Sign In</FormH1>
+
+              <SwitchSide onClick={clickHandler}>
                 <div>
-                  <FormLabel htmlFor="for">Username :</FormLabel>
+                  <span>
+                    {!sw
+                      ? " Already have an account?"
+                      : "Let's create an account!"}
+                  </span>
+                </div>
+              </SwitchSide>
+
+              <SignInForm action="#" sw={sw}>
+                <FormH2 sw={sw}>Sign In</FormH2>
+                <div>
+                  <FormLabel sw={sw} htmlFor="for">Username :</FormLabel>
                   <FormInput
                     type="text"
                     name="username"
@@ -89,7 +99,7 @@ const Sign = () => {
                   />
                 </div>
                 <div>
-                  <FormLabel htmlFor="for">Password : </FormLabel>
+                  <FormLabel sw={sw} htmlFor="for">Password : </FormLabel>
                   <FormInput
                     type="password"
                     name="password"
@@ -98,7 +108,9 @@ const Sign = () => {
                   />
                 </div>
                 {/* <FormButton type="submit">Continue</FormButton> */}
-                <FormButton type="submit">Submit</FormButton>
+                <FormButton type="submit" sw={sw}>
+                  Submit
+                </FormButton>
                 <Text>Forgot password</Text>
               </SignInForm>
             </FormContent>
