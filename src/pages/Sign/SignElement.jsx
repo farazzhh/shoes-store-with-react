@@ -27,8 +27,9 @@ export const FormsWrapper = styled.div`
 
 export const FormContent = styled.div`
   height: ${({ sw }) => (!sw ? "700px" : " 650px")};
+  background-color: whitesmoke;
   overflow: hidden;
-  transition: all 0.7s;
+  transition: all 0.3s;
   width: 500px;
   display: flex;
   flex-direction: column;
@@ -46,6 +47,7 @@ export const FormContent = styled.div`
 
 export const SignUpForm = styled.form`
   background-color: #a8667a;
+  opacity: ${({ sw }) => (!sw ? "1" : "0")};
   width: 100%;
   height: ${({ sw }) => (!sw ? "700px" : " 0px")};
   overflow: hidden;
@@ -61,6 +63,7 @@ export const SignUpForm = styled.form`
 `;
 export const SignInForm = styled.form`
   background-color: #faf5f5;
+  opacity: ${({ sw }) => (sw ? "1" : "0")};
   height: ${({ sw }) => (!sw ? "0px" : " 800px")};
   width: 100%;
   transition: all 0.7s ease-in-out;
@@ -85,7 +88,7 @@ export const SwitchSide = styled.div`
     text-align: center;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    background-color: #8f495e;
+    background-color: rgb(135, 10, 48);
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 4px,
       rgba(0, 0, 0, 0.3) 0px 7px 13px -3px;
