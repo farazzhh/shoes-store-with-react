@@ -4,9 +4,9 @@ export const UserDataContext = createContext();
 
 export const UserDataProvider = (props) => {
   const [userData, setUserData] = useState({
-    username: "Faraz",
-    email: "F@f.com",
-    password: "ffffff",
+    username: "",
+    email: "",
+    password: "",
   });
 
   const setUserDataHandler = (data) => {
@@ -15,6 +15,7 @@ export const UserDataProvider = (props) => {
       email: data.email,
       password: data.password,
     });
+      console.log(userData);
   };
 
   return (

@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
 import { validate } from "uuid";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import useForm from "../../components/useForm/useForm";
 import {signUp_validation} from "../../components/useForm/validation";
+import { UserDataContext } from "../../providers/UserDataContext";
 import {
   Container,
   FormsWrapper,
@@ -20,7 +21,7 @@ import {
 
 const Sign = () => {
   const [sw, setSw] = useState(true);
-
+const [userData, setUserDataHandler] = useContext(UserDataContext);
   const {
     signInChangeHandler,
     signInValue,
@@ -29,7 +30,7 @@ const Sign = () => {
     signIn_Submit_handler,
     signUp_Submit_handler,
     errors,
-  } = useForm(signUp_validation);
+  } = useForm({ signUp_validation, setUserDataHandler });
 
   const clickSwitchHandler = () => {
     setSw(!sw);
@@ -70,7 +71,7 @@ const Sign = () => {
                   </FormLabel>
                   <FormInput
                     id="email"
-                    type="email"
+                    type="text"
                     name="email"
                     placeholder="Enter your email"
                     onChange={signUpChangeHandler}

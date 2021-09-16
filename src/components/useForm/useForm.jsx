@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 
-const useForm = (signUp_validation) => {
-  
-    const [signUpValue, setSignUpValue] = useState({
+const useForm = ({ signUp_validation, setUserDataHandler }) => {
+  const [signUpValue, setSignUpValue] = useState({
     username: "",
     email: "",
     password: "",
@@ -12,8 +11,8 @@ const useForm = (signUp_validation) => {
     username: "",
     password: "",
   });
-    
-    const [errors , setErrors] = useState({})
+
+  const [errors, setErrors] = useState({});
 
   const signUpChangeHandler = (e) => {
     const { name, value } = e.target;
@@ -21,6 +20,8 @@ const useForm = (signUp_validation) => {
       ...signUpValue,
       [name]: value,
     });
+   
+
   };
 
   const signInChangeHandler = (e) => {
@@ -37,10 +38,16 @@ const useForm = (signUp_validation) => {
   };
   const signUp_Submit_handler = (e) => {
     e.preventDefault();
-    console.log(signUpValue);
-      setErrors(signUp_validation(signUpValue));
+    setErrors(signUp_validation(signUpValue));
+    if (!errors) {
 
+      setUserDataHandler(signUpValue);
+    }
   };
+
+  useEffect(() => {
+    setErrors({})
+  },[])
 
   return {
     signInChangeHandler,
