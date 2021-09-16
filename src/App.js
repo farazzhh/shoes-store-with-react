@@ -10,7 +10,7 @@ import {
   HashRouter,
 } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
-import SignIn from "./pages/Sign/SignIn";
+import Sign from "./pages/Sign/SignIn";
 import Products from "./pages/Products/Products";
 import SideBar from "./components/MobileMenuSideBar/MobileMenuSideBar.jsx";
 import Nav from "./components/Nav/Nav.jsx";
@@ -46,7 +46,7 @@ function App(props) {
             <Route exact path="/Products" component={Products} />
             <Route exact path="/aboutus" component={AboutUs} />
             <Route exact path="/contactus" component={ContactUs} />
-            <Route exact path="/Signin" component={SignIn} />
+            <Route exact path="/Signin" component={Sign} />
             <Route exact path="/Products/:category" component={ProductsApp} />
             <Route
               exact
