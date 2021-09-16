@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import ProductItemsPage from "./ProductItemsPage";
-import { ProductsContext } from "../../../providers/ProductsContext";
+import { DataContext } from "../../../providers/DataContext";
 
 const ProductsApp = (props) => {
 
   // data is full dataJson and resultData is category or item was selected with user
   const [data, dataHandler, requestData, requestDataHandler] =
-    useContext(ProductsContext);
+    useContext(DataContext);
   
   const [checkData, setCheckData] = useState(false);
 

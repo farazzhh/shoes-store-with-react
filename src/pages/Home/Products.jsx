@@ -14,10 +14,10 @@ import {
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { BGSection } from "../../components/PublicComponents/BGSection";
-import { ProductsContext } from "../../providers/ProductsContext";
+import { DataContext } from "../../providers/DataContext";
 import PublicHeader from "../../components/PublicComponents/PublicHeader";
 const Products = () => {
-  const [data] = useContext(ProductsContext);
+  const [data] = useContext(DataContext);
   const inputRef = useRef(null);
   useEffect(() => {
     window.scrollTo(0, 0);

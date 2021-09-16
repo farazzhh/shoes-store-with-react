@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useState } from "react";
-import { ProductsContext } from "../../../providers/ProductsContext";
+import { DataContext } from "../../../providers/DataContext";
 import { BorderBottom } from "../../../components/PublicComponents/BorderBottom";
 import { Link } from "react-router-dom";
 import SideBarProducts from "../../../components/SideBarProducts/SideBarProducts";
@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const ProductItemsPage = ({ props }) => {
   const [data, dataHandler, requestData, requestDataHandler] =
-    useContext(ProductsContext);
+    useContext(DataContext);
   const [itemsPageData, setItemsPageData] = useState(requestData);
   const clickHandler = (item) => {
     requestDataHandler(item);

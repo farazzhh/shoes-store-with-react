@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BadUrl } from "../../../../components/PublicComponents/BadUrl";
-import { ProductsContext } from "../../../../providers/ProductsContext";
+import { DataContext } from "../../../../providers/DataContext";
 import Item from "./Item/Item";
 
 const ProductsItemsApp = (props) => {
   const params = props.match.params;
   const [checkData, setCheckData] = useState(false);
-  const [data, dataHandler, requestData, requestDataHandler] =useContext(ProductsContext);
+  const [data, dataHandler, requestData, requestDataHandler] =
+    useContext(DataContext);
   
   const res = [...data.items];
 

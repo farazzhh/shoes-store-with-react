@@ -15,11 +15,11 @@ import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import PublicHeader from "../../components/PublicComponents/PublicHeader";
-import { ProductsContext } from "../../providers/ProductsContext";
+import { DataContext } from "../../providers/DataContext";
 
 const Products = () => {
   const [data, dataHandler, requestData, requestDataHandler] =
-    useContext(ProductsContext);
+    useContext(DataContext);
 
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
 

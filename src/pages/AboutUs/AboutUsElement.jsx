@@ -9,6 +9,7 @@ export const AboutContainer = styled.div`
   width: 70%;
   max-width: 1100px;
   margin: 0 auto;
+  position: relative;
   @media screen and (max-width: 1024px) {
     width: 75%;
   }
@@ -40,6 +41,7 @@ export const AboutContent = styled.div`
   width: 100%;
   height: 100%;
   padding: 20px;
+  position: relative;
 `;
 
 export const AboutTitle = styled.h1`

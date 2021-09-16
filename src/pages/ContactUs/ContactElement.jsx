@@ -15,6 +15,7 @@ export const ContactContainer = styled.div`
   width: 70%;
   max-width: 1100px;
   margin: 0 auto;
+  position: relative;
   @media screen and (max-width: 1024px) {
     width: 80%;
   }
@@ -47,6 +48,7 @@ export const ContactContent = styled.div`
   padding: 20px;
   width: 100%;
   height: 100%;
+  position: relative;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
