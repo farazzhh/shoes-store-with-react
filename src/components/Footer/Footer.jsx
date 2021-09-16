@@ -11,7 +11,7 @@ import {
   // FooterLink,
   SocialMedia,
   SocialMediaWrap,
-  SocialLogo,
+  FooterLogo,
   WebSiteRights,
   SocialIcons,
   SocialIconLink,
@@ -20,7 +20,10 @@ import {
 } from "./FooterElement";
 
 const Footer = () => {
-
+  const style = {
+    width: "30px",
+    height: "30px",
+  };
 
   return (
     <BGSection>
@@ -67,48 +70,48 @@ const Footer = () => {
 
           <SocialMedia>
             <SocialMediaWrap>
-              <SocialLogo to="/">
+              <FooterLogo to="/">
                 <Logo
                   src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
                   alt="logo"
                 />
                 <Title>ShoesStore</Title>
-              </SocialLogo>
+              </FooterLogo>
 
-                <WebSiteRights>
-                  Company {new Date().getFullYear()} All Rights reserved.
-                </WebSiteRights>
+              <WebSiteRights>
+                Company {new Date().getFullYear()} All Rights reserved.
+              </WebSiteRights>
 
-                <SocialIcons>
-                  <SocialIconLink
-                    to="//www.facebook.com"
-                    target="_blank"
-                    aria-label="Facebook"
-                  >
-                    <FaFacebook />
-                  </SocialIconLink>
-                  <SocialIconLink
-                    to="//www.instagram.com"
-                    target="_blank"
-                    aria-label="Instgaram"
-                  >
-                    <FaInstagram />
-                  </SocialIconLink>
-                  <SocialIconLink
-                    to="//www.youtube.com"
-                    target="_blank"
-                    aria-label="Youtube"
-                  >
-                    <FaYoutube />
-                  </SocialIconLink>
-                  <SocialIconLink
-                    to="//www.twitter.com"
-                    target="_blank"
-                    aria-label="Twiiter"
-                  >
-                    <FaTwitter />
-                  </SocialIconLink>
-                </SocialIcons>
+              <SocialIcons>
+                <SocialIconLink
+                  to="//www.facebook.com"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
+                  <FaFacebook style={style} />
+                </SocialIconLink>
+                <SocialIconLink
+                  to="//www.instagram.com"
+                  target="_blank"
+                  aria-label="Instgaram"
+                >
+                  <FaInstagram style={style} />
+                </SocialIconLink>
+                <SocialIconLink
+                  to="//www.youtube.com"
+                  target="_blank"
+                  aria-label="Youtube"
+                >
+                  <FaYoutube style={style} />
+                </SocialIconLink>
+                <SocialIconLink
+                  to="//www.twitter.com"
+                  target="_blank"
+                  aria-label="Twiiter"
+                >
+                  <FaTwitter style={style} />
+                </SocialIconLink>
+              </SocialIcons>
             </SocialMediaWrap>
           </SocialMedia>
           {/* </FooterLinksContainer> */}
