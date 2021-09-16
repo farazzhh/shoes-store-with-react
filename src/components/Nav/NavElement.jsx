@@ -68,6 +68,25 @@ export const NavMobileWrapper = styled.div`
   @media screen and (max-width: 768px) {
     display: flex;
   }
+  p {
+    background-color: whitesmoke;
+    height: 80%;
+    margin: auto 20px;
+    line-height: 20px;
+    text-align: center;
+    overflow: hidden;
+    list-style: none;
+    margin-left: 0.5rem;
+    color: #000;
+    padding: 6px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 export const MobileIcon = styled(FaBars)`
@@ -96,6 +115,25 @@ export const NavMenu = styled.ul`
   flex-wrap: nowrap;
   @media screen and (max-width: 768px) {
     display: none;
+  }
+  p {
+    background-color: whitesmoke;
+    height: 80%;
+    margin: auto 0;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    margin-left: 0.5rem;
+    color: #000;
+    padding: 6px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   }
 `;
 
@@ -166,6 +204,7 @@ export const SignButton = styled(LinkR)`
     border-bottom: rgba(255, 105, 180, 1) 2px solid;
     transform: translateY(2px);
   }
+  
 `;
 
 export const NavCart = styled(LinkR)`
@@ -193,6 +232,7 @@ export const NavCart = styled(LinkR)`
     border-bottom: rgba(255, 105, 180, 1) 2px solid;
     transform: translateY(2px);
   }
+
 `;
 export const NavCartImageSpan = styled.span`
   color: #fff;

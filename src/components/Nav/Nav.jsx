@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { MobileMenuContext } from "../../providers/MobileMenuContext";
-import { ProductsContext } from "../../providers/ProductsContext";
+import { DataContext } from "../../providers/DataContext";
 import { CartContext } from "../../providers/CartContext";
 import {
   Nav,
@@ -20,12 +20,14 @@ import {
   MobileIcon,
 } from "./NavElement";
 import SubMenuComponents from "./SubMenu";
+import { UserDataContext } from "../../providers/UserDataContext";
 
 const NavBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
   const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext);
-  const [data] = useContext(ProductsContext);
-
+  const [data] = useContext(DataContext);
+  const [userData, setUserDataHandler] = useContext(UserDataContext);
+console.log(userData);
   const subMenuHeight = (subMenu) => {
     return (subMenu.length * 40).toString() + "px";
   };
@@ -65,7 +67,10 @@ const NavBar = () => {
                 </NavMenuItem>
               ))}
 
-            <SignButton to="/signin">Sign up/in</SignButton>
+            {!userData.username && (
+              <SignButton to="/signin">Sign up/in</SignButton>
+            )}
+
             <NavCart to="/cart">
               <NavCartImage
                 src={`${process.env.PUBLIC_URL}/assets/images/png/cart.png`}
@@ -74,6 +79,11 @@ const NavBar = () => {
                 <NavCartImageSpan>{cartData.length}</NavCartImageSpan>
               )}
             </NavCart>
+            {userData.username && (
+              <p>
+                Hi <strong>{userData.username}</strong>
+              </p>
+            )}
           </NavMenu>
         </NavMenuWrapper>
         <NavMobileWrapper>
@@ -85,6 +95,11 @@ const NavBar = () => {
               <NavCartImageSpan>{cartData.length}</NavCartImageSpan>
             )}
           </NavCartMobile>
+          {userData.username && (
+            <p>
+              Hi <strong>{userData.username}</strong>
+            </p>
+          )}
           <MobileIcon onClick={toggleMobileMenu} />
         </NavMobileWrapper>
       </NavWrapper>
