@@ -44,7 +44,7 @@ export const FormContent = styled.div`
 `;
 
 export const SignUpForm = styled.form`
-  background-color: #a8667a;
+  background-color: ${({ sw }) => (!sw ? "#a8667a" : "#870a30")};
   opacity: ${({ sw }) => (!sw ? "1" : "0")};
   width: 100%;
   height: ${({ sw }) => (!sw ? "700px" : " 0px")};
@@ -59,6 +59,7 @@ export const SignUpForm = styled.form`
     padding: ${({ sw }) => (sw ? null : " 30px 15px")};
   }
 `;
+
 export const SignInForm = styled.form`
   background-color: #faf5f5;
   opacity: ${({ sw }) => (sw ? "1" : "0")};
@@ -129,6 +130,18 @@ export const FormInput = styled.input`
   }
 `;
 
+export const ErrorsSpan = styled.span`
+opacity: ${({ error }) => (error ? "1" : "0")};
+overflow: hidden;
+transition: all 0.2s;
+padding: 1px 3px;
+color: white;
+background-color: red;
+font-weight: 500;
+border-radius: 4px;
+box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
+`
+
 export const FormButton = styled.button`
   background-color: #dddada;
   background: ${({ sw }) => (!sw ? "#dddada" : "rgb(135, 10, 48)")};
@@ -149,6 +162,7 @@ export const FormButton = styled.button`
 `;
 
 export const Text = styled.span`
+transition: all 0.2s;
   text-align: center;
   margin-top: 24px;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
@@ -156,6 +170,6 @@ export const Text = styled.span`
   cursor: pointer;
   color: gray;
   &:hover {
-    color: #870a30;
+    color: black;
   }
 `;

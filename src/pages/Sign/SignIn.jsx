@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { validate } from "uuid";
 import { BGSection } from "../../components/PublicComponents/BGSection";
+import useForm from "../../components/useForm/useForm";
+import {signUp_validation} from "../../components/useForm/validation";
 import {
   Container,
   FormsWrapper,
@@ -10,6 +13,7 @@ import {
   FormH2,
   FormLabel,
   FormInput,
+  ErrorsSpan,
   Text,
   FormButton,
 } from "./SignElement";
@@ -17,7 +21,17 @@ import {
 const Sign = () => {
   const [sw, setSw] = useState(true);
 
-  const clickHandler = () => {
+  const {
+    signInChangeHandler,
+    signInValue,
+    signUpChangeHandler,
+    signUpValue,
+    signIn_Submit_handler,
+    signUp_Submit_handler,
+    errors,
+  } = useForm(signUp_validation);
+
+  const clickSwitchHandler = () => {
     setSw(!sw);
   };
 
@@ -30,8 +44,98 @@ const Sign = () => {
         <Container>
           <FormsWrapper>
             <FormContent sw={sw}>
-              <SignUpForm action="#" sw={sw}>
+              <SignUpForm action="#" sw={sw} onSubmit={signUp_Submit_handler}>
                 <FormH2 sw={sw}>Create an Account</FormH2>
+                <div>
+                  <FormLabel sw={sw} htmlFor="username">
+                    Username :
+                  </FormLabel>
+                  <FormInput
+                    id="username"
+                    type="text"
+                    name="username"
+                    placeholder="Enter your username"
+                    onChange={signUpChangeHandler}
+                    value={signUpValue.username}
+                  />
+                  {errors.username && (
+                    <ErrorsSpan error={errors.username}>
+                      {errors.username}
+                    </ErrorsSpan>
+                  )}
+                </div>
+                <div>
+                  <FormLabel sw={sw} htmlFor="email">
+                    Email :{" "}
+                  </FormLabel>
+                  <FormInput
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    onChange={signUpChangeHandler}
+                    value={signUpValue.email}
+                  />
+                  {errors.email && (
+                    <ErrorsSpan error={errors.email}>
+                      {errors.email}
+                    </ErrorsSpan>
+                  )}
+                </div>
+                <div>
+                  <FormLabel sw={sw} htmlFor="password">
+                    Password :
+                  </FormLabel>
+                  <FormInput
+                    id="password"
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    onChange={signUpChangeHandler}
+                    value={signUpValue.password}
+                  />
+                  {errors.password && (
+                    <ErrorsSpan error={errors.password}>
+                      {errors.password}
+                    </ErrorsSpan>
+                  )}
+                </div>
+                <div>
+                  <FormLabel sw={sw} htmlFor="password2">
+                    Repeat Password :
+                  </FormLabel>
+                  <FormInput
+                    id="password2"
+                    type="password"
+                    name="password2"
+                    placeholder="Repeat your password"
+                    onChange={signUpChangeHandler}
+                    value={signUpValue.password2}
+                  />
+                  {errors.password2 && (
+                    <ErrorsSpan error={errors.password2}>
+                      {errors.password2}
+                    </ErrorsSpan>
+                  )}
+                </div>
+                {/* <FormButton type="submit">Continue</FormButton> */}
+                <FormButton type="submit" sw={sw}>
+                  Submit
+                </FormButton>
+              </SignUpForm>
+
+              <SwitchSide onClick={clickSwitchHandler}>
+                <div>
+                  <span>
+                    {!sw
+                      ? " Already have an account?"
+                      : "Don't have an account?"}
+                  </span>
+                </div>
+              </SwitchSide>
+
+              <SignInForm action="#" sw={sw} onSubmit={signIn_Submit_handler}>
+                <FormH2 sw={sw}>Sign In</FormH2>
                 <div>
                   <FormLabel sw={sw} htmlFor="for">
                     Username :
@@ -40,73 +144,23 @@ const Sign = () => {
                     type="text"
                     name="username"
                     placeholder="Enter your username"
+                    onChange={signInChangeHandler}
+                    value={signInValue.username}
                     required
                   />
                 </div>
                 <div>
-                  <FormLabel sw={sw} htmlFor="for">Email : </FormLabel>
-                  <FormInput
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                  />
-                </div>
-                <div>
-                  <FormLabel sw={sw} htmlFor="for">Password :</FormLabel>
+                  <FormLabel sw={sw} htmlFor="for">
+                    Password :{" "}
+                  </FormLabel>
                   <FormInput
                     type="password"
                     name="password"
                     placeholder="Enter your password"
-                    required
+                    onChange={signInChangeHandler}
+                    value={signInValue.password}
                   />
                 </div>
-                <div>
-                  <FormLabel sw={sw} htmlFor="for">Repeat Password :</FormLabel>
-                  <FormInput
-                    type="password"
-                    name="password2"
-                    placeholder="Repeat your password"
-                    required
-                  />
-                </div>
-                {/* <FormButton type="submit">Continue</FormButton> */}
-                <FormButton type="submit" sw={sw}>
-                  Submit
-                </FormButton>
-              </SignUpForm>
-
-              <SwitchSide onClick={clickHandler}>
-                <div>
-                  <span>
-                    {!sw
-                      ? " Already have an account?"
-                      : "Let's create an account!"}
-                  </span>
-                </div>
-              </SwitchSide>
-
-              <SignInForm action="#" sw={sw}>
-                <FormH2 sw={sw}>Sign In</FormH2>
-                <div>
-                  <FormLabel sw={sw} htmlFor="for">Username :</FormLabel>
-                  <FormInput
-                    type="text"
-                    name="username"
-                    placeholder="Enter your username"
-                    required
-                  />
-                </div>
-                <div>
-                  <FormLabel sw={sw} htmlFor="for">Password : </FormLabel>
-                  <FormInput
-                    type="password"
-                    name="password"
-                    placeholder="Enter your password"
-                    required
-                  />
-                </div>
-                {/* <FormButton type="submit">Continue</FormButton> */}
                 <FormButton type="submit" sw={sw}>
                   Submit
                 </FormButton>
