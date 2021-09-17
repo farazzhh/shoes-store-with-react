@@ -4,17 +4,21 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 body{
   position: relative;
-}
-a{
+ }
+
+ a{
   text-decoration: none;
   outline: none;
   color: #000000;
 }
+
 li{
   list-style: none;
 }
+
 .width-0{
   width: 0;
   overflow: hidden;
