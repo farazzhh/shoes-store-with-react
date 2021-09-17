@@ -26,12 +26,12 @@ export const FormsWrapper = styled.div`
 `;
 
 export const FormContent = styled.div`
-  height: ${({ sw }) => (!sw ? "700px" : " 650px")};
+  height: ${({ sw }) => (!sw ? "650px" : " 600px")};
   background-color: whitesmoke;
   overflow: hidden;
   transition: all 0.3s;
-  max-width: 500px;
-  width: 95%;
+  max-width: 400px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,13 +41,16 @@ export const FormContent = styled.div`
   border-radius: 5px;
   border-bottom: #870a30 3px solid;
   border-left: #870a30 1px solid;
+  @media screen and (max-width: 480px) {
+    height: ${({ sw }) => (!sw ? "600px" : "550px")};
+  }
 `;
 
 export const SignUpForm = styled.form`
   background-color: ${({ sw }) => (!sw ? "#a8667a" : "#870a30")};
   opacity: ${({ sw }) => (!sw ? "1" : "0")};
+  height: ${({ sw }) => (!sw ? "650px" : " 0px")};
   width: 100%;
-  height: ${({ sw }) => (!sw ? "700px" : " 0px")};
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -55,15 +58,16 @@ export const SignUpForm = styled.form`
   z-index: 1;
   padding: ${({ sw }) => (sw ? null : " 30px  50px 50px")};
   transition: all 0.7s ease-in-out;
-  @media screen and (max-width: 400px) {
-    padding: ${({ sw }) => (sw ? null : " 30px 15px")};
+  @media screen and (max-width: 480px) {
+    height: ${({ sw }) => (!sw ? "600px" : " 0px")};
+    padding: ${({ sw }) => (sw ? null : " 30px")};
   }
 `;
 
 export const SignInForm = styled.form`
   background-color: #faf5f5;
   opacity: ${({ sw }) => (sw ? "1" : "0")};
-  height: ${({ sw }) => (!sw ? "0px" : " 800px")};
+  height: ${({ sw }) => (!sw ? "0px" : " 600px")};
   width: 100%;
   transition: all 0.7s ease-in-out;
   overflow: hidden;
@@ -73,6 +77,10 @@ export const SignInForm = styled.form`
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+  @media screen and (max-width: 480px) {
+    height: ${({ sw }) => (!sw ? "0px" : " 550px")};
+    padding: ${({ sw }) => (!sw ? null : " 30px")};
+  }
 `;
 export const SwitchSide = styled.div`
   width: 100%;
@@ -118,14 +126,16 @@ export const FormLabel = styled.label`
 `;
 
 export const FormInput = styled.input`
-  padding: 16px;
+  padding: 10px;
   width: 100%;
+  font-size: 15px;
   border: none;
   outline: none;
   background: white;
   border-radius: 5px;
   box-shadow: inset rgba(0, 0, 0, 0.4) 1px 1px 4px;
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 480px) {
+    font-size: 13px;
     padding: 10px 7px;
   }
 `;

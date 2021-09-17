@@ -1,8 +1,7 @@
-import React, { useEffect, useState,useContext } from "react";
-import { validate } from "uuid";
+import React, { useEffect, useState, useContext } from "react";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import useForm from "../../components/useForm/useForm";
-import {signUp_validation} from "../../components/useForm/validation";
+import { signUp_validation } from "../../components/useForm/validation";
 import { UserDataContext } from "../../providers/UserDataContext";
 import {
   Container,
@@ -20,8 +19,10 @@ import {
 } from "./SignElement";
 
 const Sign = () => {
-  const [sw, setSw] = useState(true);
-const [userData, setUserDataHandler] = useContext(UserDataContext);
+  const [sw, setSw] = useState(false);
+
+  const [userData, setUserDataHandler] = useContext(UserDataContext);
+
   const {
     signInChangeHandler,
     signInValue,
@@ -30,7 +31,7 @@ const [userData, setUserDataHandler] = useContext(UserDataContext);
     signIn_Submit_handler,
     signUp_Submit_handler,
     errors,
-  } = useForm({ signUp_validation, setUserDataHandler });
+  } = useForm(signUp_validation, setUserDataHandler);
 
   const clickSwitchHandler = () => {
     setSw(!sw);
@@ -39,6 +40,7 @@ const [userData, setUserDataHandler] = useContext(UserDataContext);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <BGSection>
@@ -78,9 +80,7 @@ const [userData, setUserDataHandler] = useContext(UserDataContext);
                     value={signUpValue.email}
                   />
                   {errors.email && (
-                    <ErrorsSpan error={errors.email}>
-                      {errors.email}
-                    </ErrorsSpan>
+                    <ErrorsSpan error={errors.email}>{errors.email}</ErrorsSpan>
                   )}
                 </div>
                 <div>
@@ -138,10 +138,11 @@ const [userData, setUserDataHandler] = useContext(UserDataContext);
               <SignInForm action="#" sw={sw} onSubmit={signIn_Submit_handler}>
                 <FormH2 sw={sw}>Sign In</FormH2>
                 <div>
-                  <FormLabel sw={sw} htmlFor="for">
+                  <FormLabel sw={sw} htmlFor="username">
                     Username :
                   </FormLabel>
                   <FormInput
+
                     type="text"
                     name="username"
                     placeholder="Enter your username"
@@ -151,10 +152,11 @@ const [userData, setUserDataHandler] = useContext(UserDataContext);
                   />
                 </div>
                 <div>
-                  <FormLabel sw={sw} htmlFor="for">
+                  <FormLabel sw={sw} htmlFor="password">
                     Password :{" "}
                   </FormLabel>
                   <FormInput
+
                     type="password"
                     name="password"
                     placeholder="Enter your password"
