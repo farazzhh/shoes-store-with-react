@@ -35,17 +35,17 @@ const useForm = (signUp_validation, setUserDataHandler) => {
     console.log(signInValue);
   };
 
-   const signUp_Submit_handler = (e) => {
-     const err = signUp_validation(signUpValue);
+  const signUp_Submit_handler = (e) => {
+    const err = signUp_validation(signUpValue);
 
-     if (err.username || err.password || err.password2 || err.email) {
-       setErrors(err);
-     } else {
-       setUserDataHandler(signUpValue);
-       setErrors({});
-
-     }
-   };
+    if (err.username || err.password || err.password2 || err.email) {
+      setErrors(err);
+      e.preventDefault();
+    } else {
+      setUserDataHandler(signUpValue);
+      setErrors({});
+    }
+  };
 
   return {
     signInChangeHandler,
