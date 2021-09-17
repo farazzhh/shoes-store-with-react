@@ -6,7 +6,7 @@ export const ProductsSection = styled.section`
   height: auto;
   padding: 200px 0 250px 0;
   position: relative;
-
+  overflow: hidden;
 `;
 
 export const ProductsWrapper = styled.div`
