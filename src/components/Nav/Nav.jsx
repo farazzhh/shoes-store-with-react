@@ -18,6 +18,8 @@ import {
   SignButton,
   NavMobileWrapper,
   MobileIcon,
+  WelComeUser,
+  WelComeUserMobile,
 } from "./NavElement";
 import SubMenuComponents from "./SubMenu";
 import { UserDataContext } from "../../providers/UserDataContext";
@@ -26,8 +28,9 @@ const NavBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
   const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext);
   const [data] = useContext(DataContext);
-  const [userData, setUserDataHandler] = useContext(UserDataContext);
-console.log(userData);
+  const [userData, setUserDataHandler, errors, setErrorsHandler] =
+    useContext(UserDataContext);
+
   const subMenuHeight = (subMenu) => {
     return (subMenu.length * 40).toString() + "px";
   };
@@ -57,7 +60,6 @@ console.log(userData);
                   submenuheight={() => computSubMenuHeight(menuItems)}
                 >
                   {menuItems.name}
-
                   {menuItems.subMenu && (
                     <SubMenuComponents
                       menu={menuItems.name}
@@ -66,11 +68,9 @@ console.log(userData);
                   )}
                 </NavMenuItem>
               ))}
-
             {!userData.username && (
               <SignButton to="/signin">Sign up/in</SignButton>
             )}
-
             <NavCart to="/cart">
               <NavCartImage
                 src={`${process.env.PUBLIC_URL}/assets/images/png/cart.png`}
@@ -79,14 +79,15 @@ console.log(userData);
                 <NavCartImageSpan>{cartData.length}</NavCartImageSpan>
               )}
             </NavCart>
-            {userData.username && (
-              <p>
-                Hi <strong>{userData.username}</strong>
-              </p>
-            )}
           </NavMenu>
         </NavMenuWrapper>
+
         <NavMobileWrapper>
+          {userData.username && (
+            <WelComeUserMobile>
+              <span>{userData.username[0]}</span>
+            </WelComeUserMobile>
+          )}
           <NavCartMobile to="/cart">
             <NavCartImage
               src={`${process.env.PUBLIC_URL}/assets/images/png/cart.png`}
@@ -95,14 +96,15 @@ console.log(userData);
               <NavCartImageSpan>{cartData.length}</NavCartImageSpan>
             )}
           </NavCartMobile>
-          {userData.username && (
-            <p>
-              Hi <strong>{userData.username}</strong>
-            </p>
-          )}
+
           <MobileIcon onClick={toggleMobileMenu} />
         </NavMobileWrapper>
       </NavWrapper>
+      {userData.username && (
+        <WelComeUser bool={userData.username}>
+          <span>{userData.username}</span>
+        </WelComeUser>
+      )}
     </Nav>
   );
 };

@@ -46,7 +46,10 @@ export const Logo = styled.img`
   @media screen and (max-width: 480px) {
     width: 45px;
     height: 45px;
-    /* width: 95%; */
+  }
+  @media all and (max-width: 370px) {
+    width: 40px;
+    height: 40px;
   }
 `;
 
@@ -56,7 +59,9 @@ export const Title = styled.h1`
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
   @media screen and (max-width: 480px) {
     font-size: 1rem;
-    /* width: 95%; */
+  }
+  @media all and (max-width: 370px) {
+    font-size: 0.8rem;
   }
 `;
 
@@ -67,25 +72,6 @@ export const NavMobileWrapper = styled.div`
   align-items: center;
   @media screen and (max-width: 768px) {
     display: flex;
-  }
-  p {
-    background-color: whitesmoke;
-    height: 80%;
-    margin: auto 20px;
-    line-height: 20px;
-    text-align: center;
-    overflow: hidden;
-    list-style: none;
-    margin-left: 0.5rem;
-    color: #000;
-    padding: 6px 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 400;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    transition: all 0.2s ease-in-out;
   }
 `;
 
@@ -115,25 +101,6 @@ export const NavMenu = styled.ul`
   flex-wrap: nowrap;
   @media screen and (max-width: 768px) {
     display: none;
-  }
-  p {
-    background-color: whitesmoke;
-    height: 80%;
-    margin: auto 0;
-    line-height: 50px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    list-style: none;
-    margin-left: 0.5rem;
-    color: #000;
-    padding: 6px 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 400;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   }
 `;
 
@@ -204,7 +171,6 @@ export const SignButton = styled(LinkR)`
     border-bottom: rgba(255, 105, 180, 1) 2px solid;
     transform: translateY(2px);
   }
-  
 `;
 
 export const NavCart = styled(LinkR)`
@@ -232,7 +198,6 @@ export const NavCart = styled(LinkR)`
     border-bottom: rgba(255, 105, 180, 1) 2px solid;
     transform: translateY(2px);
   }
-
 `;
 export const NavCartImageSpan = styled.span`
   color: #fff;
@@ -246,19 +211,72 @@ export const NavCartImageSpan = styled.span`
 
 export const NavCartMobile = styled(LinkR)`
   height: 100%;
-  width: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 1.4rem;
+  margin-right: 2rem;
 
   @media all and (max-width: 370px) {
-    width: 50px;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
   }
 `;
+
 export const NavCartImage = styled.img`
-  margin-right: 2px;
   height: 17px;
   object-fit: contain;
+`;
+
+/* this is for welcome username in navbar after login*/
+export const WelComeUser = styled.div`
+  position: absolute;
+  top: 0;
+  right: 20px;
+  display: none;
+  text-transform: capitalize;
+  background-color: lightpink;
+  margin-right: 1.7rem;
+  justify-content: center;
+  align-items: center;
+  height: ${({ bool }) => (bool ? "30px" : "0")};
+  padding: 0 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+  list-style: none;
+  color: #000;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 300;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+  @media all and (min-width: 769px) {
+    display: flex;
+  }
+`;
+export const WelComeUserMobile = styled.div`
+  text-transform: capitalize;
+  background-color: lightpink;
+  margin-right: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  list-style: none;
+  color: #000;
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+  @media all and (max-width: 370px) {
+    margin-right: 1rem;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+  }
 `;
