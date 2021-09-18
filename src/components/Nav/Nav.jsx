@@ -18,13 +18,10 @@ import {
   SignButton,
   NavMobileWrapper,
   MobileIcon,
-  WelComeUser,
-  WelComeUserMobile,
 } from "./NavElement";
 import SubMenuComponents from "./SubMenu";
 import { UserDataContext } from "../../providers/UserDataContext";
-import { Link } from "react-router-dom";
-import SignOut from "../../pages/Sign/SignOut";
+import UserProfile from "../../pages/Sign/UserProfile";
 
 const NavBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
@@ -33,14 +30,12 @@ const NavBar = () => {
   const [userData, setUserDataHandler, errors, setErrorsHandler] =
     useContext(UserDataContext);
 
-  const subMenuHeight = (subMenu) => {
-    return (subMenu.length * 40).toString() + "px";
-  };
   const computSubMenuHeight = (menuItems) => {
     if (menuItems.subMenu) {
-      return subMenuHeight(menuItems.subMenu);
+      return (menuItems.subMenu.length * 40).toString() + "px";
     }
   };
+
   return (
     <Nav className="nav">
       <NavWrapper>
@@ -59,8 +54,10 @@ const NavBar = () => {
                 <NavMenuItem
                   key={index}
                   to={`${menuItems.to}`}
+                  // for computing height of sub menu
                   submenuheight={() => computSubMenuHeight(menuItems)}
                 >
+                  {/* checking for submenu,if it has, it's rendring submenu */}
                   {menuItems.name}
                   {menuItems.subMenu && (
                     <SubMenuComponents
@@ -70,9 +67,12 @@ const NavBar = () => {
                   )}
                 </NavMenuItem>
               ))}
-            {!userData.username && (
+            {!userData.username ? (
               <SignButton to="/signin">Sign up/in</SignButton>
+            ) : (
+              <UserProfile bool={userData.username} mobile={true} />
             )}
+
             <NavCart to="/cart">
               <NavCartImage
                 src={`${process.env.PUBLIC_URL}/assets/images/png/cart.png`}
@@ -85,10 +85,9 @@ const NavBar = () => {
         </NavMenuWrapper>
 
         <NavMobileWrapper>
+          {/* username disapear after sign Up or In */}
           {userData.username && (
-            <WelComeUserMobile>
-              <span>{userData.username[0]}</span>
-            </WelComeUserMobile>
+            <UserProfile bool={userData.username} mobile={true} />
           )}
           <NavCartMobile to="/cart">
             <NavCartImage
@@ -101,12 +100,10 @@ const NavBar = () => {
 
           <MobileIcon onClick={toggleMobileMenu} />
         </NavMobileWrapper>
+        {/* {userData.username && (
+          <UserProfile bool={userData.username} mobile={false} />
+        )} */}
       </NavWrapper>
-      {userData.username && (
-        <WelComeUser bool={userData.username} onClick={SignOut}>
-          <span>{userData.username}</span>
-        </WelComeUser>
-      )}
     </Nav>
   );
 };

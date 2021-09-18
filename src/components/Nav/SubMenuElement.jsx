@@ -9,7 +9,7 @@ export const SubMenuList = styled.ul`
   width: 150px;
   position: absolute;
   top: 31px;
-  left: -20px;
+  left: -27px;
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -30,6 +30,18 @@ export const SubMenuListItem = styled(Link)`
   transition: all 0.2s ease-in-out;
   border-bottom: lightgray 1px solid;
   :hover {
+    background: -webkit-linear-gradient(
+      to top,
+      rgb(255, 255, 255),
+      rgba(255, 105, 180, 0.1),
+      rgb(255, 255, 255)
+    ); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(
+      to top,
+      rgb(255, 255, 255),
+      rgba(255, 105, 180, 0.1),
+      rgb(255, 255, 255)
+    ); /* Opera 11.10+ */
     background: linear-gradient(
       to top,
       rgb(255, 255, 255),

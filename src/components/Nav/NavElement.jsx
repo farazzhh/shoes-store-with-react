@@ -106,7 +106,7 @@ export const NavMenu = styled.ul`
 
 export const NavMenuItem = styled(LinkR)`
   height: 30px;
-  width: 110px;
+  width: 100px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -125,15 +125,28 @@ export const NavMenuItem = styled(LinkR)`
   transition: all 0.2s ease-in-out;
   &:hover {
     overflow: visible;
+    background: -webkit-linear-gradient(
+      to top,
+      rgb(255, 255, 255),
+      rgba(255, 105, 180, 0.1),
+      rgb(255, 255, 255)
+    ); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(
+      to top,
+      rgb(255, 255, 255),
+      rgba(255, 105, 180, 0.1),
+      rgb(255, 255, 255)
+    ); /* Opera 11.10+ */
     background: linear-gradient(
       to top,
-      rgba(255, 105, 180, 0.2),
       rgb(255, 255, 255),
-      rgba(255, 105, 180, 0.2)
+      rgba(255, 105, 180, 0.1),
+      rgb(255, 255, 255)
     );
     box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
     border-bottom: rgba(255, 105, 180, 1) 2px solid;
     transform: translateY(2px);
+
     /* ul is submenu */
     @media screen and (min-width: 769px) {
       ul {
@@ -174,8 +187,8 @@ export const SignButton = styled(LinkR)`
 `;
 
 export const NavCart = styled(LinkR)`
-  height: 35px;
-  width: 60px;
+  height: 30px;
+  width: 70px;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   border-bottom-left-radius: 2px;
@@ -206,6 +219,7 @@ export const NavCartImageSpan = styled.span`
   text-align: center;
   border-radius: 50%;
   font-weight: 500;
+  margin-left: 5px;
   background-color: #870a30;
 `;
 
@@ -224,59 +238,4 @@ export const NavCartMobile = styled(LinkR)`
 export const NavCartImage = styled.img`
   height: 17px;
   object-fit: contain;
-`;
-
-/* this is for welcome username in navbar after login*/
-export const WelComeUser = styled.div`
-  position: absolute;
-  top: 0;
-  right: 20px;
-  display: none;
-  text-transform: capitalize;
-  background-color: lightpink;
-  margin-right: 1.7rem;
-  justify-content: center;
-  align-items: center;
-  height: ${({ bool }) => (bool ? "30px" : "0")};
-  padding: 0 10px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  overflow: hidden;
-  list-style: none;
-  color: #000;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 300;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  transition: all 0.5s;
-  @media all and (min-width: 769px) {
-    display: flex;
-  }
-`;
-export const WelComeUserMobile = styled.div`
-  text-transform: capitalize;
-  background-color: lightpink;
-  margin-right: 1.7rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-  list-style: none;
-  color: #000;
-  cursor: pointer;
-  font-size: 23px;
-  font-weight: 600;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-
-  @media all and (max-width: 370px) {
-    margin-right: 1rem;
-    height: 30px;
-    width: 30px;
-    font-size: 20px;
-  }
 `;
