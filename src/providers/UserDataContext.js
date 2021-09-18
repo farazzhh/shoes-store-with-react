@@ -17,10 +17,18 @@ export const UserDataProvider = (props) => {
         username: signUpValue.username,
         email: signUpValue.email,
         password: signUpValue.password,
-      });
-      localStorage.setItem("userData", JSON.stringify(signUpValue));
+       });
     
-    console.log("userData in setUserDataHandler:", userData);
+    
+    localStorage.setItem(
+      "userData",
+      JSON.stringify({
+        username: signUpValue.username,
+        email: signUpValue.email,
+        password: signUpValue.password,
+      })
+    );
+    
   };
 
   return (
