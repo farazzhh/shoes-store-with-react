@@ -23,6 +23,8 @@ import {
 } from "./NavElement";
 import SubMenuComponents from "./SubMenu";
 import { UserDataContext } from "../../providers/UserDataContext";
+import { Link } from "react-router-dom";
+import SignOut from "../../pages/Sign/SignOut";
 
 const NavBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
@@ -101,7 +103,7 @@ const NavBar = () => {
         </NavMobileWrapper>
       </NavWrapper>
       {userData.username && (
-        <WelComeUser bool={userData.username}>
+        <WelComeUser bool={userData.username} onClick={SignOut}>
           <span>{userData.username}</span>
         </WelComeUser>
       )}

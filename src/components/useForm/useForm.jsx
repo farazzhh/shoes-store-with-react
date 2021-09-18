@@ -37,13 +37,13 @@ const useForm = (signUp_validation, setUserDataHandler) => {
 
   const signUp_Submit_handler = (e) => {
     const err = signUp_validation(signUpValue);
-
+    e.preventDefault();
     if (err.username || err.password || err.password2 || err.email) {
       setErrors(err);
-      e.preventDefault();
     } else {
       setUserDataHandler(signUpValue);
       setErrors({});
+      window.history.back();
     }
   };
 
