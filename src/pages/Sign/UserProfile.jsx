@@ -91,7 +91,7 @@ export const ProfileMenu = styled.div`
     border: 1px solid lightgray;
     width: 150px;
     position: absolute;
-    top: 31px;
+    top: 30px;
     left: -35px;
     border-radius: 10px;
     overflow: hidden;
