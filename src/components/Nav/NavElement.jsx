@@ -219,7 +219,7 @@ export const NavCartImageSpan = styled.span`
   text-align: center;
   border-radius: 50%;
   font-weight: 500;
-  margin-left: 5px;
+  margin-left: 5 px;
   background-color: #870a30;
 `;
 
@@ -229,7 +229,7 @@ export const NavCartMobile = styled(LinkR)`
   justify-content: center;
   align-items: center;
   margin-right: 2rem;
-
+  width: 40px;
   @media all and (max-width: 370px) {
     margin-right: 1rem;
   }

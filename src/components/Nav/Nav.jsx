@@ -27,6 +27,7 @@ const NavBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
   const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext);
   const [data] = useContext(DataContext);
+
   const [userData, setUserDataHandler, errors, setErrorsHandler] =
     useContext(UserDataContext);
 
@@ -70,8 +71,8 @@ const NavBar = () => {
             {!userData.username ? (
               <SignButton to="/signin">Sign up/in</SignButton>
             ) : (
-              <UserProfile bool={userData.username} mobile={true} />
-            )}
+              <UserProfile bool={userData.username} />
+             )}
 
             <NavCart to="/cart">
               <NavCartImage
@@ -86,9 +87,7 @@ const NavBar = () => {
 
         <NavMobileWrapper>
           {/* username disapear after sign Up or In */}
-          {userData.username && (
-            <UserProfile bool={userData.username} mobile={true} />
-          )}
+          {userData.username && <UserProfile bool={userData.username} />}
           <NavCartMobile to="/cart">
             <NavCartImage
               src={`${process.env.PUBLIC_URL}/assets/images/png/cart.png`}
