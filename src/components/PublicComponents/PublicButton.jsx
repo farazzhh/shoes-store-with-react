@@ -13,6 +13,7 @@ export const PublicButton = styled(LinkR)`
   justify-content: center;
   align-items: center;
   height: 50px;
+  text-transform: capitalize;
   color: ${({ transparency }) => (transparency ? "#870a30" : "#fff")};
   margin: ${({ margin }) => (margin ? "0 auto 20px auto" : null)};
   padding: ${({ big }) => (big ? " 20px 30px" : " 10px 20px")};

@@ -25,12 +25,15 @@ export const NavWrapper = styled.div`
   align-items: center;
   width: 90%;
   height: 100%;
+  @media screen and (max-width: 480px){
+    width: 95%;
+  }
 `;
 
 export const NavWrapperLogo = styled(Link)`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: #000;
   text-decoration: none;
@@ -39,10 +42,10 @@ export const NavWrapperLogo = styled(Link)`
 export const Logo = styled.img`
   width: 50px;
   height: 50px;
-  background-color: rgb(255, 105, 180);
+  background-color: rgba(135, 10, 47, 0.8);
   padding: 5px;
   border-radius: 50%;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.3);
   @media screen and (max-width: 480px) {
     width: 45px;
     height: 45px;
@@ -55,6 +58,7 @@ export const Logo = styled.img`
 
 export const Title = styled.h1`
   font-size: 1.2rem;
+  font-weight: 500;
   margin-left: 5px;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
   @media screen and (max-width: 480px) {
@@ -193,6 +197,7 @@ export const NavCart = styled(LinkR)`
   border-top-right-radius: 7px;
   border-bottom-left-radius: 2px;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -213,14 +218,21 @@ export const NavCart = styled(LinkR)`
   }
 `;
 export const NavCartImageSpan = styled.span`
-  color: #fff;
+  color: whitesmoke;
   font-size: 14px;
-  min-width: 20px;
+  font-weight: 600;
+  min-width: 18px;
   text-align: center;
   border-radius: 50%;
-  font-weight: 500;
-  margin-left: 5 px;
-  background-color: #870a30;
+  background-color: rgba(135, 10, 47, 0.7);
+  z-index: -1;
+  @media all and (max-width: 768px) {
+    font-size: 16px;
+    position: absolute;
+    min-width: 20px;
+    top: 13px;
+    right: 96px;
+  }
 `;
 
 export const NavCartMobile = styled(LinkR)`

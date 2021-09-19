@@ -5,12 +5,15 @@ import {
   SideBarWrapper,
   Icon,
   CloseIcon,
-  SideBarMenuWrapper,
   SideBarMenu,
   SideBarLink,
 } from "./MobileMenuSideBarElement";
+import { NavWrapperLogo, Logo, Title } from "../Nav/NavElement";
+import { UserDataContext } from "../../providers/UserDataContext";
 const SideBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
+  const [userData, setUserDataHandler, errors, setErrorsHandler] =
+    useContext(UserDataContext);
   return (
     <>
       <SideBarContainer toggle={navMobileMenu}>
@@ -18,11 +21,18 @@ const SideBar = () => {
           <Icon onClick={toggleMobileMenu}>
             <CloseIcon />
           </Icon>
-          <SideBarMenuWrapper>
+          <div>
             <SideBarMenu>
-              <SideBarLink to="/" onClick={toggleMobileMenu}>
+              <NavWrapperLogo to="/" onClick={toggleMobileMenu}>
+                <Logo
+                  src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+                  alt="logo"
+                />
+                <Title>ShoesStore</Title>
+              </NavWrapperLogo>
+              {/* <SideBarLink to="/" onClick={toggleMobileMenu}>
                 Home
-              </SideBarLink>
+              </SideBarLink> */}
               <SideBarLink to="/aboutus" onClick={toggleMobileMenu}>
                 About us
               </SideBarLink>
@@ -32,11 +42,13 @@ const SideBar = () => {
               <SideBarLink to="/contactus" onClick={toggleMobileMenu}>
                 Contact us
               </SideBarLink>
-              <SideBarLink to="/signin" onClick={toggleMobileMenu}>
-                Sign in
-              </SideBarLink>
+              {!userData.username && (
+                <SideBarLink to="/signin" onClick={toggleMobileMenu}>
+                  Sign Up/In
+                </SideBarLink>
+              )}
             </SideBarMenu>
-          </SideBarMenuWrapper>
+          </div>
         </SideBarWrapper>
       </SideBarContainer>
     </>

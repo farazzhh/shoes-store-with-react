@@ -20,8 +20,8 @@ export const SideBarContainer = styled.aside`
 `;
 
 export const SideBarWrapper = styled.div`
-  min-width: 250px;
-  width: 80%;
+  max-width: 300px;
+  width: 90%;
   padding: 40px 0;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -38,24 +38,19 @@ export const Icon = styled.div`
   top: 0;
   right: 0;
   margin: 10px;
-  border: 1px solid #870a30;
+  background-color: whitesmoke;
   display: flex;
+  border-bottom: 2px lightgray solid;
+  border-left: 1px lightgray solid;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 4px;
   border-radius: 50%;
   cursor: pointer;
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  width: 25px;
-  height: 25px;
-  color: #870a30;
-  @media all and (max-width: 480px) {
-    width: 20px;
-    height: 20px;
-  }
-`;
-export const SideBarMenuWrapper = styled.div`
-  height: 70%;
-  width: 80%;
+  width: 20px;
+  height: 20px;
+  color: gray;
 `;
 
 export const SideBarMenu = styled.ul`
@@ -63,25 +58,48 @@ export const SideBarMenu = styled.ul`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
+  gap: 20px;
+
+  & a:first-child {
+    max-width: 200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #870a30;
+    color: whitesmoke;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) -1px 1px 4px;
+    img:first-child {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
 `;
 
 export const SideBarLink = styled(Link)`
-  padding: 0.7rem 2rem;
-  color: #870a30;
+  padding: 0.9rem 0;
+  width: 130px;
+  color: #000;
   cursor: pointer;
-  margin: 15px 0;
   text-decoration: none;
+  text-align: center;
   list-style: none;
-  font-weight: 600;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-  border-top: #870a30 2px solid;
+  font-weight: 400;
+  font-size: 14px;
+  border-left: #870a30 1px solid;
   border-bottom: #870a30 2px solid;
+  box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 4px;
+  text-shadow: -2px 2px 3px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  letter-spacing: 0.5px;
+  background-color: whitesmoke;
 
   @media all and (max-width: 480px) {
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 0;
     font-weight: 500;
+  }
+  :active {
+    background-color: #870a30;
+    color: whitesmoke;
+    font-weight: 600;
   }
 `;
