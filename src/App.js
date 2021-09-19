@@ -16,7 +16,7 @@ import ProductsItemsApp from "./pages/Products/ProductsItemsPage/ProductItem/Pro
 import Cart from "./pages/Cart/Cart";
 import { BadUrl } from "./components/PublicComponents/BadUrl";
 import Loading from "./components/Loading/Loading";
-import useFetch from "./components/useFetch/useFetch";
+import useFetch from "./components/custom hooks/useFetch";
 import { UserDataContext } from "./providers/UserDataContext";
 
 function App(props) {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { BGSection } from "../../components/PublicComponents/BGSection";
-import useForm from "../../components/useForm/useForm";
-import { signUp_validation } from "../../components/useForm/validation";
+import useForm from "../../components//custom hooks/useForm/useForm";
+import { signUp_validation } from "../../components/custom hooks/useForm/validation";
 import { UserDataContext } from "../../providers/UserDataContext";
 import {
   Container,

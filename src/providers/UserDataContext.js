@@ -12,7 +12,6 @@ export const UserDataProvider = (props) => {
   
 
   const setUserDataHandler = ( signUpValue ) => {
-      console.log(signUpValue);
        setUserData({
         username: signUpValue.username,
         email: signUpValue.email,

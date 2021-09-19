@@ -1,8 +1,11 @@
 import styled from "styled-components";
+import useClickListener from "../../components/custom hooks/useClickListener";
 
 const UserProfile = ({ bool }) => {
+  const { ref, isComponentVisible, handleClickToggle } =
+    useClickListener(false);
+
   const signOut = () => {
-    console.log("test");
     localStorage.setItem("userData", JSON.stringify({}));
     window.location.reload();
   };
@@ -15,24 +18,44 @@ const UserProfile = ({ bool }) => {
     ],
   };
 
-  const computSubMenuHeight = (menuItem) => {
+  const computeSubMenuHeight = (menuItem) => {
     if (menuItem.subMenu) {
-      return (menuItem.subMenu.length * 40).toString() + "px";
+      return (menuItem.subMenu.length * 40 + 40).toString() + "px";
     }
   };
 
   return (
-    <ProfileMenu submenuheight={() => computSubMenuHeight(menuItems.subMenu)}>
+    <ProfileMenu
+      submenuheight={() => computeSubMenuHeight(menuItems)}
+      isComponentVisible={isComponentVisible}
+      onClick={handleClickToggle}
+    >
       <img src={`${process.env.PUBLIC_URL}/assets/images/png/user.png`} />
 
-      <ul>
-        <li>{bool}</li>
-        {menuItems.subMenu.map((item, index) => (
-          <li key={index} onClick={item.click}>
-            {item.name}
-          </li>
-        ))}
-      </ul>
+      {/* Menu for Mobile view  */}
+
+      <MobileViewMenu>
+        <ul ref={ref} id="mobile">
+          <li>Hi {bool}</li>
+          {menuItems.subMenu.map((item, index) => (
+            <li key={index} onClick={item.click}>
+              {item.name}
+            </li>
+          ))}
+        </ul>
+      </MobileViewMenu>
+
+      {/* Menu for Screen view  */}
+      <ScreenViewMenu>
+        <ul id="screen">
+          <li>Hi {bool}</li>
+          {menuItems.subMenu.map((item, index) => (
+            <li key={index} onClick={item.click}>
+              {item.name}
+            </li>
+          ))}
+        </ul>
+      </ScreenViewMenu>
     </ProfileMenu>
   );
 };
@@ -50,45 +73,50 @@ export const ProfileMenu = styled.div`
   padding: 6px 0px;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
-  border-bottom-left-radius: 2px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   font-size: 12px;
   font-weight: 400;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
+  overflow: visible;
 
   img {
     width: 17px;
   }
 
   &:hover {
-    overflow: visible;
-    background: linear-gradient(
-      to top,
-      rgba(255, 105, 180, 0.2),
-      rgb(255, 255, 255),
-      rgba(255, 105, 180, 0.2)
-    );
-    box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
-    border-bottom: rgba(255, 105, 180, 1) 2px solid;
-    transform: translateY(2px);
+    @media screen and (min-width: 769px) {
+      background: linear-gradient(
+        to top,
+        rgba(255, 105, 180, 0.2),
+        rgb(255, 255, 255),
+        rgba(255, 105, 180, 0.2)
+      );
+      box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
+      border-bottom: rgba(255, 105, 180, 1) 2px solid;
+      transform: translateY(2px);
 
-    /* ul is submenu */
-  }
-  @media screen and (min-width: 769px) {
-    :hover {
-      ul {
+      ul#screen {
         height: ${({ submenuheight }) => submenuheight};
-        opacity: 1;
+        box-shadow: none;
+        border-bottom: none;
       }
     }
   }
+
+  ul#mobile {
+    height: ${({ submenuheight, isComponentVisible }) =>
+      isComponentVisible && submenuheight};
+    box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
+    border-bottom: none;
+    left: -50px;
+  }
+
   ul {
-    /* height: 0; */
-    opacity: 0;
+    opacity: 1;
+    height: 0;
     background-color: rgba(255, 255, 255, 0.95);
-    border: 1px solid lightgray;
     width: 150px;
     position: absolute;
     top: 30px;
@@ -109,7 +137,11 @@ export const ProfileMenu = styled.div`
       width: 100%;
       text-align: center;
       transition: all 0.2s ease-in-out;
-      border-bottom: lightgray 1px solid;
+
+      &:not(:last-child) {
+        border-bottom: lightgray 1px solid;
+      }
+
       :hover {
         background: linear-gradient(
           to top,
@@ -120,5 +152,29 @@ export const ProfileMenu = styled.div`
         letter-spacing: 2px;
       }
     }
+  }
+  @media screen and (max-width: 768px) {
+    border-radius: 4px;
+    box-shadow: none;
+    height: 30px;
+    margin-right: 2rem;
+    background-color: rgba(255, 105, 180, 0.3);
+    width: 40px;
+  }
+  @media all and (max-width: 370px) {
+    margin-right: 1rem;
+  }
+`;
+
+export const MobileViewMenu = styled.div`
+  /* display: block;
+  @media small and (max-width: 768px) {
+    display: none;
+  } */
+`;
+export const ScreenViewMenu = styled.div`
+  display: block;
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
