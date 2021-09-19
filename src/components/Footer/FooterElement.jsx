@@ -115,16 +115,17 @@ export const FooterLogo = styled(Link)`
 export const Logo = styled.img`
   width: 50px;
   height: 50px;
-  background-color: rgb(239, 104, 180);
+  background-color: rgba(135, 10, 47, 0.8);
   padding: 5px;
   border-radius: 50%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.3);
 `;
 
 export const Title = styled.h1`
   font-size: 1.2rem;
+  font-weight: 500;
   margin-left: 5px;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  text-shadow: -1px 2px 3px rgba(0, 0, 0, 0.3);
 `;
 
 export const WebSiteRights = styled.small`
