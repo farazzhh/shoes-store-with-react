@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import useClickListener from "../../components/custom hooks/useClickListener";
-
+import { faUserCircle as userIcon } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 const UserProfile = ({ bool }) => {
   const { ref, isComponentVisible, handleClickToggle } =
     useClickListener(false);
@@ -30,7 +31,7 @@ const UserProfile = ({ bool }) => {
       isComponentVisible={isComponentVisible}
       onClick={handleClickToggle}
     >
-      <img src={`${process.env.PUBLIC_URL}/assets/images/png/user.png`} />
+      <Icon icon={userIcon} />
 
       {/* Menu for Mobile view  */}
 
@@ -71,8 +72,7 @@ export const ProfileMenu = styled.div`
   margin-left: 0.5rem;
   color: #000;
   padding: 6px 0px;
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
+  border-radius: 7px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   font-size: 12px;
@@ -81,8 +81,14 @@ export const ProfileMenu = styled.div`
   transition: all 0.2s ease-in-out;
   overflow: visible;
 
-  img {
-    width: 17px;
+  @media screen and (max-width: 768px) {
+    height: 35px;
+    box-shadow: none;
+    margin-right: 1.5rem;
+    width: 40px;
+  }
+  @media all and (max-width: 370px) {
+    margin-right: 1rem;
   }
 
   &:hover {
@@ -103,6 +109,10 @@ export const ProfileMenu = styled.div`
         border-bottom: none;
       }
     }
+  }
+
+  svg {
+    font-size: 20px;
   }
 
   ul#mobile {
@@ -152,17 +162,6 @@ export const ProfileMenu = styled.div`
         letter-spacing: 2px;
       }
     }
-  }
-  @media screen and (max-width: 768px) {
-    border-radius: 4px;
-    box-shadow: none;
-    height: 30px;
-    margin-right: 2rem;
-    background-color: rgba(255, 105, 180, 0.3);
-    width: 40px;
-  }
-  @media all and (max-width: 370px) {
-    margin-right: 1rem;
   }
 `;
 

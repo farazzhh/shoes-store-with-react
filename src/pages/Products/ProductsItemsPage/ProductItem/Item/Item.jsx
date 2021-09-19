@@ -34,7 +34,7 @@ const Item = ({ data, category, requestData }) => {
         thumbnail: `${process.env.PUBLIC_URL}${img}`,
       });
     });
-  });
+  },[]);
 
   // make object with all item property plus selected size and item's category
   const addToCartHandler = () => {
@@ -78,11 +78,12 @@ const Item = ({ data, category, requestData }) => {
                         type="radio"
                         id={index}
                         name="ItemSize"
+                        onChange={() => setSelectSize(size)}
                         value={size}
                       />
                       <ItemSizeLabel
                         htmlFor={index}
-                        onClick={() => setSelectSize(size)}
+                        // onClick={() => setSelectSize(size)}
                       >
                         {size}
                       </ItemSizeLabel>

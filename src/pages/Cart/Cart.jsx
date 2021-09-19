@@ -1,7 +1,9 @@
 import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { BackButtonPublic } from "../../components/PublicComponents/BackButton";
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { CartContext } from "../../providers/CartContext";
+import { UserDataContext } from "../../providers/UserDataContext";
 import {
   CartSection,
   CartWrapper,
@@ -19,14 +21,16 @@ import {
 
 const Cart = () => {
   const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext);
+  const [userData, setUserDataHandler, errors, setErrorsHandler] =
+    useContext(UserDataContext);
   let sum = 0;
 
-    if (cartData) {
-      cartData.map((item) => {
-        sum += parseFloat(item.price);
-      });
-    }
-  
+  if (cartData) {
+    cartData.map((item) => {
+      sum += parseFloat(item.price);
+    });
+  }
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -51,10 +55,17 @@ const Cart = () => {
           opacity={0.05}
           flipH={false}
         />
-
         <CartItemsWrapper>
+          {userData.username ? (
+            <p>dear {userData.username} </p>
+          ) : (
+            <p>
+              Please <Link to="/signin">login</Link> to continue
+            </p>
+          )}
           <CartItemsTitle>
-            You have {cartData && cartData.length} items in your Cart
+            You have <span>{cartData && cartData.length}</span> items in
+            your Cart
           </CartItemsTitle>
           <CardItems>
             {cartData &&

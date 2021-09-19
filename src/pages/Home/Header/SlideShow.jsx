@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Slide } from "react-slideshow-image";
-import { faSignInAlt as awsomeIcon } from "@fortawesome/free-solid-svg-icons";
+import { faSignInAlt as loginIcon } from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle as userIcon } from "@fortawesome/free-solid-svg-icons";
 import "./SlideShow.css";
 import "react-slideshow-image/dist/styles.css";
 import { BorderBottom } from "../../../components/PublicComponents/BorderBottom";
@@ -15,6 +16,8 @@ import {
   SlideShowWrapper,
   Icon,
 } from "./SlideShowElement";
+import { UserDataContext } from "../../../providers/UserDataContext";
+import { useContext } from "react";
 const slideImages = [
   "./assets/images/header Slideshow/header3web.jpg",
   "./assets/images/header Slideshow/header1web.jpg",
@@ -25,7 +28,8 @@ const slideImages = [
 const Slideshow = () => {
   const inputRef = useRef(null);
   const [autoplay, setAutoplay] = useState(true);
-
+const [userData, setUserDataHandler, errors, setErrorsHandler] =
+  useContext(UserDataContext);
   useEffect(() => {
     window.addEventListener("scroll", function (e) {
       if (inputRef.current !== null) {
@@ -67,10 +71,17 @@ const Slideshow = () => {
         <BorderBottom />
         <HeroDescribe>Your Feet</HeroDescribe>
         <PublicButtonWrapper>
-          <PublicButton to="/signin" transparency="true">
-            <strong>Sign Up</strong>/<small>Sign in</small>
-            <Icon icon={awsomeIcon} />
-          </PublicButton>
+          {!userData.username ? (
+            <PublicButton to="/signin" transparency="true">
+              <strong>Sign Up</strong>/<small>Sign in</small>
+              <Icon icon={loginIcon} />
+            </PublicButton>
+          ) : (
+            <PublicButton to="/profile" transparency="true">
+              <strong>Hi {userData.username}</strong>
+              <Icon icon={userIcon} />
+            </PublicButton>
+          )}
         </PublicButtonWrapper>
       </HeroWrapper>
     </SlideShowWrapper>
