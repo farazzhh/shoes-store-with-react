@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FaBars } from "react-icons/fa";
 import { Link, Link as LinkR } from "react-router-dom";
 
 export const Nav = styled.nav`
@@ -25,7 +24,7 @@ export const NavWrapper = styled.div`
   align-items: center;
   width: 90%;
   height: 100%;
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 480px) {
     width: 95%;
   }
 `;
@@ -72,20 +71,31 @@ export const Title = styled.h1`
 export const NavMobileWrapper = styled.div`
   display: none;
   height: 100%;
-  justify-content: center;
+  width: 100%;
+  justify-content: end;
   align-items: center;
+  gap: 20px;
   @media screen and (max-width: 768px) {
     display: flex;
   }
+  @media screen and (max-width: 370px) {
+    gap: 10px;
+  }
 `;
 
-export const MobileIcon = styled(FaBars)`
-  width: 25px;
-  height: 25px;
+export const MobileIcon = styled.div`
+  width: 40px;
+  height: 100%;
   cursor: pointer;
+  display: flex;
   @media all and (max-width: 370px) {
-    width: 20px;
-    height: 20px;
+    /* width: 20px; */
+  }
+
+  svg {
+    font-size: 20px;
+    margin: auto;
+    width: 100%;
   }
 `;
 
@@ -190,6 +200,18 @@ export const SignButton = styled(LinkR)`
   }
 `;
 
+export const NavCartMobile = styled(LinkR)`
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  position: relative;
+  @media all and (max-width: 370px) {
+    /* margin-right: 1rem; */
+  }
+`;
+
 export const NavCart = styled(LinkR)`
   height: 30px;
   width: 70px;
@@ -197,57 +219,48 @@ export const NavCart = styled(LinkR)`
   border-top-right-radius: 7px;
   border-bottom-left-radius: 2px;
   display: flex;
-  position: relative;
+  margin-left: 0.5rem;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin-left: 0.5rem;
   box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
   transition: all 0.1s ease-in-out;
-  border-bottom: rgba(255, 105, 180, 1) 1px solid;
   &:hover {
     background: linear-gradient(
       to top,
-      rgb(255, 255, 255) 20%,
-      rgb(255, 105, 180)
+      rgba(255, 105, 180, 0.2),
+      rgb(255, 255, 255),
+      rgba(255, 105, 180, 0.2)
     );
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
     border-bottom: rgba(255, 105, 180, 1) 2px solid;
     transform: translateY(2px);
   }
 `;
+
 export const NavCartImageSpan = styled.span`
-  color: whitesmoke;
+  padding: 0 2px;
+  color: rgb(135, 10, 47);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 16px;
   min-width: 18px;
   text-align: center;
   border-radius: 50%;
-  background-color: rgba(135, 10, 47, 0.7);
   z-index: -1;
   @media all and (max-width: 768px) {
-    font-size: 16px;
+    font-size: 14px;
     position: absolute;
     min-width: 20px;
-    top: 13px;
-    right: 96px;
-  }
-`;
-
-export const NavCartMobile = styled(LinkR)`
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 2rem;
-  width: 40px;
-  @media all and (max-width: 370px) {
-    margin-right: 1rem;
+    top: 18px;
+    right: 7px;
   }
 `;
 
 export const NavCartImage = styled.img`
   height: 17px;
-  object-fit: contain;
+  object-fit: cover;
+  @media all and (max-width: 768px) {
+    position: absolute;
+  }
 `;

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const SubMenuList = styled.ul`
   height: 0;
   opacity: 0;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #fff;
   border: 1px solid lightgray;
   width: 150px;
   position: absolute;

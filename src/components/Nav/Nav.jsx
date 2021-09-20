@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { FaBars } from "react-icons/fa";
 import { MobileMenuContext } from "../../providers/MobileMenuContext";
 import { DataContext } from "../../providers/DataContext";
 import { CartContext } from "../../providers/CartContext";
@@ -72,7 +73,7 @@ const NavBar = () => {
               <SignButton to="/signin">Sign up/in</SignButton>
             ) : (
               <UserProfile bool={userData.username} />
-             )}
+            )}
 
             <NavCart to="/cart">
               <NavCartImage
@@ -88,20 +89,25 @@ const NavBar = () => {
         <NavMobileWrapper>
           {/* username disapear after sign Up or In */}
           {userData.username && <UserProfile bool={userData.username} />}
+
           <NavCartMobile to="/cart">
             <NavCartImage
               src={`${process.env.PUBLIC_URL}/assets/images/png/cart.png`}
             />
-            {cartData.length === 0 ? null : (
+            {!cartData.length ? null : (
               <NavCartImageSpan>{cartData.length}</NavCartImageSpan>
             )}
           </NavCartMobile>
 
-          <MobileIcon onClick={toggleMobileMenu} />
+          <MobileIcon onClick={toggleMobileMenu}>
+            <FaBars />
+          </MobileIcon>
+
         </NavMobileWrapper>
         {/* {userData.username && (
           <UserProfile bool={userData.username} mobile={false} />
         )} */}
+      
       </NavWrapper>
     </Nav>
   );
