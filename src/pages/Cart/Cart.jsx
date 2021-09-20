@@ -4,6 +4,7 @@ import { BackButtonPublic } from "../../components/PublicComponents/BackButton";
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { CartContext } from "../../providers/CartContext";
 import { UserDataContext } from "../../providers/UserDataContext";
+import { MdDelete } from "react-icons/md";
 import {
   CartSection,
   CartWrapper,
@@ -64,8 +65,8 @@ const Cart = () => {
             </p>
           )}
           <CartItemsTitle>
-            You have <span>{cartData && cartData.length}</span> items in
-            your Cart
+            You have <span>{cartData && cartData.length}</span> items in your
+            Cart
           </CartItemsTitle>
           <CardItems>
             {cartData &&
@@ -82,7 +83,7 @@ const Cart = () => {
                       <CardItemLink
                         to={`/Products/${item.category}/${item.id}`}
                       >
-                        {item.name}{" "}
+                        <CardItemSpan>{item.name}</CardItemSpan>{" "}
                       </CardItemLink>
                     </CardItemSpan>
                     <CardItemSpan>size : {item.size}</CardItemSpan>
@@ -92,7 +93,7 @@ const Cart = () => {
                   <CardItemDeleteButton
                     onClick={() => removeItemFromCart(index)}
                   >
-                    X
+                    <MdDelete />
                   </CardItemDeleteButton>
                 </CardItem>
               ))}
@@ -101,11 +102,11 @@ const Cart = () => {
         <div>
           <CartItemsTitle>Cart Summary</CartItemsTitle>
           <CardSummary>
-            <CardItemSpan>
+            <span>
               Total Numbers: {cartData && cartData.length}
-            </CardItemSpan>
-            <CardItemSpan>Total Cost : {sum}$</CardItemSpan>
-            <CardItemSpan>Your Credit : {sum}$</CardItemSpan>
+            </span>
+            <span>Total Cost : {sum}</span>
+            <span>Your Credit : {sum}</span>
           </CardSummary>
         </div>
       </CartWrapper>
