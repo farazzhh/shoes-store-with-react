@@ -2,6 +2,7 @@ import styled from "styled-components";
 import useClickListener from "../../components/custom hooks/useClickListener";
 import { faUserCircle as userIcon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+
 const UserProfile = ({ bool }) => {
   const { ref, isComponentVisible, handleClickToggle } =
     useClickListener(false);
@@ -72,7 +73,8 @@ export const ProfileMenu = styled.div`
   margin-left: 0.5rem;
   color: #000;
   padding: 6px 0px;
-  border-radius: 7px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   font-size: 12px;
@@ -80,15 +82,15 @@ export const ProfileMenu = styled.div`
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
   overflow: visible;
-
+  z-index: 1;
   @media screen and (max-width: 768px) {
-    height: 35px;
+    height: 100%;
+    border-radius: 0;
     box-shadow: none;
-    margin-right: 1.5rem;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
     width: 40px;
-  }
-  @media all and (max-width: 370px) {
-    margin-right: 1rem;
   }
 
   &:hover {
@@ -105,7 +107,7 @@ export const ProfileMenu = styled.div`
 
       ul#screen {
         height: ${({ submenuheight }) => submenuheight};
-        box-shadow: none;
+        /* box-shadow: none; */
         border-bottom: none;
       }
     }
@@ -113,14 +115,20 @@ export const ProfileMenu = styled.div`
 
   svg {
     font-size: 20px;
+    margin: 0 auto;
+    @media screen and (max-width: 768px) {
+      font-size: 25px;
+    }
   }
-
-  ul#mobile {
-    height: ${({ submenuheight, isComponentVisible }) =>
-      isComponentVisible && submenuheight};
-    box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
-    border-bottom: none;
-    left: -50px;
+  @media screen and (max-width: 768px) {
+    ul#mobile {
+      height: ${({ submenuheight, isComponentVisible }) =>
+        isComponentVisible && submenuheight};
+      box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
+      border-bottom: none;
+      left: -50px;
+      top: 60px;
+    }
   }
 
   ul {
