@@ -64,7 +64,7 @@ export const SideBarMenu = styled.ul`
   & a:first-child {
     max-width: 200px;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #870a30;
     color: whitesmoke;
     padding: 10px;
@@ -89,7 +89,7 @@ export const SideBarLink = styled(Link)`
   border-bottom: #870a30 2px solid;
   box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 4px;
   text-shadow: -2px 2px 3px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  border-radius: 5px;
   letter-spacing: 0.5px;
   background-color: whitesmoke;
 
