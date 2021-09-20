@@ -15,8 +15,11 @@ import {
   AboutImageGalleryWrapper,
 } from "./AboutUsElement";
 const AboutUs = () => {
+  
+  // its for rafreshing, without this , the slide animation on public header does not work correctly
 const [, forceUpdate] = useReducer((x) => x + 1, 0);
-useEffect(() => {
+
+  useEffect(() => {
   window.scrollTo({
     top: 0,
     left: 0,
