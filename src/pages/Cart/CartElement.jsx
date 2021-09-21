@@ -27,7 +27,7 @@ export const CartWrapper = styled.div`
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   overflow: hidden;
-  background: rgb(255, 255, 250);
+  background: whitesmoke;
   box-shadow: rgba(0, 0, 0, 0.4) -1px 2px 35px;
   border-radius: 10px;
   border-bottom: #870a30 1px solid;
@@ -71,6 +71,7 @@ export const CartItemsWrapper = styled.div`
 `;
 
 export const CartItemsTitle = styled.h4`
+  color: gray;
   font-weight: 400;
   span {
     text-decoration: underline;
@@ -144,6 +145,7 @@ export const CardItemSpan = styled.span`
 `;
 
 export const CardSummary = styled.div`
+  background-color: white;
   border-radius: 5px;
   width: 100%;
   padding: 10px;

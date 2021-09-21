@@ -48,14 +48,7 @@ const Cart = () => {
         flipH={true}
       />
       <CartWrapper>
-        <BackgroundPng
-          src={`${process.env.PUBLIC_URL}/assets/images/png/shoebox.png`}
-          width="100%"
-          top={true}
-          left={true}
-          opacity={0.05}
-          flipH={false}
-        />
+       
         <CartItemsWrapper>
           {userData.username ? (
             <p>dear {userData.username} </p>
