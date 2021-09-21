@@ -48,7 +48,6 @@ export const CartWrapper = styled.div`
     width: 400px;
     padding: 20px;
   }
-  
 `;
 
 export const CartItemsWrapper = styled.div`
@@ -85,10 +84,10 @@ export const CartItemsTitle = styled.h4`
 export const CardItems = styled.div`
   margin-top: 20px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 20px;
   border-radius: 5px;
-  row-gap: 20px;
 `;
 
 export const CardItem = styled.div`
@@ -125,7 +124,6 @@ export const CardItem = styled.div`
 `;
 
 export const CartContent = styled.div`
- 
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -142,7 +140,7 @@ export const CardItemSpan = styled.span`
   color: gray;
   text-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px;
   text-align: center;
-font-weight: 500;
+  font-weight: 500;
 `;
 
 export const CardSummary = styled.div`
@@ -158,11 +156,11 @@ export const CardSummary = styled.div`
   box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
 `;
 
-//its contains a image and the name of product in cart item 
+//its contains a image and the name of product in cart item
 export const CardItemLink = styled(Link)`
-:first-of-type{
-  height: 80px;
-}
+  :first-of-type {
+    height: 80px;
+  }
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -176,8 +174,8 @@ export const CardItemLink = styled(Link)`
     margin-top: 5px;
     text-transform: capitalize;
     @media screen and (max-width: 580px) {
-     font-size: 14px;
-     margin: 0;
+      font-size: 14px;
+      margin: 0;
     }
   }
   :hover {
@@ -191,8 +189,8 @@ export const CartItemImg = styled.img`
   border-radius: 50%;
   box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
   @media screen and (max-width: 580px) {
-   height: 80%;
-   margin-right: 5px;
+    height: 80%;
+    margin-right: 5px;
   }
 `;
 
@@ -210,6 +208,7 @@ export const CardItemDeleteButton = styled.button`
   color: #870a30;
   border-radius: 50%;
   cursor: pointer;
+
   :hover {
     color: white;
     background-color: #870a30;
@@ -222,8 +221,8 @@ export const CardItemDeleteButton = styled.button`
   svg {
     font-size: 15px;
     @media screen and (max-width: 380px) {
-    font-size: 13px;
-  }
+      font-size: 13px;
+    }
   }
 `;
 //  CartSection,
