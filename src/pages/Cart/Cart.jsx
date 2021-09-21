@@ -78,14 +78,11 @@ const Cart = () => {
                       alt={item.name}
                     />
                   </CardItemLink>
+                    <CardItemLink to={`/Products/${item.category}/${item.id}`}>
+                      <CardItemSpan>{item.name}</CardItemSpan>{" "}
+                    </CardItemLink>
+                  <span className="borderBottom"></span>
                   <CartContent>
-                    <CardItemSpan>
-                      <CardItemLink
-                        to={`/Products/${item.category}/${item.id}`}
-                      >
-                        <CardItemSpan>{item.name}</CardItemSpan>{" "}
-                      </CardItemLink>
-                    </CardItemSpan>
                     <CardItemSpan>size : {item.size}</CardItemSpan>
                     <CardItemSpan>Qty : 1</CardItemSpan>
                     <CardItemSpan>price: {item.price}</CardItemSpan>
@@ -102,9 +99,7 @@ const Cart = () => {
         <div>
           <CartItemsTitle>Cart Summary</CartItemsTitle>
           <CardSummary>
-            <span>
-              Total Numbers: {cartData && cartData.length}
-            </span>
+            <span>Total Numbers: {cartData && cartData.length}</span>
             <span>Total Cost : {sum}</span>
             <span>Your Credit : {sum}</span>
           </CardSummary>
