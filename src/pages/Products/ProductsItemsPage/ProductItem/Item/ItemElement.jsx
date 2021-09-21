@@ -37,6 +37,7 @@ export const ItemWrapper = styled.div`
   }
   @media screen and (max-width: 480px) {
     width: 95%;
+    display: block;
   }
 `;
 
@@ -61,6 +62,7 @@ export const ItemTitlePriceWrapper = styled.div``;
 export const ItemTitle = styled.h1`
   font-size: 30px;
   margin-bottom: 10px;
+  text-transform: capitalize;
   @media screen and (max-width: 768px) {
     font-size: 25px;
   }
