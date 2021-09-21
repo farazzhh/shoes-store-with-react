@@ -215,12 +215,15 @@ export const CardItemDeleteButton = styled.button`
     background-color: #870a30;
     border-radius: 50%;
   }
-  @media screen and (max-width: 480px) {
-    /* width: 20px;
-    height: 20px; */
+  @media screen and (max-width: 380px) {
+    width: 20px;
+    height: 20px;
   }
   svg {
     font-size: 15px;
+    @media screen and (max-width: 380px) {
+    font-size: 13px;
+  }
   }
 `;
 //  CartSection,
