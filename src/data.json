@@ -7,15 +7,16 @@
           "Products": [
             {
               "id": 1,
-              "name": "adidasBasket",
+              "name": "Adidas Basket",
               "price": "169$",
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/4.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/5.jpg"
               ]
             },
             {
@@ -72,15 +73,15 @@
             },
             {
               "id": 111,
-              "name": "adidasBasket",
+              "name": "Adidas Basket",
               "price": "169$",
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/4.jpg"
               ]
             },
             {
@@ -137,15 +138,15 @@
             },
             {
               "id": 1111,
-              "name": "adidasBasket",
+              "name": "Adidas Basket",
               "price": "169$",
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/4.jpg"
               ]
             },
             {
@@ -208,15 +209,15 @@
           "Products": [
             {
               "id": 11,
-              "name": "adidasBasket Slippers",
+              "name": "Adidas Basket Slippers",
               "price": "169$",
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/4.jpg"
               ]
             },
             {
@@ -298,15 +299,15 @@
           "Products": [
             {
               "id": 11,
-              "name": "adidasBasket Slippers",
+              "name": "Adidas Basket Slippers",
               "price": "169$",
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/4.jpg"
               ]
             },
             {
@@ -369,15 +370,15 @@
           "Products": [
             {
               "id": 11,
-              "name": "adidasBasket Slippers",
+              "name": "Adidas Basket Slippers",
               "price": "169$",
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/adidasBasket/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/4.jpg"
               ]
             },
             {
