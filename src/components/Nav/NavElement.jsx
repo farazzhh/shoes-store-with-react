@@ -72,10 +72,13 @@ export const NavMobileWrapper = styled.div`
   display: none;
   height: 100%;
   width: 100%;
-  justify-content: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
   align-items: center;
   gap: 20px;
+  
   @media screen and (max-width: 768px) {
+    display: -webkit-flex;
     display: flex;
   }
   @media screen and (max-width: 370px) {
@@ -138,6 +141,7 @@ export const NavMenuItem = styled(LinkR)`
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
   transition: all 0.1s ease-in-out;
   -webkit-transition: all 0.1s ease-in-out;
+
   &:hover {
     overflow: visible;
     box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3);
