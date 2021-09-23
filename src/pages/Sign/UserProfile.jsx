@@ -75,12 +75,13 @@ export const ProfileMenu = styled.div`
   padding: 6px 0px;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   font-size: 12px;
   font-weight: 400;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
   overflow: visible;
   z-index: 1;
   @media screen and (max-width: 768px) {
@@ -95,15 +96,9 @@ export const ProfileMenu = styled.div`
 
   &:hover {
     @media screen and (min-width: 769px) {
-      background: linear-gradient(
-        to top,
-        rgba(255, 105, 180, 0.2),
-        rgb(255, 255, 255),
-        rgba(255, 105, 180, 0.2)
-      );
-      box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
-      border-bottom: rgba(255, 105, 180, 1) 2px solid;
-      transform: translateY(2px);
+      box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3);
+      border-bottom: #870a30 1px solid;
+      transform: translateY(1px);
 
       ul#screen {
         height: ${({ submenuheight }) => submenuheight};
@@ -134,7 +129,7 @@ export const ProfileMenu = styled.div`
   ul {
     opacity: 1;
     height: 0;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: #fff;
     width: 150px;
     position: absolute;
     top: 30px;
@@ -142,6 +137,7 @@ export const ProfileMenu = styled.div`
     border-radius: 10px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
       rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     li {
@@ -155,19 +151,40 @@ export const ProfileMenu = styled.div`
       width: 100%;
       text-align: center;
       transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
 
       &:not(:last-child) {
-        border-bottom: lightgray 1px solid;
+        border-bottom: #d3d3d3 1px solid;
       }
 
-      :hover {
+      &:not(:first-child):hover {
+        background: -webkit-linear-gradient(
+          to top,
+          rgb(255, 255, 255),
+          rgba(135, 10, 47, 0.1),
+          rgb(255, 255, 255)
+        ); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(
+          to top,
+          rgb(255, 255, 255),
+          rgba(135, 10, 47, 0.1),
+          rgb(255, 255, 255)
+        ); /* Opera 11.10+ */
         background: linear-gradient(
           to top,
           rgb(255, 255, 255),
-          rgba(255, 105, 180, 0.1),
+          rgba(135, 10, 47, 0.1),
           rgb(255, 255, 255)
         );
         letter-spacing: 2px;
+        letter-spacing: 2px;
+      }
+      &:first-child {
+        /* background-color: rgba(135, 10, 47, 1); */
+        color: #870a2f;
+        font-weight: 500;
+        text-transform: capitalize;
+        cursor: default;
       }
     }
   }

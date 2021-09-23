@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { IoIosArrowDropdown as IconArrow } from "react-icons/io";
 import {
   SideBarContainer,
   SelectionDiv,
@@ -51,8 +52,8 @@ const SideBarProducts = ({ itemsPageData, setItemsPageData }) => {
       <SideBarContainer toggle={toggle}>
         <Icon onClick={() => setToggle(!toggle)} toggle={toggle}>
           <span>Sort</span>
-          <CloseIcon
-            src={`${process.env.PUBLIC_URL}/assets/images/png/arrow.png`}
+          <IconArrow
+            // src={`${process.env.PUBLIC_URL}/assets/images/png/arrow.png`}
             toggle={toggle}
           />
         </Icon>

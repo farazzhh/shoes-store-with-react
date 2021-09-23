@@ -123,15 +123,7 @@ const ContactUs = () => {
               See More
             </PublicButton>
           </ContactWrapper>
-          <BackgroundPng
-            width="20%"
-            mobileWidth="30%"
-            src={`${process.env.PUBLIC_URL}/assets/images/png/contactus3.png`}
-            top={true}
-            left={false}
-            opacity={0.5}
-            flipH={false}
-          />
+       
         </ContactContainer>
       </Contact>
     </BGSection>

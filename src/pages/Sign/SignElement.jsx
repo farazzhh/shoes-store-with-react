@@ -30,6 +30,7 @@ export const FormContent = styled.div`
   background-color: whitesmoke;
   overflow: hidden;
   transition: all 0.3s;
+  -webkit-transition: all 0.3s ;
   max-width: 400px;
   width: 90%;
   display: flex;
@@ -58,6 +59,7 @@ export const SignUpForm = styled.form`
   z-index: 1;
   padding: ${({ sw }) => (sw ? null : " 30px  50px 50px")};
   transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
   @media screen and (max-width: 480px) {
     height: ${({ sw }) => (!sw ? "600px" : " 0px")};
     padding: ${({ sw }) => (sw ? null : " 30px")};
@@ -70,6 +72,7 @@ export const SignInForm = styled.form`
   height: ${({ sw }) => (!sw ? "0px" : " 600px")};
   width: 100%;
   transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
   overflow: hidden;
   padding: ${({ sw }) => (!sw ? null : " 50px")};
   z-index: 1;
@@ -117,6 +120,7 @@ export const FormH2 = styled.h2`
   text-align: center;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
   transition: all 0.7s;
+  -webkit-transition: all 0.7s;
 `;
 
 export const FormLabel = styled.label`
@@ -141,16 +145,17 @@ export const FormInput = styled.input`
 `;
 
 export const ErrorsSpan = styled.span`
-opacity: ${({ error }) => (error ? "1" : "0")};
-overflow: hidden;
-transition: all 0.2s;
-padding: 1px 3px;
-color: white;
-background-color: red;
-font-weight: 500;
-border-radius: 4px;
-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
-`
+  opacity: ${({ error }) => (error ? "1" : "0")};
+  overflow: hidden;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  padding: 1px 3px;
+  color: white;
+  background-color: red;
+  font-weight: 500;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
+`;
 
 export const FormButton = styled.button`
   background-color: #dddada;
@@ -164,6 +169,7 @@ export const FormButton = styled.button`
   cursor: pointer;
   text-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px;
   transition: all 0.1s;
+  -webkit-transition: all 0.1s;
   margin: 10px 0 0;
   &:hover {
     background: ${({ sw }) => (!sw ? "white" : "rgb(117, 8, 41)")};
@@ -172,7 +178,8 @@ export const FormButton = styled.button`
 `;
 
 export const Text = styled.span`
-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
   text-align: center;
   margin-top: 24px;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);

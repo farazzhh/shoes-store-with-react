@@ -27,6 +27,7 @@ export const PublicButton = styled(LinkR)`
   box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 5px;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
   cursor: pointer;
   font-weight: 800;
   z-index: 10;

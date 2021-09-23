@@ -16,12 +16,14 @@ export const SideBarContainer = styled.aside`
   right: ${({ toggle }) => (toggle ? "0" : "-100%")};
   opacity: ${({ toggle }) => (toggle ? "1" : "0")};
   transition: all ease-in-out 0.5s;
+  -webkit-transition: all 0.5s ease-in-out;
+
   z-index: 99;
 `;
 
 export const SideBarWrapper = styled.div`
-  max-width: 300px;
-  width: 90%;
+  width: 300px;
+  margin-top: -10px;
   padding: 40px 0;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -31,26 +33,32 @@ export const SideBarWrapper = styled.div`
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 10px;
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
+  @media all and (max-width: 370px) {
+    width: 255px;
+  }
+  @media all and (max-width: 300px) {
+    width: 230px;
+  }
 `;
 export const Icon = styled.div`
   position: absolute;
   padding: 0.3rem;
   top: 0;
   right: 0;
-  margin: 10px;
   background-color: whitesmoke;
   display: flex;
   border-bottom: 2px lightgray solid;
   border-left: 1px lightgray solid;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 4px;
-  border-radius: 50%;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   cursor: pointer;
 `;
 
 export const CloseIcon = styled(FaTimes)`
   width: 20px;
   height: 20px;
-  color: gray;
+  color: #870a30;
 `;
 
 export const SideBarMenu = styled.ul`
@@ -60,17 +68,30 @@ export const SideBarMenu = styled.ul`
   flex-direction: column;
   align-items: center;
   gap: 20px;
-
   & a:first-child {
-    max-width: 200px;
-    margin-bottom: 20px;
+    width: 360px;
+    margin: 10px 0 15px;
     border-radius: 5px;
     background-color: #870a30;
     color: whitesmoke;
     padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.5) -1px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.5) -1px 2px 5px;
     img:first-child {
       background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    h1 {
+      margin-left: 5px;
+      text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+      @media all and (max-width: 370px) {
+        font-size: 1rem;
+      }
+    }
+    @media all and (max-width: 370px) {
+      width: 290px;
+    }
+    @media all and (max-width: 300px) {
+      width: 270px;
     }
   }
 `;

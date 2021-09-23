@@ -26,7 +26,7 @@ const ProductItemsPage = ({ props }) => {
 
   return (
     <>
-      {itemsPageData.Products && (
+      {itemsPageData.Products && (  
         <PIP id={itemsPageData.category}>
           <PIPItemsWrapper>
             <PIPTitle>{itemsPageData.category}
@@ -122,6 +122,7 @@ export const ItemsWrapper = styled.div`
   border-radius: 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.1s ease-in;
+  -webkit-transition: all 0.1s ease-in-out;
   width: 200px;
   height: 270px;
   :hover {

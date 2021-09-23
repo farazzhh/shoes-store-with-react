@@ -25,6 +25,7 @@ export const BackButton = styled.button`
   border-radius: 50%;
   font-weight: bold;
   transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
   cursor: pointer;
   animation: ${BackButtonAnimate} 2s linear 1s forwards;
   opacity: 0;

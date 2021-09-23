@@ -134,32 +134,15 @@ export const NavMenuItem = styled(LinkR)`
   cursor: pointer;
   font-size: 12px;
   font-weight: 400;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
   &:hover {
     overflow: visible;
-    background: -webkit-linear-gradient(
-      to top,
-      rgb(255, 255, 255),
-      rgba(255, 105, 180, 0.1),
-      rgb(255, 255, 255)
-    ); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(
-      to top,
-      rgb(255, 255, 255),
-      rgba(255, 105, 180, 0.1),
-      rgb(255, 255, 255)
-    ); /* Opera 11.10+ */
-    background: linear-gradient(
-      to top,
-      rgb(255, 255, 255),
-      rgba(255, 105, 180, 0.1),
-      rgb(255, 255, 255)
-    );
-    box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
-    border-bottom: rgba(255, 105, 180, 1) 2px solid;
-    transform: translateY(2px);
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3);
+    border-bottom: #870a30 1px solid;
+    transform: translateY(1px);
 
     /* ul is submenu */
     @media screen and (min-width: 769px) {
@@ -173,6 +156,8 @@ export const NavMenuItem = styled(LinkR)`
 
 export const SignButton = styled(LinkR)`
   height: 30px;
+  width: 100px;
+  text-align: center;
   list-style: none;
   margin-left: 0.5rem;
   color: #000;
@@ -184,19 +169,14 @@ export const SignButton = styled(LinkR)`
   font-size: 12px;
   font-weight: 400;
   transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
   transform: scaleY(10px);
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   &:hover {
-    background: linear-gradient(
-      to top,
-      rgba(255, 105, 180, 0.2),
-      rgb(255, 255, 255),
-      rgba(255, 105, 180, 0.2)
-    );
-    box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
-    border-bottom: rgba(255, 105, 180, 1) 2px solid;
-    transform: translateY(2px);
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3);
+    border-bottom: #870a30 1px solid;
+    transform: translateY(1px);
   }
 `;
 
@@ -223,18 +203,14 @@ export const NavCart = styled(LinkR)`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+  text-transform: capitalize;
   transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
   &:hover {
-    background: linear-gradient(
-      to top,
-      rgba(255, 105, 180, 0.2),
-      rgb(255, 255, 255),
-      rgba(255, 105, 180, 0.2)
-    );
-    box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
-    border-bottom: rgba(255, 105, 180, 1) 2px solid;
-    transform: translateY(2px);
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3);
+    border-bottom: #870a30 1px solid;
+    transform: translateY(1px);
   }
 `;
 
@@ -258,9 +234,10 @@ export const NavCartImageSpan = styled.span`
 `;
 
 export const NavCartImage = styled.img`
-  height: 17px;
+  height: 15px;
   object-fit: cover;
   @media all and (max-width: 768px) {
     position: absolute;
+    height: 18px;
   }
 `;

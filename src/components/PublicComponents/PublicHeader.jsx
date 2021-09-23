@@ -97,7 +97,7 @@ export const PIPHeroWrapper = styled.div`
   left: 0;
   @media screen and (max-width: 768) {
     align-items: center;
-    /* background: rgba(0, 0, 0, 0.3); */
+
     -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
   }
@@ -109,7 +109,7 @@ export const PIPHeroWrapperBG = styled.div`
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 `;

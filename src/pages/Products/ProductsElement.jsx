@@ -50,7 +50,7 @@ export const ProductsContent = styled.div`
 
 export const ProductsTitle = styled.h1`
   font-size: 50px;
-  font-weight: 900;
+  font-weight: 400;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
   color: #000;
   @media screen and (max-width: 768px) {
@@ -66,7 +66,7 @@ export const ProductsTitle = styled.h1`
 export const ProductsDescribe = styled.p`
   font-weight: 600;
   font-size: 20px;
-  color: #000;
+  color: gray;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
   margin: 10px 0;
   @media screen and (max-width: 768px) {
@@ -85,15 +85,15 @@ export const ProductsMenuItems = styled.ul`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  row-gap: 10px;
-  column-gap: 10px;
+  row-gap: 15px;
+  column-gap: 15px;
   padding: 10px;
 `;
 
 export const ProductsItems = styled(LinkR)`
   width: 200px;
   background: #ffffff;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   list-style: none;
@@ -102,16 +102,21 @@ export const ProductsItems = styled(LinkR)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
   backface-visibility: hidden;
-  border: #870a30 1px solid;
+  border-bottom: #870a30 2px solid;
   overflow: hidden;
   cursor: pointer;
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
     span {
-      letter-spacing: 2px;
+      color: #fff;
+      font-weight: 400;
+      font-size: 20px;
+    }
+    div::after {
+      opacity: 0.6;
     }
   }
 
@@ -125,22 +130,38 @@ export const ProductsItems = styled(LinkR)`
 
 export const ProductsItemsImage = styled.div`
   width: 100%;
+  position: relative;
+  &:after {
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+  }
 `;
 
 export const ProductsImage = styled.img`
   width: 100%;
+  vertical-align: top;
   object-fit: cover;
   object-position: center center;
 `;
 
 export const ProductsItemsTitle = styled.span`
-  font-size: 18px;
+  font-size: 16px;
+  position: absolute;
   font-weight: 400;
   margin: 5px 0 10px 0;
-  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
-  letter-spacing: 1px;
-  transition: all 0.2s ease-in-out;
-
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.5px;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  color: lightgray;
   @media screen and (max-width: 480px) {
     font-size: 16px;
   }

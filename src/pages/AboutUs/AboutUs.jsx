@@ -60,14 +60,7 @@ const [, forceUpdate] = useReducer((x) => x + 1, 0);
               </AboutDescribe>
             </AboutContent>
           </AboutWrapper>
-          <BackgroundPng
-            src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus2 web.png`}
-            width="30%"
-            top={true}
-            left={true}
-            opacity={0.3}
-            flipH={true}
-          />
+         
           <BackgroundPng
             width="40%"
             src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus.png`}

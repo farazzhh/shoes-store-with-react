@@ -109,6 +109,7 @@ export const ItemSizeLabel = styled.label`
   -ms-user-select: none;
   user-select: none;
   transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
   :hover {
     background-color: rgb(242, 197, 224);
   }
@@ -138,6 +139,7 @@ export const ItemAddToCartBtn = styled.input`
   cursor: pointer;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
   outline: none;
   :hover {
     background: rgba(255, 105, 180, 0.85);
@@ -149,9 +151,8 @@ export const ItemAddToCartBtn = styled.input`
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
     transform: translateY(1.5px);
   }
-  :disabled{
+  :disabled {
     background: #f9c3de;
-
   }
 `;
 export const ItemDescribe = styled.p`

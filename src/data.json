@@ -3,7 +3,7 @@
     {
       "items": [
         {
-          "category": "Sneakers",
+          "category": "Sneaker",
           "Products": [
             {
               "id": 1,
@@ -12,11 +12,11 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/4.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/5.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/4.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/5.jpg"
               ]
             },
             {
@@ -26,10 +26,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/4.jpg"
               ]
             },
             {
@@ -39,10 +39,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/4.jpg"
               ]
             },
             {
@@ -52,10 +52,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/2.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/3.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/4.png"
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/2.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/3.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/4.png"
               ]
             },
             {
@@ -65,10 +65,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/4.jpg"
               ]
             },
             {
@@ -78,10 +78,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/4.jpg"
               ]
             },
             {
@@ -91,10 +91,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/4.jpg"
               ]
             },
             {
@@ -104,10 +104,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/4.jpg"
               ]
             },
             {
@@ -117,10 +117,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/2.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/3.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/4.png"
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/2.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/3.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/4.png"
               ]
             },
             {
@@ -130,10 +130,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/4.jpg"
               ]
             },
             {
@@ -143,10 +143,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/4.jpg"
               ]
             },
             {
@@ -156,10 +156,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/4.jpg"
               ]
             },
             {
@@ -169,10 +169,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/4.jpg"
               ]
             },
             {
@@ -182,10 +182,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/2.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/3.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/4.png"
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/2.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/3.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/4.png"
               ]
             },
             {
@@ -195,17 +195,17 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/4.jpg"
               ]
             }
           ],
           "img": "/assets/images/Products Images/shoe2 web.jpg"
         },
         {
-          "category": "Sports",
+          "category": "Sport",
           "Products": [
             {
               "id": 11,
@@ -214,10 +214,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/4.jpg"
               ]
             },
             {
@@ -227,10 +227,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/4.jpg"
               ]
             },
             {
@@ -240,17 +240,17 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/4.jpg"
               ]
             }
           ],
           "img": "/assets/images/Products Images/sportsshoes web.jpg"
         },
         {
-          "category": "Casuals",
+          "category": "Formal",
           "Products": [
             {
               "id": 33,
@@ -259,10 +259,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/4.jpg"
               ]
             },
             {
@@ -272,10 +272,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/2.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/3.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/4.png"
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/2.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/3.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/4.png"
               ]
             },
             {
@@ -285,17 +285,17 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/4.jpg"
               ]
             }
           ],
           "img": "/assets/images/Products Images/shoe3 web.jpg"
         },
         {
-          "category": "Boots",
+          "category": "Boot",
           "Products": [
             {
               "id": 11,
@@ -304,10 +304,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/4.jpg"
               ]
             },
             {
@@ -317,10 +317,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/4.jpg"
               ]
             },
             {
@@ -330,10 +330,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/4.jpg"
               ]
             },
             {
@@ -343,10 +343,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/2.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/3.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/4.png"
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/2.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/3.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/4.png"
               ]
             },
             {
@@ -356,17 +356,17 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/4.jpg"
               ]
             }
           ],
           "img": "/assets/images/Products Images/shoe15 web.jpg"
         },
         {
-          "category": "Slippers",
+          "category": "Slipper",
           "Products": [
             {
               "id": 11,
@@ -375,10 +375,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Adidas Basket/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Adidas Basket/4.jpg"
               ]
             },
             {
@@ -388,10 +388,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/4.jpg"
               ]
             },
             {
@@ -401,10 +401,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon oat/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon oat/4.jpg"
               ]
             },
             {
@@ -414,10 +414,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/2.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/3.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/4.png"
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/2.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/3.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/4.png"
               ]
             },
             {
@@ -427,17 +427,17 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/CHRISTIAN LOUBOUTIN/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/CHRISTIAN LOUBOUTIN/4.jpg"
               ]
             }
           ],
           "img": "/assets/images/Products Images/shoe4 web.jpg"
         },
         {
-          "category": "Street Style",
+          "category": "Casual",
           "Products": [
             {
               "id": 22,
@@ -446,10 +446,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/2.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/3.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/Canyon Green/4.jpg"
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/2.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/3.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/Canyon Green/4.jpg"
               ]
             },
             {
@@ -459,10 +459,10 @@
               "sizes": ["40", "41", "42", "43", "44"],
               "describe": "Lorem ipsum dolor sit, amet consectetur adipisicing elit Recusandae eaque dolor commodi illo animi corporis autem atque magnam ipsa possimus totam, temporibus nostrum dolorum quis maiores ea neque doloremque fugiat.",
               "images": [
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/1.jpg",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/2.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/3.png",
-                "/assets/images/Products Images/ProductItem/sneackers/FoggySands/4.png"
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/1.jpg",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/2.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/3.png",
+                "/assets/images/Products Images/ProductItem/sneacker/FoggySands/4.png"
               ]
             }
           ],
@@ -479,12 +479,12 @@
           "name": "Products",
           "to": "/Products",
           "subMenu": [
-            { "name": "Sneakers", "to": "/Sneakers" },
-            { "name": "Slippers", "to": "/Slippers" },
-            { "name": "Sports", "to": "/Sports" },
-            { "name": "Casuals", "to": "/Casuals" },
-            { "name": "Boots", "to": "/Boots" },
-            { "name": "Street Style", "to": "/Street Style" }
+            { "name": "Sneaker", "to": "/Sneaker" },
+            { "name": "Slipper", "to": "/Slipper" },
+            { "name": "Sport", "to": "/Sport" },
+            { "name": "Formal", "to": "/Formal" },
+            { "name": "Boot", "to": "/Boot" },
+            { "name": "casual", "to": "/Casual" }
           ]
         },
         {

@@ -8,7 +8,7 @@ import {
   SideBarMenu,
   SideBarLink,
 } from "./MobileMenuSideBarElement";
-import { NavWrapperLogo, Logo, Title } from "../Nav/NavElement";
+import { NavWrapperLogo, Logo } from "../Nav/NavElement";
 import { UserDataContext } from "../../providers/UserDataContext";
 const SideBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
@@ -28,7 +28,7 @@ const SideBar = () => {
                   src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
                   alt="logo"
                 />
-                <Title>ShoesStore</Title>
+                <h1>ShoesStore</h1>
               </NavWrapperLogo>
               {/* <SideBarLink to="/" onClick={toggleMobileMenu}>
                 Home

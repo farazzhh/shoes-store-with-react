@@ -58,7 +58,7 @@ export const ContactTitle = styled.h1`
   margin-bottom: 20px;
   font-size: 35px;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-  font-weight: 800;
+  font-weight: 400;
   @media screen and (max-width: 768px) {
     font-size: 30px;
   }
@@ -71,6 +71,8 @@ export const ContactDescribe = styled.p`
   font-size: 18px;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   margin: 30px 0;
+  color: gray;
+  font-weight: 500;
   @media screen and (max-width: 768px) {
     font-size: 16px;
   }

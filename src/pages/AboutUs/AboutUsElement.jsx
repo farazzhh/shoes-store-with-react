@@ -48,7 +48,7 @@ export const AboutTitle = styled.h1`
   font-size: 35px;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
-  font-weight: 800;
+  font-weight: 400;
   @media screen and (max-width: 768px) {
     font-size: 30px;
   }
@@ -60,8 +60,9 @@ export const AboutTitle = styled.h1`
 export const AboutDescribe = styled.p`
   font-size: 20px;
   margin: 30px 0 40px;
+  color:gray;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  font-weight: 300;
+  font-weight: 500;
   @media screen and (max-width: 768px) {
     font-size: 16px;
   }
