@@ -36,19 +36,19 @@ export const SubMenuListItem = styled(Link)`
     background: -webkit-linear-gradient(
       to top,
       rgba(255, 255, 255, 0.1),
-      rgba(135, 10, 47, 0.2),
+      rgba(135, 10, 47, 0.1),
       rgba(255, 255, 255, 0.1)
     ); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(
       to top,
       rgba(255, 255, 255, 0.1),
-      rgba(135, 10, 47, 0.2),
+      rgba(135, 10, 47, 0.1),
       rgba(255, 255, 255, 0.1)
     ); /* Opera 11.10+ */
     background: linear-gradient(
       to top,
       rgba(255, 255, 255, 0.1),
-      rgba(135, 10, 47, 0.2),
+      rgba(135, 10, 47, 0.1),
       rgba(255, 255, 255, 0.1)
     );
     letter-spacing: 2px;

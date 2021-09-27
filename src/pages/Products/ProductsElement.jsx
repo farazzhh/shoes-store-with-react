@@ -109,14 +109,14 @@ export const ProductsItems = styled(LinkR)`
   overflow: hidden;
   cursor: pointer;
   &:hover {
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
     span {
       color: #fff;
       font-weight: 400;
-      font-size: 20px;
+      /* font-size: 20px; */  
     }
     div::after {
-      opacity: 0.6;
+      opacity: 0.4;
     }
   }
 
@@ -135,6 +135,7 @@ export const ProductsItemsImage = styled.div`
     transition: all 0.1s ease-in-out;
     -webkit-transition: all 0.1s ease-in-out;
     content: "";
+    border-radius: 10px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -155,9 +156,9 @@ export const ProductsImage = styled.img`
 export const ProductsItemsTitle = styled.span`
   font-size: 16px;
   position: absolute;
-  font-weight: 400;
+  font-weight: 600;
   margin: 5px 0 10px 0;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
   letter-spacing: -0.5px;
   transition: all 0.1s ease-in-out;
   -webkit-transition: all 0.1s ease-in-out;

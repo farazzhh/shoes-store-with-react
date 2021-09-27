@@ -4,7 +4,6 @@ import {
   SideBarContainer,
   SelectionDiv,
   Icon,
-  CloseIcon,
   SideBarMenuWrapper,
   SideBarMenu,
 } from "./SideBarProductsElement";

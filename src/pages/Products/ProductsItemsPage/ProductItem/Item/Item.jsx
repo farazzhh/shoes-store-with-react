@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, useMemo } from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/scss/image-gallery.css";
 import { BackButtonPublic } from "../../../../../components/PublicComponents/BackButton.jsx";
@@ -22,20 +22,22 @@ import {
 
 const Item = ({ data, category, requestData }) => {
   const [cart, pushToCart] = useContext(CartContext);
-
-  const imges = [];
+  const [imges, setImges] = useState([]);
   const [selectSize, setSelectSize] = useState("");
-
-  // put process.env.PUBLIC_URL befor image adress 
-  useEffect(() => {
-    requestData.images.map((img) => {
-      imges.push({
+  
+  // put process.env.PUBLIC_URL befor image adress
+  const fixImagesPath = useMemo(() => {
+    const imgCopy = [];
+    requestData.images.map((img) => {    
+      imgCopy.push({
         original: `${process.env.PUBLIC_URL}${img}`,
         thumbnail: `${process.env.PUBLIC_URL}${img}`,
       });
     });
-  });
-
+    return setImges(imgCopy);
+  }, [requestData.images]);
+  
+  
   // make object with all item property plus selected size and item's category
   const addToCartHandler = () => {
     const newItem = {

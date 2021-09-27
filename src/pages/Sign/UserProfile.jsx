@@ -160,27 +160,25 @@ export const ProfileMenu = styled.div`
       &:not(:first-child):hover {
         background: -webkit-linear-gradient(
           to top,
-          rgb(255, 255, 255),
+          rgba(255, 255, 255, 0.1),
           rgba(135, 10, 47, 0.1),
-          rgb(255, 255, 255)
+          rgba(255, 255, 255, 0.1)
         ); /* Chrome10+,Safari5.1+ */
         background: -o-linear-gradient(
           to top,
-          rgb(255, 255, 255),
+          rgba(255, 255, 255, 0.1),
           rgba(135, 10, 47, 0.1),
-          rgb(255, 255, 255)
+          rgba(255, 255, 255, 0.1)
         ); /* Opera 11.10+ */
         background: linear-gradient(
           to top,
-          rgb(255, 255, 255),
+          rgba(255, 255, 255, 0.1),
           rgba(135, 10, 47, 0.1),
-          rgb(255, 255, 255)
+          rgba(255, 255, 255, 0.1) 
         );
-        letter-spacing: 2px;
         letter-spacing: 2px;
       }
       &:first-child {
-        /* background-color: rgba(135, 10, 47, 1); */
         color: #870a2f;
         font-weight: 500;
         text-transform: capitalize;
