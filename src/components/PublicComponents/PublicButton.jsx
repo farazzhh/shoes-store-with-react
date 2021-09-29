@@ -12,24 +12,24 @@ export const PublicButton = styled(LinkR)`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
   text-transform: capitalize;
   color: ${({ transparency }) => (transparency ? "#870a30" : "#fff")};
   margin: ${({ margin }) => (margin ? "0 auto 20px auto" : null)};
-  padding: ${({ big }) => (big ? " 20px 30px" : " 10px 20px")};
+
+  padding: 10px 5px;
   width: ${({ width }) => (width ? `${width}` : null)};
   ${({ transparency }) =>
     !transparency ? "background:  rgba(255, 105, 180, 1)" : "background:#fff;"};
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 5px;
   border: #870a30 1px solid;
   box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 5px;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-  transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
   cursor: pointer;
-  font-weight: 800;
+  font-weight: 600;
   z-index: 10;
   &:hover {
     background: #870a30;
@@ -41,7 +41,6 @@ export const PublicButton = styled(LinkR)`
   @media screen and (max-width: 768px) {
     opacity: 1;
     font-size: 14px;
-    padding: 2px 20px;
   }
 
   @media screen and (max-width: 480px) {
