@@ -36,7 +36,7 @@ function App(props) {
 
   return (
     <HashRouter>
-      {isPending && <Loading />}
+      {/* {isPending && <Loading />} */}
       {data.items && (
         <div className="App">
           <SideBar />
