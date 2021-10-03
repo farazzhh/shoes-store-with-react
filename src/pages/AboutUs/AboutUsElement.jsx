@@ -8,6 +8,7 @@ export const About = styled.section`
 export const AboutContainer = styled.div`
   width: 70%;
   max-width: 1100px;
+  min-width: 750px;
   margin: 0 auto;
   position: relative;
   @media screen and (max-width: 1024px) {
@@ -15,11 +16,12 @@ export const AboutContainer = styled.div`
   }
   @media screen and (max-width: 768px) {
     width: 95%;
+    min-width: 470px;
   }
 `;
 
 export const AboutWrapper = styled.div`
-  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px;
+  /* box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px; */
   border-left: #870a30 1px solid;
   background: #fff;
   border-radius: 10px;
@@ -30,18 +32,27 @@ export const AboutWrapper = styled.div`
   align-items: flex-start;
   width: 100%;
 `;
-
-export const AboutVideoBg = styled.video`
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-`;
-
 export const AboutContent = styled.div`
   width: 100%;
   height: 100%;
   padding: 20px;
   position: relative;
+  & > div {
+    /* display: flex; */
+    /* flex-direction: row-reverse; */
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+    div {
+
+      float: right;
+      width: 50%;
+      border: 1px solid red;
+      shape-outside: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+  }
 `;
 
 export const AboutTitle = styled.h1`
@@ -57,12 +68,20 @@ export const AboutTitle = styled.h1`
   }
 `;
 
+export const AboutVideoBg = styled.video`
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+  }
+`;
+
 export const AboutDescribe = styled.p`
-  font-size: 20px;
-  margin: 30px 0 40px;
-  color:gray;
+  font-size: 16px;
+  /* margin: 30px 0 40px; */
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
-  font-weight: 500;
+  font-weight: 300;
+  float: right;
   @media screen and (max-width: 768px) {
     font-size: 16px;
   }

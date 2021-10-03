@@ -39,12 +39,7 @@ const Products = () => {
 
       <BGSection>
         {/* products parallex hero header from public components */}
-        <PublicHeader
-          title="Style"
-          describe="let's play the Game"
-          type="image"
-          src={`${process.env.PUBLIC_URL}/assets/images/header2web.jpg`}
-        />
+        <PublicHeader title="Style" describe="lorem" type="bg" />
         <ProductsSection id="products">
           <ProductsWrapper>
             <BackgroundPng

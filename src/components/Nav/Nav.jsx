@@ -29,6 +29,7 @@ const NavBar = () => {
   const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext);
   const [data] = useContext(DataContext);
 
+  console.log("nav");
   const [userData, setUserDataHandler, errors, setErrorsHandler] =
     useContext(UserDataContext);
 

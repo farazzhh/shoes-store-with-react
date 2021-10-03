@@ -7,12 +7,15 @@ export const ProductsSection = styled.section`
   padding: 200px 0 250px 0;
   position: relative;
   overflow: hidden;
+  background: rgba(101, 1, 31, 0.7);
+  backdrop-filter: blur(5px);
+  box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 10px;
 `;
 
 export const ProductsWrapper = styled.div`
   width: 90%;
   max-width: 1000px;
-  padding: 50px 10px;
+  padding: 50px 10px 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,7 +25,6 @@ export const ProductsWrapper = styled.div`
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   background: rgb(250, 250, 250);
-  box-shadow: rgba(0, 0, 0, 0.3) -1px 1px 10px;
   border-radius: 10px;
   border-left: #870a30 1px solid;
   border-bottom: #870a30 3px solid;
@@ -63,6 +65,7 @@ export const ProductsTitle = styled.h1`
     font-size: 30px;
   }
 `;
+
 export const ProductsDescribe = styled.p`
   font-weight: 600;
   font-size: 20px;
@@ -109,11 +112,10 @@ export const ProductsItems = styled(LinkR)`
   overflow: hidden;
   cursor: pointer;
   &:hover {
-    /* transform: translateY(-2px); */
+    transform: translateY(-1px);
     span {
       color: #fff;
-      font-weight: 400;
-      /* font-size: 20px; */  
+      font-weight: 300;
     }
     div::after {
       opacity: 0.4;
@@ -144,6 +146,12 @@ export const ProductsItemsImage = styled.div`
     background: rgba(0, 0, 0, 0.7);
     opacity: 1;
   }
+
+  @media screen and (max-width: 768px) {
+    &:after {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
 `;
 
 export const ProductsImage = styled.img`
@@ -154,16 +162,22 @@ export const ProductsImage = styled.img`
 `;
 
 export const ProductsItemsTitle = styled.span`
-  font-size: 16px;
+  font-size: 25px;
   position: absolute;
-  font-weight: 600;
+  font-weight: 500;
   margin: 5px 0 10px 0;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
   letter-spacing: -0.5px;
-  transition: all 0.1s ease-in-out;
-  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
   color: lightgray;
+
+  @media screen and (max-width: 768px) {
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    font-weight: 700;
+  }
   @media screen and (max-width: 480px) {
-    font-size: 16px;
+    font-size: 30px;
   }
 `;

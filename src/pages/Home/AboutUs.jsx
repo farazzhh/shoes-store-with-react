@@ -30,6 +30,14 @@ const AboutUs = () => {
       />
       <About id="aboutus">
         <AboutContainer>
+          <BackgroundPng
+            width="40%"
+            src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus.png`}
+            top={false}
+            left={false}
+            opacity={0.1}
+            flipH={true}
+          />
           <AboutWrapper>
             <AboutVideoBg
               src={`${process.env.PUBLIC_URL}/assets/videos/aboutusweb.mp4`}
@@ -51,29 +59,17 @@ const AboutUs = () => {
                 consequatur beatae odit veritatis, nostrum reprehenderit sunt
                 quaerat provident.
               </AboutDescribe>
-              <PublicButton
-                to="/aboutus"
-                margin="true"
-                transparency="true"
-                width="250px"
-              >
-                See More
-              </PublicButton>
             </AboutContent>
+          <PublicButton
+            to="/aboutus"
+            margin="true"
+            transparency="true"
+            width="250px"
+          >
+            See More
+          </PublicButton>
           </AboutWrapper>
-       
-          <BackgroundPng
-            width="40%"
-            src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus.png`}
-            top={false}
-            left={false}
-            opacity={0.1}
-            flipH={true}
-          />
         </AboutContainer>
-        <AboutImageGalleryWrapper>
-          <AboutImageGallery />
-        </AboutImageGalleryWrapper>
       </About>
     </BGSection>
   );

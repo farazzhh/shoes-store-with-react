@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Slide } from "react-slideshow-image";
+// import { Slide } from "react-slideshow-image";
 import { faSignInAlt as loginIcon } from "@fortawesome/free-solid-svg-icons";
 import { faUserCircle as userIcon } from "@fortawesome/free-solid-svg-icons";
-import "./SlideShow.css";
-import "react-slideshow-image/dist/styles.css";
+// import "./SlideShow.css";
+// import "react-slideshow-image/dist/styles.css";
 import { BorderBottom } from "../../../components/PublicComponents/BorderBottom";
 import {
   PublicButton,
@@ -18,6 +18,7 @@ import {
 } from "./SlideShowElement";
 import { UserDataContext } from "../../../providers/UserDataContext";
 import { useContext } from "react";
+
 const slideImages = [
   "./assets/images/header Slideshow/header3web.jpg",
   "./assets/images/header Slideshow/header1web.jpg",
@@ -47,7 +48,7 @@ const [userData, setUserDataHandler, errors, setErrorsHandler] =
 
   return (
     <SlideShowWrapper ref={inputRef}>
-      <Slide
+      {/* <Slide
         easing="ease"
         arrows={false}
         duration={3000}
@@ -65,7 +66,14 @@ const [userData, setUserDataHandler, errors, setErrorsHandler] =
             </div>
           </div>
         ))}
-      </Slide>
+      </Slide> */}
+      <div>
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/images/header Slideshow/header3web.jpg`}
+        alt="Header"
+        />
+        </div>
+
       <HeroWrapper>
         <HeroTitle>Respect</HeroTitle>
         <BorderBottom />

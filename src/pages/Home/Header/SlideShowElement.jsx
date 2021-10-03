@@ -23,6 +23,13 @@ export const HeaderSection = styled.header`
 export const SlideShowWrapper = styled.div`
   position: relative;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  height: 100%;
+  &>div{
+    height: 100%;
+    img{
+      height: 100%;
+    }
+  }
 `;
 
 export const HeroWrapper = styled.div`
