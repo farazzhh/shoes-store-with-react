@@ -21,18 +21,17 @@ import { UserDataContext } from "./providers/UserDataContext";
 
 function App(props) {
   const {user , login , logout} = useContext(UserDataContext);
-
   const { data, isPending } = useFetch("../../data.json");
 
   useEffect(() => {
     const loadDataFromLocalStorage = () => {
-      const userData = JSON.parse(localStorage.getItem("userData"));
+      // const userData = JSON.parse(localStorage.getItem("userData"));
       // if (userData) {
       //   setUserDataHandler(userData);
       // }
     };
 
-    loadDataFromLocalStorage();
+    // loadDataFromLocalStorage();
   }, []);
 
   return (
