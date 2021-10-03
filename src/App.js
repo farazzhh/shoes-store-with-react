@@ -20,16 +20,16 @@ import useFetch from "./components/custom hooks/useFetch";
 import { UserDataContext } from "./providers/UserDataContext";
 
 function App(props) {
-  const [userData, setUserDataHandler] = useContext(UserDataContext);
+  const {user , login , logout} = useContext(UserDataContext);
 
   const { data, isPending } = useFetch("../../data.json");
 
   useEffect(() => {
     const loadDataFromLocalStorage = () => {
       const userData = JSON.parse(localStorage.getItem("userData"));
-      if (userData) {
-        setUserDataHandler(userData);
-      }
+      // if (userData) {
+      //   setUserDataHandler(userData);
+      // }
     };
 
     loadDataFromLocalStorage();

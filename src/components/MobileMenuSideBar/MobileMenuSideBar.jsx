@@ -12,8 +12,8 @@ import { NavWrapperLogo, Logo } from "../Nav/NavElement";
 import { UserDataContext } from "../../providers/UserDataContext";
 const SideBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
-  const [userData, setUserDataHandler, errors, setErrorsHandler] =
-    useContext(UserDataContext);
+  // const [userData, setUserDataHandler, errors, setErrorsHandler] =
+  const { user, login, logout } = useContext(UserDataContext);
   return (
     <>
       <SideBarContainer toggle={navMobileMenu}>
@@ -42,7 +42,7 @@ const SideBar = () => {
               <SideBarLink to="/contactus" onClick={toggleMobileMenu}>
                 Contact us
               </SideBarLink>
-              {!userData.username && (
+              {!user && (
                 <SideBarLink to="/signin" onClick={toggleMobileMenu}>
                   Sign Up/In
                 </SideBarLink>

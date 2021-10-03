@@ -30,8 +30,9 @@ const NavBar = () => {
   const [data] = useContext(DataContext);
 
   console.log("nav");
-  const [userData, setUserDataHandler, errors, setErrorsHandler] =
-    useContext(UserDataContext);
+  // const [userData, setUserDataHandler, errors, setErrorsHandler] =
+  //   useContext(UserDataContext);
+  const { user, login, logout } = useContext(UserDataContext);
 
   const computSubMenuHeight = (menuItems) => {
     if (menuItems.subMenu) {
@@ -70,10 +71,10 @@ const NavBar = () => {
                   )}
                 </NavMenuItem>
               ))}
-            {!userData.username ? (
+            {!user ? (
               <SignButton to="/signin">Sign up/in</SignButton>
             ) : (
-              <UserProfile bool={userData.username} />
+              <UserProfile bool={user.username} />
             )}
 
             <NavCart to="/cart">
@@ -89,7 +90,7 @@ const NavBar = () => {
 
         <NavMobileWrapper>
           {/* username disapear after sign Up or In */}
-          {userData.username && <UserProfile bool={userData.username} />}
+          {user && <UserProfile bool={user} />}
 
           <NavCartMobile to="/cart">
             <NavCartImage
