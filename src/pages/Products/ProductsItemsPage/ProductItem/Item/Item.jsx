@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect, useMemo } from "react";
 import ImageGallery from "react-image-gallery";
-// import "react-image-gallery/styles/scss/image-gallery.css";
-import './image-gallery';
+import "react-image-gallery/styles/scss/image-gallery.css";
 import { BackButtonPublic } from "../../../../../components/PublicComponents/BackButton.jsx";
 import { CartContext } from "../../../../../providers/CartContext.js";
 import {
