@@ -1,9 +1,9 @@
 import { DataContext } from "../../providers/DataContext";
 import { useEffect, useState, useContext } from "react";
 
-const useFetch = (url) => {
+const useFetch = async(url) => {
   const [data, dataHandler, requestData, requestDataHandler] =
-    useContext(DataContext);
+   await useContext(DataContext);
   const [isPending, setIsPending] = useState(true);
   // const abortCont = new AbortController();
 

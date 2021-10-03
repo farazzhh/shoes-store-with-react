@@ -37,7 +37,7 @@ function App(props) {
   return (
     <HashRouter>
       {/* {isPending && <Loading />} */}
-      {data.items && (
+      {/* {data.items && ( */}
         <div className="App">
           <SideBar />
           <Nav />
@@ -70,7 +70,7 @@ function App(props) {
 
           <Footer />
         </div>
-      )}
+      {/* )} */}
     </HashRouter>
   );
 }
