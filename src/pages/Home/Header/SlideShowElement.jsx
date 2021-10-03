@@ -24,10 +24,12 @@ export const SlideShowWrapper = styled.div`
   position: relative;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   height: 100%;
-  &>div{
+  & > div {
     height: 100%;
-    img{
+    img {
+      width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 `;
