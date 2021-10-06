@@ -21,7 +21,6 @@ export const UserDataProvider = (props) => {
       JSON.stringify({
         username: signUpValue.username,
         email: signUpValue.email,
-        password: signUpValue.password,
       })
     );
 
