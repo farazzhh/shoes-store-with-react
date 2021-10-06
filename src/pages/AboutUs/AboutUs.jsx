@@ -15,17 +15,16 @@ import {
   AboutImageGalleryWrapper,
 } from "./AboutUsElement";
 const AboutUs = () => {
-  
   // its for rafreshing, without this , the slide animation on public header does not work correctly
-const [, forceUpdate] = useReducer((x) => x + 1, 0);
+  const [, forceUpdate] = useReducer((x) => x + 1, 0);
 
   useEffect(() => {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-  });
-  forceUpdate();
-}, []);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+    forceUpdate();
+  }, []);
 
   return (
     <BGSection>
@@ -56,11 +55,18 @@ const [, forceUpdate] = useReducer((x) => x + 1, 0);
                 consectetur adipisicing elit. Adipisci suscipit quo quos hic
                 inventore enim deleniti praesentium quod qui debitis est
                 consequatur beatae odit veritatis, nostrum reprehenderit sunt
-                quaerat provident.
+                quaerat provident. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Sequi illum sunt impedit voluptatem voluptatum
+                ut dolorum totam, ad ipsa soluta perferendis nisi, ipsam ullam
+                reiciendis placeat, quisquam eaque harum dolor. Lorem ipsum
+                dolor sit, amet consectetur adipisicing elit. A labore eius
+                nostrum, repellendus consequatur accusamus cum quod culpa.
+                Asperiores nostrum dicta maiores sequi consequuntur doloremque
+                delectus molestias voluptatibus ut enim!
               </AboutDescribe>
             </AboutContent>
           </AboutWrapper>
-         
+
           <BackgroundPng
             width="40%"
             src={`${process.env.PUBLIC_URL}/assets/images/png/aboutus.png`}

@@ -15,7 +15,7 @@ export const ProductsSection = styled.section`
 export const ProductsWrapper = styled.div`
   width: 90%;
   max-width: 1000px;
-  padding: 50px 10px 80px;
+  padding: 80px 10px 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,7 +35,6 @@ export const ProductsWrapper = styled.div`
   }
   @media screen and (max-width: 480px) {
     width: 90%;
-    padding: 30px 10px;
   }
 `;
 
@@ -44,7 +43,7 @@ export const ProductsContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   @media screen and (max-width: 768px) {
     margin-bottom: 50px;
   }

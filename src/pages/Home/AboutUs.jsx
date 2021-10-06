@@ -57,7 +57,15 @@ const AboutUs = () => {
                 consectetur adipisicing elit. Adipisci suscipit quo quos hic
                 inventore enim deleniti praesentium quod qui debitis est
                 consequatur beatae odit veritatis, nostrum reprehenderit sunt
-                quaerat provident.
+                quaerat provident. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Voluptatibus nulla magnam sit dolorum
+                explicabo possimus reprehenderit eveniet porro voluptates
+                quisquam quas asperiores nobis mollitia hic repellendus, natus,
+                iste voluptate. Est? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Labore dicta reprehenderit deserunt incidunt
+                ducimus quibusdam quo quos asperiores laborum expedita voluptate
+                dignissimos vitae, quod ratione. Incidunt laudantium
+                voluptatibus necessitatibus facere?
               </AboutDescribe>
             </AboutContent>
             <PublicLink
