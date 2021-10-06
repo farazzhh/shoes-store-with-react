@@ -29,11 +29,9 @@ const slideImages = [
 const Slideshow = () => {
   const inputRef = useRef(null);
   const [autoplay, setAutoplay] = useState(true);
-// const [userData, setUserDataHandler, errors, setErrorsHandler] =
-//   useContext(UserDataContext);
+const [userData, setUserDataHandler, errors, setErrorsHandler] =
+  useContext(UserDataContext);
   
-const { user, login, logout } = useContext(UserDataContext);
-
   useEffect(() => {
     window.addEventListener("scroll", function (e) {
       if (inputRef.current !== null) {
@@ -82,14 +80,14 @@ const { user, login, logout } = useContext(UserDataContext);
         <BorderBottom />
         <HeroDescribe>Your Feet</HeroDescribe>
         <PublicButtonWrapper>
-          {!user ? (
-            <PublicLink to="" transparency="true" onClick={login}>
+          {!userData.username ? (
+            <PublicLink to="/signin" transparency="true">
               <strong>Sign Up</strong>/<small>Sign in</small>
               <Icon icon={loginIcon} />
             </PublicLink>
           ) : (
             <PublicLink to="/profile" transparency="true">
-              <strong>Hi {user}</strong>
+              <strong>Hi {userData.username}</strong>
               <Icon icon={userIcon} />
             </PublicLink>
           )}
