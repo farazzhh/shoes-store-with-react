@@ -128,7 +128,9 @@ const Sign = () => {
               <SwitchSide onClick={clickSwitchHandler}>
                 <div>
                   <span>
-                     Login / Signup
+                    {!sw
+                      ? " Already have an account?"
+                      : "Don't have an account?"}
                   </span>
                 </div>
               </SwitchSide>
