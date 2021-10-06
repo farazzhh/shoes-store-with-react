@@ -100,7 +100,7 @@ export const CardItem = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
@@ -116,7 +116,7 @@ export const CardItem = styled.div`
     display: block;
     width: 100px;
     height: 2px;
-    background-color: lightgray;
+    background-color: #870a30;
     margin: 5px 0;
     @media screen and (max-width: 580px) {
       display: none;
@@ -137,11 +137,16 @@ export const CartContent = styled.div`
 `;
 
 export const CardItemSpan = styled.span`
-  font-size: 14px;
+  font-size: 12px;
   color: gray;
   text-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px;
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
+  span{
+    color: #444343;
+    font-size: 14px;
+    font-weight: 500;
+  }
 `;
 
 export const CardSummary = styled.div`
@@ -197,7 +202,7 @@ export const CartItemImg = styled.img`
 `;
 
 export const CardItemDeleteButton = styled.button`
-  border: 1px solid #870a30;
+  border: 1px solid gray;
   width: 25px;
   height: 25px;
   position: absolute;
@@ -207,13 +212,16 @@ export const CardItemDeleteButton = styled.button`
   right: 2px;
   top: 2px;
   font-weight: 900;
-  color: #870a30;
+  color: gray;
   border-radius: 50%;
   cursor: pointer;
-
+  opacity: 0.6;
+  transition: all 0.1s;
   :hover {
-    color: white;
-    background-color: #870a30;
+    color: #870a30;
+    border: 1px solid #870a30;
+    opacity: 1;
+    background-color: #fff;
     border-radius: 50%;
   }
   @media screen and (max-width: 380px) {
