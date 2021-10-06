@@ -16,8 +16,11 @@ import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import { DataContext } from "../../providers/DataContext";
 import PublicHeader from "../../components/PublicComponents/PublicHeader";
-const Products = () => {
-  const [data] = useContext(DataContext);
+const Products =  () => {
+  const [data, dataHandler, requestData, requestDataHandler] =  useContext(
+    DataContext
+  );
+
   const inputRef = useRef(null);
   useEffect(() => {
     window.scrollTo(0, 0);

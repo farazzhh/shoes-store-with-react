@@ -6,7 +6,7 @@ import { faUserCircle as userIcon } from "@fortawesome/free-solid-svg-icons";
 // import "react-slideshow-image/dist/styles.css";
 import { BorderBottom } from "../../../components/PublicComponents/BorderBottom";
 import {
-  PublicButton,
+  PublicLink,
   PublicButtonWrapper,
 } from "../../../components/PublicComponents/PublicButton";
 import {
@@ -29,8 +29,11 @@ const slideImages = [
 const Slideshow = () => {
   const inputRef = useRef(null);
   const [autoplay, setAutoplay] = useState(true);
-const [userData, setUserDataHandler, errors, setErrorsHandler] =
-  useContext(UserDataContext);
+// const [userData, setUserDataHandler, errors, setErrorsHandler] =
+//   useContext(UserDataContext);
+  
+const { user, login, logout } = useContext(UserDataContext);
+
   useEffect(() => {
     window.addEventListener("scroll", function (e) {
       if (inputRef.current !== null) {
@@ -68,27 +71,27 @@ const [userData, setUserDataHandler, errors, setErrorsHandler] =
         ))}
       </Slide> */}
       <div>
-      <img
-        src={`${process.env.PUBLIC_URL}/assets/images/header Slideshow/header3web.jpg`}
-        alt="Header"
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/images/header Slideshow/header3web.jpg`}
+          alt="Header"
         />
-        </div>
+      </div>
 
       <HeroWrapper>
         <HeroTitle>Respect</HeroTitle>
         <BorderBottom />
         <HeroDescribe>Your Feet</HeroDescribe>
         <PublicButtonWrapper>
-          {!userData.username ? (
-            <PublicButton to="/signin" transparency="true">
+          {!user ? (
+            <PublicLink to="" transparency="true" onClick={login}>
               <strong>Sign Up</strong>/<small>Sign in</small>
               <Icon icon={loginIcon} />
-            </PublicButton>
+            </PublicLink>
           ) : (
-            <PublicButton to="/profile" transparency="true">
-              <strong>Hi {userData.username}</strong>
+            <PublicLink to="/profile" transparency="true">
+              <strong>Hi {user}</strong>
               <Icon icon={userIcon} />
-            </PublicButton>
+            </PublicLink>
           )}
         </PublicButtonWrapper>
       </HeroWrapper>

@@ -2,8 +2,7 @@ import { DataContext } from "../../providers/DataContext";
 import { useEffect, useState, useContext } from "react";
 
 const useFetch = (url) => {
-  const [data, dataHandler, requestData, requestDataHandler] =
-    useContext(DataContext);
+  const [data, dataHandler, requestData, requestDataHandler] = useContext(DataContext);
   const [isPending, setIsPending] = useState(true);
   // const abortCont = new AbortController();
 
@@ -22,8 +21,8 @@ const useFetch = (url) => {
     //     }
     // });
 
-    const importData = async () => {
-      await import("../../data.json").then((res) => dataHandler(res.default.database));
+    const importData =  () => {
+ import("../../data.json").then((res) => dataHandler(res.default.database));
       setIsPending(false);
     }
     importData();

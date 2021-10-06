@@ -8,7 +8,7 @@ export const PublicButtonWrapper = styled.div`
   justify-content: center;
 `;
 
-export const PublicButton = styled(LinkR)`
+export const PublicLink = styled(LinkR)`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -10,13 +10,13 @@ import { UserDataProvider } from "./providers/UserDataContext";
 ReactDOM.render(
   <React.StrictMode>
     <UserDataProvider>
-    <DataProvider>
-      <MobileMenuProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </MobileMenuProvider>
-    </DataProvider>
+      <DataProvider>
+        <MobileMenuProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </MobileMenuProvider>
+      </DataProvider>
     </UserDataProvider>
   </React.StrictMode>,
   document.getElementById("root")

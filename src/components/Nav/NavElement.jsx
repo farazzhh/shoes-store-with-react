@@ -76,7 +76,7 @@ export const NavMobileWrapper = styled.div`
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
-  
+
   @media screen and (max-width: 768px) {
     display: -webkit-flex;
     display: flex;

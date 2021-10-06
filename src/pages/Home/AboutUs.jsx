@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { BGSection } from "../../components/PublicComponents/BGSection";
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
-import { PublicButton } from "../../components/PublicComponents/PublicButton";
+import { PublicLink } from "../../components/PublicComponents/PublicButton";
 import PublicHeader from "../../components/PublicComponents/PublicHeader";
 import AboutImageGallery from "../AboutUs/AboutImageGallery";
 import { FaBars } from "react-icons/fa";
@@ -60,14 +60,14 @@ const AboutUs = () => {
                 quaerat provident.
               </AboutDescribe>
             </AboutContent>
-          <PublicButton
-            to="/aboutus"
-            margin="true"
-            transparency="true"
-            width="250px"
-          >
-            See More
-          </PublicButton>
+            <PublicLink
+              to="/aboutus"
+              margin="true"
+              transparency="true"
+              width="250px"
+            >
+              See More
+            </PublicLink>
           </AboutWrapper>
         </AboutContainer>
       </About>

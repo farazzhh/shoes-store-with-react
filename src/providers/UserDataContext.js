@@ -9,16 +9,13 @@ export const UserDataProvider = (props) => {
     password: "",
   });
 
-  
-
-  const setUserDataHandler = ( signUpValue ) => {
+ const setUserDataHandler = ( signUpValue ) => {
        setUserData({
         username: signUpValue.username,
         email: signUpValue.email,
         password: signUpValue.password,
        });
-    
-    
+
     localStorage.setItem(
       "userData",
       JSON.stringify({
@@ -27,7 +24,7 @@ export const UserDataProvider = (props) => {
         password: signUpValue.password,
       })
     );
-    
+
   };
 
   return (

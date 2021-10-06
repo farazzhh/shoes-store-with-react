@@ -17,7 +17,7 @@ import {
 import { BorderBottom } from "../../components/PublicComponents/BorderBottom";
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng.jsx";
 import { BGSection } from "../../components/PublicComponents/BGSection";
-import { PublicButton } from "../../components/PublicComponents/PublicButton.jsx";
+import { PublicLink } from "../../components/PublicComponents/PublicButton.jsx";
 import PublicHeader from "../../components/PublicComponents/PublicHeader.jsx";
 
 const ContactUs = () => {
@@ -114,16 +114,15 @@ const ContactUs = () => {
               opacity={0.1}
               flipH={true}
             />
-            <PublicButton
+            <PublicLink
               to="/contactus"
               margin="true"
               transparency="true"
               width="250px"
             >
               See More
-            </PublicButton>
+            </PublicLink>
           </ContactWrapper>
-       
         </ContactContainer>
       </Contact>
     </BGSection>

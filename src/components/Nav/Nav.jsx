@@ -103,12 +103,10 @@ const NavBar = () => {
           <MobileIcon onClick={toggleMobileMenu}>
             <FaBars />
           </MobileIcon>
-
         </NavMobileWrapper>
         {/* {userData.username && (
           <UserProfile bool={userData.username} mobile={false} />
         )} */}
-      
       </NavWrapper>
     </Nav>
   );

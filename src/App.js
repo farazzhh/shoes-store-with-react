@@ -19,25 +19,24 @@ import Loading from "./components/Loading/Loading";
 import useFetch from "./components/custom hooks/useFetch";
 import { UserDataContext } from "./providers/UserDataContext";
 
-function App(props) {
-  const [userData, setUserDataHandler] = useContext(UserDataContext);
-
-  const { data, isPending } = useFetch("../../data.json");
+ function App(props){
+  const {user , login , logout} = useContext(UserDataContext);
+   const { data, isPending } = useFetch("../../data.json");
 
   useEffect(() => {
-    const loadDataFromLocalStorage = () => {
-      const userData = JSON.parse(localStorage.getItem("userData"));
-      if (userData) {
-        setUserDataHandler(userData);
-      }
-    };
+    // const loadDataFromLocalStorage = () => {
+      // const userData = JSON.parse(localStorage.getItem("userData"));
+      // if (userData) {
+      //   setUserDataHandler(userData);
+      // }
+    // };
 
-    loadDataFromLocalStorage();
+    // loadDataFromLocalStorage();
   }, []);
 
   return (
     <HashRouter>
-      {isPending && <Loading />}
+      {/* {isPending && <Loading />} */}
       {data.items && (
         <div className="App">
           <SideBar />
@@ -71,7 +70,7 @@ function App(props) {
 
           <Footer />
         </div>
-      )}
+      )} 
     </HashRouter>
   );
 }

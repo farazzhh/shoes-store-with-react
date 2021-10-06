@@ -18,8 +18,7 @@ import PublicHeader from "../../components/PublicComponents/PublicHeader";
 import { DataContext } from "../../providers/DataContext";
 
 const Products = () => {
-  const [data, dataHandler, requestData, requestDataHandler] =
-    useContext(DataContext);
+  const [data, dataHandler, requestData, requestDataHandler] =  useContext(DataContext);
 
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
 
