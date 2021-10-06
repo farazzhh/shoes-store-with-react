@@ -33,6 +33,7 @@ const NavBar = () => {
   const [userData, setUserDataHandler, errors, setErrorsHandler] =
     useContext(UserDataContext);
 
+  console.log(userData);
   const computSubMenuHeight = (menuItems) => {
     if (menuItems.subMenu) {
       return (menuItems.subMenu.length * 40).toString() + "px";
@@ -57,7 +58,7 @@ const NavBar = () => {
                 <NavMenuItem
                   key={index}
                   to={`${menuItems.to}`}
-                  // for computing height of sub menu
+                  // for computing height of sub menu for styling
                   submenuheight={() => computSubMenuHeight(menuItems)}
                 >
                   {/* checking for submenu,if it has, it's rendring submenu */}
