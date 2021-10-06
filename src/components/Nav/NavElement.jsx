@@ -158,12 +158,14 @@ export const NavMenuItem = styled(LinkR)`
   }
 `;
 
-export const SignButton = styled(LinkR)`
+export const SignButton = styled.button`
   height: 30px;
+  background-color: white;
   width: 100px;
   text-align: center;
   list-style: none;
   margin-left: 0.5rem;
+  border: none;
   color: #000;
   padding: 6px 15px;
   border-top-left-radius: 7px;

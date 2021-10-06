@@ -9,16 +9,13 @@
 //     password: "",
 //   });
 
-  
-
 //  const setUserDataHandler = ( signUpValue ) => {
 //        setUserData({
 //         username: signUpValue.username,
 //         email: signUpValue.email,
 //         password: signUpValue.password,
 //        });
-    
-    
+
 //     localStorage.setItem(
 //       "userData",
 //       JSON.stringify({
@@ -27,7 +24,7 @@
 //         password: signUpValue.password,
 //       })
 //     );
-    
+
 //   };
 
 //   return (
@@ -75,10 +72,10 @@ export const UserDataProvider = ({ children }) => {
     netlifyIdentity.logout();
   };
 
-  const context = { user, login, logout };
+  const context = [];
 
   return (
-    <UserDataContext.Provider value={context}>
+    <UserDataContext.Provider value={{user, login, logout}}>
       {children}
     </UserDataContext.Provider>
   );

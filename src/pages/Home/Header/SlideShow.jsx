@@ -6,7 +6,7 @@ import { faUserCircle as userIcon } from "@fortawesome/free-solid-svg-icons";
 // import "react-slideshow-image/dist/styles.css";
 import { BorderBottom } from "../../../components/PublicComponents/BorderBottom";
 import {
-  PublicButton,
+  PublicLink,
   PublicButtonWrapper,
 } from "../../../components/PublicComponents/PublicButton";
 import {
@@ -31,7 +31,9 @@ const Slideshow = () => {
   const [autoplay, setAutoplay] = useState(true);
 // const [userData, setUserDataHandler, errors, setErrorsHandler] =
 //   useContext(UserDataContext);
+  
 const { user, login, logout } = useContext(UserDataContext);
+
   useEffect(() => {
     window.addEventListener("scroll", function (e) {
       if (inputRef.current !== null) {
@@ -69,11 +71,11 @@ const { user, login, logout } = useContext(UserDataContext);
         ))}
       </Slide> */}
       <div>
-      <img
-        src={`${process.env.PUBLIC_URL}/assets/images/header Slideshow/header3web.jpg`}
-        alt="Header"
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/images/header Slideshow/header3web.jpg`}
+          alt="Header"
         />
-        </div>
+      </div>
 
       <HeroWrapper>
         <HeroTitle>Respect</HeroTitle>
@@ -81,15 +83,15 @@ const { user, login, logout } = useContext(UserDataContext);
         <HeroDescribe>Your Feet</HeroDescribe>
         <PublicButtonWrapper>
           {!user ? (
-            <PublicButton  transparency="true" onClick={login}>
+            <PublicLink to="" transparency="true" onClick={login}>
               <strong>Sign Up</strong>/<small>Sign in</small>
               <Icon icon={loginIcon} />
-            </PublicButton>
+            </PublicLink>
           ) : (
-            <PublicButton to="/profile" transparency="true">
+            <PublicLink to="/profile" transparency="true">
               <strong>Hi {user}</strong>
               <Icon icon={userIcon} />
-            </PublicButton>
+            </PublicLink>
           )}
         </PublicButtonWrapper>
       </HeroWrapper>

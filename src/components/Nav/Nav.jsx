@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useMemo,useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { MobileMenuContext } from "../../providers/MobileMenuContext";
 import { DataContext } from "../../providers/DataContext";
@@ -28,18 +28,18 @@ const NavBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
   const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext);
   const [data] = useContext(DataContext);
-
-  console.log("nav");
+  
   // const [userData, setUserDataHandler, errors, setErrorsHandler] =
   //   useContext(UserDataContext);
+  
   const { user, login, logout } = useContext(UserDataContext);
 
   const computSubMenuHeight = (menuItems) => {
     if (menuItems.subMenu) {
-      return (menuItems.subMenu.length * 40).toString() + "px";
+        return (menuItems.subMenu.length * 40).toString() + "px";
     }
-  };
-
+  }
+ 
   return (
     <Nav className="nav">
       <NavWrapper>
@@ -71,11 +71,12 @@ const NavBar = () => {
                   )}
                 </NavMenuItem>
               ))}
-            {!user ? (
-              <SignButton to="/signin">Sign up/in</SignButton>
-            ) : (
-              <UserProfile bool={user.username} />
-            )}
+            {/* {!user ? ( */}
+            <SignButton onClick={login}>Sign Up/In</SignButton>
+            {/* ) : ( */}
+            {/* <UserProfile bool={user.username} /> */}
+            {/* "" */}
+            {/* )} */}
 
             <NavCart to="/cart">
               <NavCartImage
@@ -104,15 +105,13 @@ const NavBar = () => {
           <MobileIcon onClick={toggleMobileMenu}>
             <FaBars />
           </MobileIcon>
-
         </NavMobileWrapper>
         {/* {userData.username && (
           <UserProfile bool={userData.username} mobile={false} />
         )} */}
-      
       </NavWrapper>
     </Nav>
   );
 };
 
-export default NavBar;
+export default NavBar
