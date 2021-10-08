@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, useMemo } from "react";
-// import ImageGallery from "react-image-gallery";
-// import "react-image-gallery/styles/scss/image-gallery.css";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/scss/image-gallery.css";
 import { BackButtonPublic } from "../../../../../components/PublicComponents/BackButton.jsx";
 import { CartContext } from "../../../../../providers/CartContext.js";
 import {
@@ -60,7 +60,7 @@ const Item = ({ data, category, requestData }) => {
           <BackButtonPublic />
           <ItemWrapper>
             <ItemImageGallery>
-              {/* <ImageGallery items={imges} showNav={false} /> */}
+              <ImageGallery items={imges} showNav={false} />
             </ItemImageGallery>
             <ItemContent>
               <ItemTitlePriceWrapper>
