@@ -22,7 +22,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const Cart = () => {
   const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext);
-  const{user} = useAuth0()
+  const{user, loginWithRedirect} = useAuth0()
   let sum = 0;
 
 
@@ -49,11 +49,11 @@ const Cart = () => {
       />
       <CartWrapper>
         <CartItemsWrapper>
-          {user.name ? (
+          {user ? (
             <p>dear {user.name} </p>
           ) : (
             <p>
-              Please <Link to="/signin">login</Link> to continue
+              Please <a onClick={loginWithRedirect}>login</a> to continue
             </p>
           )}
           <CartItemsTitle>
@@ -78,7 +78,9 @@ const Cart = () => {
                     <CardItemSpan>
                       size : <span>{item.size}</span>
                     </CardItemSpan>
-                    <CardItemSpan>price: <span>{item.price}</span></CardItemSpan>
+                    <CardItemSpan>
+                      price: <span>{item.price}</span>
+                    </CardItemSpan>
                   </CartContent>
                   <CardItemDeleteButton
                     onClick={() => removeItemFromCart(index)}
