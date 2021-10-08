@@ -4,27 +4,48 @@ import { faUserCircle as userIcon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { useAuth0 } from "@auth0/auth0-react";
 
-const UserProfile = ({ bool }) => {
- const { user, isAuthenticated, isLoading, loginWithRedirect, logout } =
-   useAuth0();
+const UserProfile = () => {
+  const { user, isAuthenticated, isLoading, loginWithRedirect, logout } =
+    useAuth0();
   // close the window when click outside the window
   const { ref, isComponentVisible, handleClickToggle } =
     useClickListener(false);
 
-  const profileMenu = `<div>
+  // const profileMenu = `<div>
+  //       <h2>${user.name}</h2>
+  //       <p>${user.email}</p>
+  //     </div>`;
 
-        <h2>${user.name}</h2>
-        <p>${user.email}</p>
-      </div>`
+  let menuItems = null;
 
-  const menuItems = {
-    name: `${bool}`,
-    subMenu: [ { name: "Signout", click: logout }],
-  };
+  if (user) {
+    menuItems = [
+      {
+        name: "Signout",
+        click: () => {
+          logout({
+            returnTo: window.location.origin,
+          });
+        },
+      },
+    ];
+  } else {
+    menuItems = [
+      {
+        name: "Login",
+        click: loginWithRedirect,
+      },
+    ];
+  }
 
+  // Computing height of Profile's submenu for css
   const computeSubMenuHeight = (menuItem) => {
-    if (menuItem.subMenu) {
-      return (menuItem.subMenu.length * 40 + 40).toString() + "px";
+    if (menuItem) {
+      if (user) { 
+        return (menuItem.length * 40 + 40).toString() + "px";
+      } else {
+        return (menuItem.length * 40 ).toString() + "px";
+      }
     }
   };
 
@@ -40,8 +61,8 @@ const UserProfile = ({ bool }) => {
 
       <MobileViewMenu>
         <ul ref={ref} id="mobile">
-          <li>Hi {bool}</li>
-          {menuItems.subMenu.map((item, index) => (
+          {user && <li>Hi {user.name}</li>}
+          {menuItems.map((item, index) => (
             <li key={index} onClick={item.click}>
               {item.name}
             </li>
@@ -52,8 +73,8 @@ const UserProfile = ({ bool }) => {
       {/* Menu for Screen view  */}
       <ScreenViewMenu>
         <ul id="screen">
-          <li>Hi {bool}</li>
-          {menuItems.subMenu.map((item, index) => (
+          {user && <li>Hi {user.name}</li>}
+          {menuItems.map((item, index) => (
             <li key={index} onClick={item.click}>
               {item.name}
             </li>
@@ -123,7 +144,7 @@ export const ProfileMenu = styled.div`
         isComponentVisible && submenuheight};
       box-shadow: 0 1px 5px rgba(107, 78, 78, 0.6);
       border-bottom: none;
-      left: -50px;
+      left: -56px;
       top: 60px;
     }
   }
@@ -176,7 +197,7 @@ export const ProfileMenu = styled.div`
           to top,
           rgba(255, 255, 255, 0.1),
           rgba(135, 10, 47, 0.1),
-          rgba(255, 255, 255, 0.1) 
+          rgba(255, 255, 255, 0.1)
         );
         letter-spacing: 2px;
       }

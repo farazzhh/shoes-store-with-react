@@ -31,7 +31,6 @@ const Slideshow = () => {
 
   const [autoplay, setAutoplay] = useState(true);
 
-  
   const { user, isLoading, loginWithRedirect, logout } = useAuth0();
 
   useEffect(() => {
@@ -82,34 +81,20 @@ const Slideshow = () => {
         <BorderBottom />
         <HeroDescribe>Your Feet</HeroDescribe>
         <PublicButtonWrapper>
-
-          {/* {!userData.username ? (
-            <PublicLink to="/signin" transparency="true">
-              <strong>Sign Up</strong>/<small>Sign in</small>
+          {/*  profile or Signup/in button */}
+          {!user ? (
+            <PublicLink to="" transparency="true" onClick={loginWithRedirect}>
+              <span>
+                Login<span>/Signup</span>
+              </span>
               <Icon icon={loginIcon} />
             </PublicLink>
           ) : (
-            <PublicLink to="/profile" transparency="true">
-
-              <strong>Hi {userData.username}</strong>
+            <PublicLink to="" transparency="true">
+              <strong>Hi {user.name}</strong>
               <Icon icon={userIcon} />
             </PublicLink>
-          )} */}
-          
-          {!isLoading && !user && (
-            <LogButtons onClick={() => loginWithRedirect()}>Login</LogButtons>
           )}
-          {/* {!isLoading && user && ( */}
-            <LogButtons
-              onClick={() =>
-                logout({
-                  returnTo: window.location.origin,
-                })
-              }
-            >
-              Logout
-            </LogButtons>
-          {/* )} */}
         </PublicButtonWrapper>
       </HeroWrapper>
     </SlideShowWrapper>

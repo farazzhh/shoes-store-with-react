@@ -106,16 +106,14 @@ export const LogButtons = styled.div`
  display: flex;
   justify-content: center;
   align-items: center;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: ${({ transparency }) => (transparency ? "#870a30" : "#fff")};
   margin: ${({ margin }) => (margin ? "0 auto 20px auto" : null)};
-
   padding: 10px 5px;
   width: ${({ width }) => (width ? `${width}` : null)};
   ${({ transparency }) =>
     !transparency ? "background:  rgba(255, 105, 180, 1)" : "background:#fff;"};
   text-align: center;
-  font-size: 15px;
   border-radius: 5px;
   border: #870a30 1px solid;
   box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 5px;

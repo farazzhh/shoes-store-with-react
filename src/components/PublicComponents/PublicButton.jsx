@@ -12,11 +12,9 @@ export const PublicLink = styled(LinkR)`
   display: flex;
   justify-content: center;
   align-items: center;
-  text-transform: capitalize;
   color: ${({ transparency }) => (transparency ? "#870a30" : "#fff")};
   margin: ${({ margin }) => (margin ? "0 auto 20px auto" : null)};
-
-  padding: 10px 5px;
+  padding: 10px 15px;
   width: ${({ width }) => (width ? `${width}` : null)};
   ${({ transparency }) =>
     !transparency ? "background:  rgba(255, 105, 180, 1)" : "background:#fff;"};
@@ -26,8 +24,8 @@ export const PublicLink = styled(LinkR)`
   border: #870a30 1px solid;
   box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 5px;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-  transition: all 0.1s;
-  -webkit-transition: all 0.1s;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
   cursor: pointer;
   font-weight: 600;
   z-index: 10;
@@ -46,5 +44,12 @@ export const PublicLink = styled(LinkR)`
   @media screen and (max-width: 480px) {
     max-width: 80%;
     font-size: 12px;
+  }
+  span {
+    font-size: 20px;
+    font-weight: 400;
+    span{
+      font-size: 13px;
+    }
   }
 `;

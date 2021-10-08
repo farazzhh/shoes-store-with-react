@@ -1,4 +1,4 @@
-import React, { useContext, useMemo,useState } from "react";
+import React, { useContext, useMemo, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { MobileMenuContext } from "../../providers/MobileMenuContext";
 import { DataContext } from "../../providers/DataContext";
@@ -31,15 +31,15 @@ const NavBar = () => {
 
   const [data] = useContext(DataContext);
 
-  const { user, isAuthenticated, isLoading , loginWithRedirect , logout } = useAuth0();
-  
-  
+  const { user, isAuthenticated, isLoading, loginWithRedirect, logout } =
+    useAuth0();
+
   const computSubMenuHeight = (menuItems) => {
     if (menuItems.subMenu) {
-        return (menuItems.subMenu.length * 40).toString() + "px";
+      return (menuItems.subMenu.length * 40).toString() + "px";
     }
-  }
- 
+  };
+
   return (
     <Nav className="nav">
       <NavWrapper>
@@ -72,7 +72,6 @@ const NavBar = () => {
                 </NavMenuItem>
               ))}
 
-
             {/* Login/out button */}
 
             {user ? <UserProfile bool={user.name} /> : <AuthenticationButton />}
@@ -90,7 +89,7 @@ const NavBar = () => {
 
         <NavMobileWrapper>
           {/* username disapear after sign Up or In */}
-          {user && <UserProfile bool={user.name} />}
+          <UserProfile />
 
           <NavCartMobile to="/cart">
             <NavCartImage
@@ -110,4 +109,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar
+export default NavBar;
