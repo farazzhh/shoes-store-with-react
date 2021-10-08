@@ -23,17 +23,29 @@ import {
 import SubMenuComponents from "./SubMenu";
 import { UserDataContext } from "../../providers/UserDataContext";
 import UserProfile from "../../pages/Sign/UserProfile";
-
+import AuthenticationButton from "../Auth0/authentication-button.jsx";
+import { useAuth0 } from "@auth0/auth0-react";
 const NavBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
+
   const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext);
+
   const [data] = useContext(DataContext);
+<<<<<<< HEAD
   
   // const [userData, setUserDataHandler, errors, setErrorsHandler] =
   //   useContext(UserDataContext);
   
   const { user, login, logout } = useContext(UserDataContext);
+=======
 
+  // const [user, setUserDataHandler, errors, setErrorsHandler] =
+  //   useContext(UserDataContext);
+>>>>>>> reverse-befor-netlify
+
+  const { user, isAuthenticated, isLoading , loginWithRedirect , logout } = useAuth0();
+  
+  
   const computSubMenuHeight = (menuItems) => {
     if (menuItems.subMenu) {
         return (menuItems.subMenu.length * 40).toString() + "px";
@@ -58,7 +70,7 @@ const NavBar = () => {
                 <NavMenuItem
                   key={index}
                   to={`${menuItems.to}`}
-                  // for computing height of sub menu
+                  // for computing height of sub menu for styling
                   submenuheight={() => computSubMenuHeight(menuItems)}
                 >
                   {/* checking for submenu,if it has, it's rendring submenu */}
@@ -71,13 +83,20 @@ const NavBar = () => {
                   )}
                 </NavMenuItem>
               ))}
+<<<<<<< HEAD
             {/* {!user ? ( */}
             <SignButton onClick={login}>Sign Up/In</SignButton>
             {/* ) : ( */}
             {/* <UserProfile bool={user.username} /> */}
             {/* "" */}
             {/* )} */}
+=======
+>>>>>>> reverse-befor-netlify
 
+            {/* Login/out button */}
+
+            {user ? <UserProfile bool={user.name} /> : <AuthenticationButton />}
+            {/* Cart button */}
             <NavCart to="/cart">
               <NavCartImage
                 src={`${process.env.PUBLIC_URL}/assets/images/png/cart.png`}
@@ -91,7 +110,11 @@ const NavBar = () => {
 
         <NavMobileWrapper>
           {/* username disapear after sign Up or In */}
+<<<<<<< HEAD
           {user && <UserProfile bool={user} />}
+=======
+          {user && <UserProfile bool={user.name} />}
+>>>>>>> reverse-befor-netlify
 
           <NavCartMobile to="/cart">
             <NavCartImage
@@ -106,9 +129,12 @@ const NavBar = () => {
             <FaBars />
           </MobileIcon>
         </NavMobileWrapper>
+<<<<<<< HEAD
         {/* {userData.username && (
           <UserProfile bool={userData.username} mobile={false} />
         )} */}
+=======
+>>>>>>> reverse-befor-netlify
       </NavWrapper>
     </Nav>
   );

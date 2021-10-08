@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { createContext, useEffect, useState } from "react";
 
 // export const UserDataContext = createContext();
@@ -66,6 +67,34 @@ export const UserDataProvider = ({ children }) => {
 
   const login = () => {
     netlifyIdentity.open();
+=======
+import React, { createContext, useState } from "react";
+
+export const UserDataContext = createContext();
+
+export const UserDataProvider = (props) => {
+  const [userData, setUserData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
+ const setUserDataHandler = ( signUpValue ) => {
+       setUserData({
+        username: signUpValue.username,
+        email: signUpValue.email,
+        password: signUpValue.password,
+       });
+
+    localStorage.setItem(
+      "userData",
+      JSON.stringify({
+        username: signUpValue.username,
+        email: signUpValue.email,
+      })
+    );
+
+>>>>>>> reverse-befor-netlify
   };
 
   const logout = () => {

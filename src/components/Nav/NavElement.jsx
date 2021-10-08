@@ -76,7 +76,7 @@ export const NavMobileWrapper = styled.div`
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
-  
+
   @media screen and (max-width: 768px) {
     display: -webkit-flex;
     display: flex;
@@ -158,7 +158,11 @@ export const NavMenuItem = styled(LinkR)`
   }
 `;
 
+<<<<<<< HEAD
 export const SignButton = styled.button`
+=======
+export const SignButton = styled.div`
+>>>>>>> reverse-befor-netlify
   height: 30px;
   background-color: white;
   width: 100px;
