@@ -48,7 +48,6 @@ const Cart = () => {
         flipH={true}
       />
       <CartWrapper>
-       
         <CartItemsWrapper>
           {userData.username ? (
             <p>dear {userData.username} </p>
@@ -71,14 +70,15 @@ const Cart = () => {
                       alt={item.name}
                     />
                   </CardItemLink>
-                    <CardItemLink to={`/Products/${item.category}/${item.id}`}>
-                      <CardItemSpan>{item.name}</CardItemSpan>{" "}
-                    </CardItemLink>
+                  <CardItemLink to={`/Products/${item.category}/${item.id}`}>
+                    <CardItemSpan>{item.name}</CardItemSpan>{" "}
+                  </CardItemLink>
                   <span className="borderBottom"></span>
                   <CartContent>
-                    <CardItemSpan>size : {item.size}</CardItemSpan>
-                    <CardItemSpan>Qty : 1</CardItemSpan>
-                    <CardItemSpan>price: {item.price}</CardItemSpan>
+                    <CardItemSpan>
+                      size : <span>{item.size}</span>
+                    </CardItemSpan>
+                    <CardItemSpan>price: <span>{item.price}</span></CardItemSpan>
                   </CartContent>
                   <CardItemDeleteButton
                     onClick={() => removeItemFromCart(index)}

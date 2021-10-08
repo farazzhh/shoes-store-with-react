@@ -491,12 +491,7 @@
           "name": "Contact Us",
           "to": "/contactus"
         }
-      ],
-      "userData":{
-        "username": "",
-        "email": "",
-        "password": ""
-      }
+      ]
     }
   
 }

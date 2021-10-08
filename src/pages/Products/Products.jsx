@@ -20,8 +20,10 @@ import { DataContext } from "../../providers/DataContext";
 const Products = () => {
   const [data, dataHandler, requestData, requestDataHandler] =  useContext(DataContext);
 
+// add for issue when pages are open, the pages needs to refresh for working correctly the title's animation 
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
 
+// for scrolling to top of page when pages loaded
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -41,6 +43,8 @@ const Products = () => {
         />
         <ProductsSection id="products">
           <ProductsWrapper>
+
+            {/* backgroundpng are the png transparet files in background  */}
             <BackgroundPng
               src={`${process.env.PUBLIC_URL}/assets/images/shoesprint2.png`}
               alt="logo"
@@ -67,6 +71,8 @@ const Products = () => {
               <ProductsDescribe>Choose Your Style</ProductsDescribe>
             </ProductsContent>
             <ProductsMenuItems>
+
+              {/* Listing category of products */}
               {data.items.map((item, index) => (
                 <ProductsItems
                   key={index}
