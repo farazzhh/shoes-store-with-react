@@ -16,7 +16,6 @@ import {
   Icon,
   LogButtons,
 } from "./SlideShowElement";
-import { UserDataContext } from "../../../providers/UserDataContext";
 import { useContext } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -29,18 +28,11 @@ const slideImages = [
 
 const Slideshow = () => {
   const inputRef = useRef(null);
+
   const [autoplay, setAutoplay] = useState(true);
-<<<<<<< HEAD
-// const [userData, setUserDataHandler, errors, setErrorsHandler] =
-//   useContext(UserDataContext);
-  
-const { user, login, logout } = useContext(UserDataContext);
-=======
-const [userData, setUserDataHandler, errors, setErrorsHandler] =
-  useContext(UserDataContext);
+
   
   const { user, isLoading, loginWithRedirect, logout } = useAuth0();
->>>>>>> reverse-befor-netlify
 
   useEffect(() => {
     window.addEventListener("scroll", function (e) {
@@ -90,23 +82,15 @@ const [userData, setUserDataHandler, errors, setErrorsHandler] =
         <BorderBottom />
         <HeroDescribe>Your Feet</HeroDescribe>
         <PublicButtonWrapper>
-<<<<<<< HEAD
-          {!user ? (
-            <PublicLink to="" transparency="true" onClick={login}>
-=======
+
           {/* {!userData.username ? (
             <PublicLink to="/signin" transparency="true">
->>>>>>> reverse-befor-netlify
               <strong>Sign Up</strong>/<small>Sign in</small>
               <Icon icon={loginIcon} />
             </PublicLink>
           ) : (
             <PublicLink to="/profile" transparency="true">
-<<<<<<< HEAD
-              <strong>Hi {user}</strong>
-              <Icon icon={userIcon} />
-            </PublicLink>
-=======
+
               <strong>Hi {userData.username}</strong>
               <Icon icon={userIcon} />
             </PublicLink>
@@ -114,7 +98,6 @@ const [userData, setUserDataHandler, errors, setErrorsHandler] =
           
           {!isLoading && !user && (
             <LogButtons onClick={() => loginWithRedirect()}>Login</LogButtons>
->>>>>>> reverse-befor-netlify
           )}
           {/* {!isLoading && user && ( */}
             <LogButtons

@@ -21,7 +21,6 @@ import {
   MobileIcon,
 } from "./NavElement";
 import SubMenuComponents from "./SubMenu";
-import { UserDataContext } from "../../providers/UserDataContext";
 import UserProfile from "../../pages/Sign/UserProfile";
 import AuthenticationButton from "../Auth0/authentication-button.jsx";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -31,17 +30,6 @@ const NavBar = () => {
   const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext);
 
   const [data] = useContext(DataContext);
-<<<<<<< HEAD
-  
-  // const [userData, setUserDataHandler, errors, setErrorsHandler] =
-  //   useContext(UserDataContext);
-  
-  const { user, login, logout } = useContext(UserDataContext);
-=======
-
-  // const [user, setUserDataHandler, errors, setErrorsHandler] =
-  //   useContext(UserDataContext);
->>>>>>> reverse-befor-netlify
 
   const { user, isAuthenticated, isLoading , loginWithRedirect , logout } = useAuth0();
   
@@ -83,15 +71,7 @@ const NavBar = () => {
                   )}
                 </NavMenuItem>
               ))}
-<<<<<<< HEAD
-            {/* {!user ? ( */}
-            <SignButton onClick={login}>Sign Up/In</SignButton>
-            {/* ) : ( */}
-            {/* <UserProfile bool={user.username} /> */}
-            {/* "" */}
-            {/* )} */}
-=======
->>>>>>> reverse-befor-netlify
+
 
             {/* Login/out button */}
 
@@ -110,11 +90,7 @@ const NavBar = () => {
 
         <NavMobileWrapper>
           {/* username disapear after sign Up or In */}
-<<<<<<< HEAD
-          {user && <UserProfile bool={user} />}
-=======
           {user && <UserProfile bool={user.name} />}
->>>>>>> reverse-befor-netlify
 
           <NavCartMobile to="/cart">
             <NavCartImage
@@ -129,12 +105,6 @@ const NavBar = () => {
             <FaBars />
           </MobileIcon>
         </NavMobileWrapper>
-<<<<<<< HEAD
-        {/* {userData.username && (
-          <UserProfile bool={userData.username} mobile={false} />
-        )} */}
-=======
->>>>>>> reverse-befor-netlify
       </NavWrapper>
     </Nav>
   );

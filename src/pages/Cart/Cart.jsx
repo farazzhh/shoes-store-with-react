@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { BackButtonPublic } from "../../components/PublicComponents/BackButton";
 import { BackgroundPng } from "../../components/PublicComponents/BackgroundPng";
 import { CartContext } from "../../providers/CartContext";
-import { UserDataContext } from "../../providers/UserDataContext";
 import { MdDelete } from "react-icons/md";
 import {
   CartSection,
@@ -19,12 +18,13 @@ import {
   CartContent,
   CardSummary,
 } from "./CartElement";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Cart = () => {
   const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext);
-  const [userData, setUserDataHandler, errors, setErrorsHandler] =
-    useContext(UserDataContext);
+  const{user} = useAuth0()
   let sum = 0;
+
 
   if (cartData) {
     cartData.map((item) => {
@@ -49,8 +49,8 @@ const Cart = () => {
       />
       <CartWrapper>
         <CartItemsWrapper>
-          {userData.username ? (
-            <p>dear {userData.username} </p>
+          {user.name ? (
+            <p>dear {user.name} </p>
           ) : (
             <p>
               Please <Link to="/signin">login</Link> to continue

@@ -9,11 +9,11 @@ import {
   SideBarLink,
 } from "./MobileMenuSideBarElement";
 import { NavWrapperLogo, Logo } from "../Nav/NavElement";
-import { UserDataContext } from "../../providers/UserDataContext";
+import { useAuth0 } from "@auth0/auth0-react";
+
 const SideBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
-  // const [userData, setUserDataHandler, errors, setErrorsHandler] =
-  const { user, login, logout } = useContext(UserDataContext);
+  const { user } = useAuth0();
   return (
     <>
       <SideBarContainer toggle={navMobileMenu}>

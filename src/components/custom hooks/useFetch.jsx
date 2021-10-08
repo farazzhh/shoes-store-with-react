@@ -4,11 +4,9 @@ import { LoadingContext } from "../../providers/LoadingContext";
 
 const useFetch = (url) => {
   const [data, dataHandler, requestData, requestDataHandler] = useContext(DataContext);
-<<<<<<< HEAD
-  const [isPending, setIsPending] = useState(true);
-=======
+
    const { loading, setLoading } = useContext(LoadingContext);
->>>>>>> reverse-befor-netlify
+
   // const abortCont = new AbortController();
 
   useEffect(() => {
@@ -26,16 +24,10 @@ const useFetch = (url) => {
     //     }
     // });
 
-<<<<<<< HEAD
-    const importData =  () => {
- import("../../data.json").then((res) => dataHandler(res.default.database));
-      setIsPending(false);
-=======
     const importData = () => {
       setLoading(true);
       import("../../data.json").then((res) => dataHandler(res.default.database));
       setLoading(false);
->>>>>>> reverse-befor-netlify
     }
     importData();
 

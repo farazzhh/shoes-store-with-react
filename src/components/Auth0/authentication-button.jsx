@@ -1,13 +1,11 @@
 /* eslint-disable no-mixed-operators */
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import styled from "styled-components";
 import { LoadingContext } from "../../providers/LoadingContext";
 
 const AuthenticationButton = () => {
-  const { user, loginWithRedirect, logout } =
-    useAuth0();
-  const { loading, setLoading } = useContext(LoadingContext)
+  const { user, loginWithRedirect, logout } = useAuth0();
   
   return (
     <>

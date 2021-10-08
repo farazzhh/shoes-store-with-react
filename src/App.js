@@ -22,13 +22,6 @@ import Cart from "./pages/Cart/Cart";
 import { BadUrl } from "./components/PublicComponents/BadUrl";
 import Loading from "./components/Loading/Loading";
 import useFetch from "./components/custom hooks/useFetch";
-import { UserDataContext } from "./providers/UserDataContext";
-<<<<<<< HEAD
-
- function App(props){
-  const {user , login , logout} = useContext(UserDataContext);
-   const { data, isPending } = useFetch("../../data.json");
-=======
 import { useAuth0 } from "@auth0/auth0-react";
 import { LoadingContext } from "./providers/LoadingContext";
 function App(props) {
@@ -38,26 +31,11 @@ function App(props) {
     useAuth0();
 
   const { loading, setLoading } = useContext(LoadingContext);
->>>>>>> reverse-befor-netlify
 
   // isLoading is for Authentication by Auth0 SDK
   // loading is context, it change when isLoading change
   useEffect(() => {
-<<<<<<< HEAD
-    // const loadDataFromLocalStorage = () => {
-      // const userData = JSON.parse(localStorage.getItem("userData"));
-      // if (userData) {
-      //   setUserDataHandler(userData);
-      // }
-    // };
 
-    // loadDataFromLocalStorage();
-  }, []);
-
-  return (
-    <HashRouter>
-      {/* {isPending && <Loading />} */}
-=======
     if (isLoading) {
       setLoading(true);
     } else {
@@ -68,7 +46,6 @@ function App(props) {
 
   return (
     <Router>
->>>>>>> reverse-befor-netlify
       {data.items && (
         <div className="App">
           {loading ? (
@@ -112,13 +89,10 @@ function App(props) {
             </>
           )}
         </div>
-<<<<<<< HEAD
-      )} 
-    </HashRouter>
-=======
+
+
       )}
     </Router>
->>>>>>> reverse-befor-netlify
   );
 }
 

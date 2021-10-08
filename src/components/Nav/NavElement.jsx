@@ -158,11 +158,8 @@ export const NavMenuItem = styled(LinkR)`
   }
 `;
 
-<<<<<<< HEAD
-export const SignButton = styled.button`
-=======
+
 export const SignButton = styled.div`
->>>>>>> reverse-befor-netlify
   height: 30px;
   background-color: white;
   width: 100px;
