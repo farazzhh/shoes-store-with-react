@@ -202,7 +202,7 @@ export const CartItemImg = styled.img`
 `;
 
 export const CardItemDeleteButton = styled.button`
-  border: 1px solid gray;
+border: none;
   width: 25px;
   height: 25px;
   position: absolute;
@@ -212,17 +212,21 @@ export const CardItemDeleteButton = styled.button`
   right: 2px;
   top: 2px;
   font-weight: 900;
+  background-color: white;
   color: gray;
   border-radius: 50%;
   cursor: pointer;
-  opacity: 0.6;
   transition: all 0.1s;
+  -moz-box-shadow: inset 0 0 1px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
   :hover {
     color: #870a30;
-    border: 1px solid #870a30;
-    opacity: 1;
     background-color: #fff;
     border-radius: 50%;
+    svg{
+      opacity: 1;
+    }
   }
   @media screen and (max-width: 380px) {
     width: 20px;
@@ -230,6 +234,7 @@ export const CardItemDeleteButton = styled.button`
   }
   svg {
     font-size: 15px;
+    opacity: 0.6;
     @media screen and (max-width: 380px) {
       font-size: 13px;
     }
