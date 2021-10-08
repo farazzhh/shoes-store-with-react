@@ -158,7 +158,7 @@ export const NavMenuItem = styled(LinkR)`
   }
 `;
 
-export const SignButton = styled(LinkR)`
+export const SignButton = styled.div`
   height: 30px;
   width: 100px;
   text-align: center;

@@ -23,17 +23,21 @@ import {
 import SubMenuComponents from "./SubMenu";
 import { UserDataContext } from "../../providers/UserDataContext";
 import UserProfile from "../../pages/Sign/UserProfile";
-
+import AuthenticationButton from "../Auth0/authentication-button.jsx";
+import { useAuth0 } from "@auth0/auth0-react";
 const NavBar = () => {
   const [navMobileMenu, toggleMobileMenu] = useContext(MobileMenuContext);
+
   const [cartData, pushToCart, removeItemFromCart] = useContext(CartContext);
+
   const [data] = useContext(DataContext);
 
-  console.log("nav");
-  const [userData, setUserDataHandler, errors, setErrorsHandler] =
-    useContext(UserDataContext);
+  // const [user, setUserDataHandler, errors, setErrorsHandler] =
+  //   useContext(UserDataContext);
 
-  console.log(userData);
+  const { user, isAuthenticated, isLoading , loginWithRedirect , logout } = useAuth0();
+  
+  
   const computSubMenuHeight = (menuItems) => {
     if (menuItems.subMenu) {
       return (menuItems.subMenu.length * 40).toString() + "px";
@@ -71,12 +75,11 @@ const NavBar = () => {
                   )}
                 </NavMenuItem>
               ))}
-            {!userData.username ? (
-              <SignButton to="/signin">Sign up/in</SignButton>
-            ) : (
-              <UserProfile bool={userData.username} />
-            )}
 
+            {/* Login/out button */}
+
+            {user ? <UserProfile bool={user.name} /> : <AuthenticationButton />}
+            {/* Cart button */}
             <NavCart to="/cart">
               <NavCartImage
                 src={`${process.env.PUBLIC_URL}/assets/images/png/cart.png`}
@@ -90,7 +93,7 @@ const NavBar = () => {
 
         <NavMobileWrapper>
           {/* username disapear after sign Up or In */}
-          {userData.username && <UserProfile bool={userData.username} />}
+          {user && <UserProfile bool={user.name} />}
 
           <NavCartMobile to="/cart">
             <NavCartImage
@@ -105,9 +108,6 @@ const NavBar = () => {
             <FaBars />
           </MobileIcon>
         </NavMobileWrapper>
-        {/* {userData.username && (
-          <UserProfile bool={userData.username} mobile={false} />
-        )} */}
       </NavWrapper>
     </Nav>
   );
