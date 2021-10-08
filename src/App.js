@@ -1,9 +1,14 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext, useState, createContext } from "react";
 import "./App.css";
 import "animate.css";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Footer from "./components/Footer/Footer";
-import { Route, Redirect, Switch, HashRouter } from "react-router-dom";
+import {
+  Route,
+  Redirect,
+  Switch,
+  BrowserRouter as Router,
+} from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
 import Sign from "./pages/Sign/SignIn";
 import Products from "./pages/Products/Products";
@@ -18,12 +23,27 @@ import { BadUrl } from "./components/PublicComponents/BadUrl";
 import Loading from "./components/Loading/Loading";
 import useFetch from "./components/custom hooks/useFetch";
 import { UserDataContext } from "./providers/UserDataContext";
+<<<<<<< HEAD
 
  function App(props){
   const {user , login , logout} = useContext(UserDataContext);
    const { data, isPending } = useFetch("../../data.json");
+=======
+import { useAuth0 } from "@auth0/auth0-react";
+import { LoadingContext } from "./providers/LoadingContext";
+function App(props) {
+  const { data } = useFetch("../../data.json");
 
+  const { user, isAuthenticated, isLoading, loginWithRedirect, logout } =
+    useAuth0();
+
+  const { loading, setLoading } = useContext(LoadingContext);
+>>>>>>> reverse-befor-netlify
+
+  // isLoading is for Authentication by Auth0 SDK
+  // loading is context, it change when isLoading change
   useEffect(() => {
+<<<<<<< HEAD
     // const loadDataFromLocalStorage = () => {
       // const userData = JSON.parse(localStorage.getItem("userData"));
       // if (userData) {
@@ -37,41 +57,68 @@ import { UserDataContext } from "./providers/UserDataContext";
   return (
     <HashRouter>
       {/* {isPending && <Loading />} */}
+=======
+    if (isLoading) {
+      setLoading(true);
+    } else {
+      setLoading(false);
+    }
+  }, [isLoading]);
+
+
+  return (
+    <Router>
+>>>>>>> reverse-befor-netlify
       {data.items && (
         <div className="App">
-          <SideBar />
-          <Nav />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/Home">
-              <Redirect to="/" />
-            </Route>
-            <Route exact path="/ShoesStore">
-              <Redirect to="/" />
-            </Route>
-            <Route exact path="/Products" component={Products} />
-            <Route exact path="/aboutus" component={AboutUs} />
-            <Route exact path="/contactus" component={ContactUs} />
-            <Route exact path="/Signin" component={Sign} />
-            <Route exact path="/Products/:category" component={ProductsApp} />
-            <Route
-              exact
-              path="/Products/:category/:id"
-              component={ProductsItemsApp}
-            ></Route>
-            <Route exact path="/cart" component={Cart} />
-            <Route exact path="/Cart">
-              <Redirect to="/cart" />
-            </Route>
-            <Route path="*">
-              <BadUrl />
-            </Route>
-          </Switch>
+          {loading ? (
+            <Loading />
+          ) : (
+            <>
+              <SideBar />
+              <Nav />
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/Home">
+                  <Redirect to="/" />
+                </Route>
+                <Route exact path="/ShoesStore">
+                  <Redirect to="/" />
+                </Route>
+                <Route exact path="/Products" component={Products} />
+                <Route exact path="/aboutus" component={AboutUs} />
+                <Route exact path="/contactus" component={ContactUs} />
+                <Route exact path="/Signin" component={Sign} />
+                <Route
+                  exact
+                  path="/Products/:category"
+                  component={ProductsApp}
+                />
+                <Route
+                  exact
+                  path="/Products/:category/:id"
+                  component={ProductsItemsApp}
+                ></Route>
+                <Route exact path="/cart" component={Cart} />
+                <Route exact path="/Cart">
+                  <Redirect to="/cart" />
+                </Route>
+                <Route path="*">
+                  <BadUrl />
+                </Route>
+              </Switch>
 
-          <Footer />
+              <Footer />
+            </>
+          )}
         </div>
+<<<<<<< HEAD
       )} 
     </HashRouter>
+=======
+      )}
+    </Router>
+>>>>>>> reverse-befor-netlify
   );
 }
 
