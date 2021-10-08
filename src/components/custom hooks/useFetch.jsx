@@ -1,9 +1,10 @@
 import { DataContext } from "../../providers/DataContext";
 import { useEffect, useState, useContext } from "react";
+import { LoadingContext } from "../../providers/LoadingContext";
 
 const useFetch = (url) => {
   const [data, dataHandler, requestData, requestDataHandler] = useContext(DataContext);
-  const [isPending, setIsPending] = useState(true);
+   const { loading, setLoading } = useContext(LoadingContext);
   // const abortCont = new AbortController();
 
   useEffect(() => {
@@ -21,16 +22,17 @@ const useFetch = (url) => {
     //     }
     // });
 
-    const importData =  () => {
- import("../../data.json").then((res) => dataHandler(res.default.database));
-      setIsPending(false);
+    const importData = () => {
+      setLoading(true);
+      import("../../data.json").then((res) => dataHandler(res.default.database));
+      setLoading(false);
     }
     importData();
 
 
   },[]);
     
-    return {data,isPending}
+    return {data}
 };
 
 export default useFetch;
