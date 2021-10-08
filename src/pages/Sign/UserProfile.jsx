@@ -2,22 +2,24 @@ import styled from "styled-components";
 import useClickListener from "../../components/custom hooks/useClickListener";
 import { faUserCircle as userIcon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const UserProfile = ({ bool }) => {
+ const { user, isAuthenticated, isLoading, loginWithRedirect, logout } =
+   useAuth0();
+  // close the window when click outside the window
   const { ref, isComponentVisible, handleClickToggle } =
     useClickListener(false);
 
-  const signOut = () => {
-    localStorage.setItem("userData", JSON.stringify({}));
-    window.location.reload();
-  };
+  const profileMenu = `<div>
+
+        <h2>${user.name}</h2>
+        <p>${user.email}</p>
+      </div>`
 
   const menuItems = {
     name: `${bool}`,
-    subMenu: [
-      { name: "Profile", click: null },
-      { name: "Signout", click: signOut },
-    ],
+    subMenu: [ { name: "Signout", click: logout }],
   };
 
   const computeSubMenuHeight = (menuItem) => {
