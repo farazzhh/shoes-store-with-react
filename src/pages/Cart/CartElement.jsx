@@ -160,7 +160,9 @@ export const CardSummary = styled.div`
   column-gap: 100px;
   align-items: center;
   border-radius: 4px;
-  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0px 7px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0 0px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: inset -0.px 0.5px 7px rgba(0, 0, 0, 0.4);
 `;
 
 //its contains a image and the name of product in cart item
@@ -202,7 +204,7 @@ export const CartItemImg = styled.img`
 `;
 
 export const CardItemDeleteButton = styled.button`
-border: none;
+  border: none;
   width: 25px;
   height: 25px;
   position: absolute;
@@ -217,14 +219,14 @@ border: none;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.1s;
-  -moz-box-shadow: inset 0 0 1px #000000;
-  -webkit-box-shadow: inset 0 0 10px #000000;
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
   :hover {
     color: #870a30;
     background-color: #fff;
     border-radius: 50%;
-    svg{
+    svg {
       opacity: 1;
     }
   }
