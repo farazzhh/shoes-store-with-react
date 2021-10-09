@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import HeaderSection from "./Header/Header";
+import Header from "../../components/Header/Header";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import Products from "./Products.jsx";
@@ -12,7 +12,7 @@ const Home = (props) => {
 
   return (
     <>
-      <HeaderSection />
+      <Header />
       <ParallexBody>
         <AboutUs />
         <Products />
