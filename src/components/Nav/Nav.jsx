@@ -21,7 +21,7 @@ import {
   MobileIcon,
 } from "./NavElement";
 import SubMenuComponents from "./SubMenu";
-import UserProfile from "../../pages/Sign/UserProfile";
+import UserProfileNavMenu from "./UserProfileNavMenu";
 import AuthenticationButton from "../Auth0/authentication-button.jsx";
 import { useAuth0 } from "@auth0/auth0-react";
 const NavBar = () => {
@@ -74,7 +74,11 @@ const NavBar = () => {
 
             {/* Login/out button */}
 
-            {user ? <UserProfile bool={user.name} /> : <AuthenticationButton />}
+            {user ? (
+              <UserProfileNavMenu bool={user.name} />
+            ) : (
+              <AuthenticationButton />
+            )}
             {/* Cart button */}
             <NavCart to="/cart">
               <NavCartImage
@@ -89,7 +93,7 @@ const NavBar = () => {
 
         <NavMobileWrapper>
           {/* username disapear after sign Up or In */}
-          <UserProfile />
+          <UserProfileNavMenu />
 
           <NavCartMobile to="/cart">
             <NavCartImage
