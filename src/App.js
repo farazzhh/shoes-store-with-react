@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState, createContext } from "react";
+import React, { useEffect, useContext } from "react";
 import "./App.css";
 import "animate.css";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -7,7 +7,7 @@ import {
   Route,
   Redirect,
   Switch,
-  BrowserRouter as Router,
+  HashRouter as Router,
 } from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
 import Sign from "./pages/Sign/SignIn";
